@@ -1,0 +1,380 @@
+% Version control information:
+%$HeadURL: https://practicas-spss.googlecode.com/svn/trunk/anova_1_factor/anova_1_factor.tex $
+%$LastChangedDate: 2010-09-27 16:37:11 +0200 (lun, 27 sep 2010) $
+%$LastChangedRevision: 3 $
+%$LastChangedBy: asalber $
+%$Id: anova_1_factor.tex 3 2010-09-27 14:37:11Z asalber $
+
+\chapter{Análisis de Concordancia}
+
+\section{Fundamentos teóricos}
+
+\subsection{Introducción}
+
+La medición es un proceso que aparece siempre tanto en la práctica como en la investigación clínica. Hay variables que
+son sencillas de medir, como puede ser el peso, pero hay otras que conllevan cierto grado de subjetividad, como la
+intensidad del dolor, que hacen especialmente difícil su medición. En cualquier caso, el proceso de medición lleva
+asociado algún grado de error. Existen factores asociados a los individuos, al observador o al instrumento de medida que
+pueden influir en los resultados de las mediciones. Se denomina validez de una medición a la capacidad de poder medir lo
+que realmente se quiere medir mientras que se denomina fiabilidad o reproducibilidad de una medición a la capacidad de
+poder obtener un mismo valor cuando la medición se realiza sobre la misma muestra en más de una ocasión en condiciones
+similares. Los términos concordancia y acuerdo son sinónimos de reproducibilidad. En los estudios que tratan de evaluar
+la validez de una medida se comparan sus resultados con los obtenidos mediante una prueba de referencia (gold standard)
+que se sabe válida y fiable. Cuando se trata de estudiar la fiabilidad de una medición, se repite el proceso de medida
+para evaluar la concordancia obtenida entre las diferentes mediciones. En un estudio de la fiabilidad pueden valorarse
+los siguientes aspectos:
+
+\begin{description}
+\item[Concordancia intraobservador:] tiene por objetivo evaluar el grado de coincidencia de las mediciones efectuadas
+por un mismo observador en las mismas condiciones.
+\item[Concordancia interobservador:] tiene por objetivo evaluar el grado de coincidencia de las mediciones efectuadas
+por dos observadores en un mismo individuo.
+\item[Concordancia entre métodos de medición:] tiene por objetivo evaluar el grado de coincidencia de las mediciones
+efectuadas con diferentes métodos de medida.
+\end{description}
+
+La concordancia entre mediciones es de gran interés en la práctica clínica. Las técnicas de análisis de la concordancia
+dependen del tipo de variable a estudiar. En el caso de variables cuantitativas se utiliza habitualmente el coeficiente
+de correlación intraclase, mientras que en el caso de variables cualitativas el estadístico más utilizado es el índice
+kappa.
+\subsection{Análisis de la Concordancia entre dos Variables Cuantitativas}
+En la investigación clínica resulta muy frecuente la evaluación de la fiabilidad, o concordancia, de las medidas
+realizadas, pudiéndose distinguir entre dos tipos de situaciones diferentes:
+\begin{itemize}
+\item Aquellas en las que se determina la concordancia en los resultados cuando se repite la medición con el mismo
+instrumento en condiciones idénticas.
+\item Aquellas en las que se determina hasta qué punto los resultados obtenidos con diferentes instrumentos de medida, o
+con diferentes observadores, concuerdan.
+\end{itemize}
+ 
+Por ejemplo, podríamos plantearnos el acuerdo entre las medidas de la presión arterial sistólica, tomadas en los
+mismos pacientes y en idénticas condiciones (también por el mismo observador), excepto que una de las medidas se ha
+hecho con el tensiómetro habitual y la otra con un tensiómetro electrónico de muñeca.
+
+Para analizar la concordancia entre este tipo de variables numéricas, muy a menudo se ha utilizado r, el coeficiente de
+correlación de Pearson, pero no resulta un índice adecuado ya que dos instrumentos pueden medir sistemáticamente
+cantidades diferentes uno del otro, y sin embargo la correlación podría incluso ser perfecta. Por ejemplo, supongamos
+que la medida del tensiómetro de muñeca es sistemáticamente $10 mmHg$ inferior a la obtenida con el tensiómetro
+habitual. De esta forma, si llamamos $y$ a la medida del tensiómetro de muñeca y $x$ a la del habitual, ambas expresadas
+en $mmHg$, concluiremos que $y=x-10$ con una correlación lineal perfecta $(r = 1)$; sin embargo, evidentemente, la
+concordancia entre ambos métodos de medida deja bastante que desear. En definitiva, el coeficiente de correlación lineal
+mide la intensidad de la asociación lineal pero no proporciona información sobre el nivel de acuerdo entre las medidas.
+
+El índice estadístico que permite cuantificar el acuerdo entre variables numéricas es el \emph{Coeficiente de
+Correlación Intraclase ($CCI$)}, cuyo cálculo se basa en un Análisis de la Varianza (ANOVA) en el que se tiene en cuenta
+que la variabilidad total de los datos puede dividirse en tres componentes:\begin{itemize}
+\item La variabilidad debida a las diferencias entre los distintos pacientes: $P$.
+\item La debida a las diferencias entre observadores o métodos de observación: $O$.
+\item La residual aleatoria inherente a toda medición: $R$.
+\end{itemize}
+
+A partir de ello, se define el $CCI$ como el cociente entre la variabilidad debida a los pacientes y la variabilidad total:
+\[
+CCI  = \frac{P} {P+O+R},
+\]
+
+El valor del $CCI$ siempre se encuentra entre 0 y 1, de tal forma que si la variabilidad debida al observador (o método
+de observación), junto con la residual, son muy pequeñas, el $CCI$ será muy próximo a 1, y la concordancia entre las
+medidas muy buena. Por el contrario, si la variabilidad entre los pacientes es muy pequeña comparada con la que
+introduce el observador, el $CCI$ será muy próximo a 0 y la concordancia mala o muy mala.
+
+Generalmente, para delimitar entre qué valores del $CCI$ podemos considerar que la concordancia es muy buena, buena,
+moderada, mediocre o mala, se utiliza la siguiente tabla:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Valor de $CCI$ & Fuerza de la Concordancia \\
+\hline\hline
+$CCI \geq 0.9$ & Muy buena  \\
+\hline
+$0.7\leq CCI<0.9$ & Buena  \\
+\hline
+$0.5\leq CCI<0.7$ & Moderada  \\
+\hline
+$0.3\leq CCI<0.5$ & Mediocre  \\
+\hline
+$CCI<0.3$ & Mala o nula  \\
+\hline
+\end{tabular}
+\end{center}
+
+La tabla anterior nos indica el grado de bondad estadístico de la concordancia, pero para establecer si una concordancia
+es clínicamente buena, la respuesta no la puede dar la tabla, sino la experiencia previa del experimentador, que es
+quien marca el valor del $CCI$ que considera necesario.
+
+\subsection{Análisis de la Concordancia entre dos Variables Cualitativas}
+La existencia o no de relación entre variables cualitativas se apoya, habitualmente, en el contraste de Chi Cuadrado (o
+similares); no obstante, como ya ocurría con las variables cuantitativas, la existencia de relación no implica
+concordancia.
+
+Para entender cómo se cuantifica la concordancia entre variables cualitativas, supongamos que tenemos, por ejemplo, dos
+médicos diferentes que observan a los mismos 100 pacientes, y los diagnostican como enfermos o sanos, con los resultados
+que aparecen en la siguiente tabla de contingencia:
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+Médico 1 $\setminus$ Médico 2 & Enfermos & Sanos & Totales \\
+\hline
+Enfermos & 8 & 12 & 20 \\
+\hline
+Sanos & 17 & 63 & 80 \\
+\hline
+Totales & 25 & 75 & 100 \\
+\hline
+\end{tabular}
+\end{center}
+
+Evidentemente, la concordancia en el diagnóstico sería tanto mejor cuantos más pacientes se situasen en las casillas en
+que coinciden los diagnósticos de los dos médicos y menos en las casillas en que los diagnósticos son diferentes. Si
+como criterio de concordancia simplemente nos fijáramos en la proporción de diagnósticos coincidentes, tendríamos $71$
+pacientes de un total de $100$, es decir un $71\%$ de acuerdo.
+No obstante lo anterior, simplemente por azar cabría esperar que, en la casilla correspondiente a un diagnóstico de
+enfermo por parte de los dos médicos, hubiese una frecuencia esperada de $5$ pacientes $(25*20/100)$, y en la casilla
+correspondiente a un diagnóstico de sano por parte de ambos médicos $60$ $(75*80/100)$. Por lo tanto, simplemente por
+azar se hubiesen producido $65$ coincidencias (un $65\%$ de acuerdo), con lo cual sólo se han logrado $6$ coincidencias
+más de las que cabría esperar por azar. Dividiendo esas $6$ coincidencias entre las $35$ que se hubiesen podido dar como
+máximo sin tener en cuenta el azar, obtenemos un porcentaje del $17.1\%$, que, ahora sí que cuantifica la concordancia
+sin tener en cuenta el azar, y que en nada se parece al $71\%$ de acuerdo que parecía deducirse de los datos originales.
+
+El ejemplo anterior pone de manifiesto la discrepancia tan grande que puede haber entre la proporción o porcentaje de
+observaciones concordantes $P_o$, también llamada concordancia simple, y la proporción o porcentaje de concordancia más
+allá del azar, que es precisamente lo que cuantifica el índice Kappa de Cohen, $\kappa$ . Para el cálculo de  $\kappa$
+se utiliza la expresión: 
+\[ 
+\kappa  = \frac{P_{o}-P_{e}}{1-P_{e}}, 
+\]
+
+Donde $P_{o}$ es la proporción de observaciones concordantes, y $P_{e}$ es la proporción de observaciones concordantes
+simplemente por azar, suponiendo independientes las dos variables que cruzamos en la tabla de contingencia.
+
+Sin más que sustituir en la fórmula las proporciones del ejemplo anterior, comprobamos cómo el índice  $\kappa$ tiene un
+valor de $0.171$:
+Para interpretar los valores del índice Kappa $\kappa$ se suele utilizar la siguiente tabla:
+
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Valor de $\kappa$ & Fuerza de la Concordancia \\
+\hline\hline
+$\kappa \geq 0.8$ & Muy buena\\
+\hline
+$0.6\leq\kappa<0.8$ & Buena\\
+\hline
+$0.4\leq\kappa<0.6$ & Moderada\\
+\hline
+$0.2\leq\kappa<0.4$ & Mediocre  \\
+\hline
+$\kappa<0.2$ & Mala o nula  \\
+\hline
+\end{tabular}
+\end{center}
+
+Por lo tanto el índice Kappa $\kappa$ obtenido indica que la concordancia del diagnóstico entre ambos médicos es mala.
+
+% \subsection{Análisis de la Concordancia entre dos Variables Cualitativas Ordinales}
+% 
+% \subsubsection{Indice Kappa ponderado}
+% Si el índice Kappa $\kappa$ se aplica a variables cualitativas ordinales, la prueba asigna el mismo porcentaje de desacuerdo a cualquier
+% diferencia de niveles de las variables estudiadas. Es decir, si dos médicos clasifican el estado de un tumor en una escala de $1$ a $4$, la
+% no coincidencia no establecería si dicha falta de coincidencia es de $1$, $2$ o $3$ niveles. Para evitar este problema se puede utilizar el
+% índice Kappa ponderado en el que se asigna un peso distinto a cada diferencia obtenida entre los dos evaluadores, pues parece lógico asignar
+% más peso cuanto mayor sea la diferencia entre los niveles.
+% 
+% El índice Kappa ponderado $\kappa_{w}$ se calcula mediante:
+% \[
+% \kappa_{w}= 1-\frac{\sum w_{ij}*P_{oij}} {\sum w_{ij}*P_{eij}}
+% \]
+%  
+% donde $P_{oij}$ es la proporción observada en la casilla $(i,j)$ y $P_{eij}$ es la proporción esperada en la casilla $(i,j)$, es decir la
+% casilla situada en la fila $i$ y en la columna $j$ . Para asignar la ponderación existen dos métodos, el lineal y el cuadrático. En la
+% ponderación lineal el peso de una casilla $(i,j)$ viene dado por $w_{ij} = |i-j|$ mientras que en la ponderación cuadrática, que es la más
+% utilizada,  viene dado por $w_{ij} = (i-j)^{2}$.
+% 
+% 
+% \subsubsection{Coeficiente de concordancia W de Kendall}
+% Cuando el número de evaluaciones es superior a dos, la prueba para valorar la concordancia entre k variables cualitativas ordinales, es el
+% coeficiente de concordancia de Kendall.
+
+\clearpage
+\newpage
+
+\section{Ejercicios resueltos}
+\begin{enumerate}[leftmargin=*]
+\item Se ha medido la presión arterial sistólica en un grupo de 20 pacientes con el tensiómetro habitual y con un
+tensiómetro de muñeca, obteniéndose los siguientes resultados:\[
+\begin{array}{cc}
+\hline
+\multicolumn{1}{p{2cm}}{\centering \text{Tensiómetro} \text{habitual}} & \multicolumn{1}{p{2cm}}{\centering \text{Tensiómetro} \text{de
+muñeca}} \\ 
+112 & 124 \\ 
+124 & 116 \\
+ 96 &  88 \\
+106 & 110 \\
+138 & 144 \\
+155 & 150 \\
+ 86 &  82 \\
+126 & 118 \\
+114 & 120 \\
+ 92 &  97 \\
+\hline
+\end{array}
+\quad
+\begin{array}{cc}
+\hline
+\multicolumn{1}{p{2cm}}{\centering \text{Tensiómetro} \text{habitual}} & \multicolumn{1}{p{2cm}}{\centering \text{Tensiómetro} \text{de
+muñeca}} \\ 
+133 & 126 \\
+115 & 121 \\
+104 &  98 \\
+ 86 &  94 \\
+ 93 & 102 \\
+144 & 132 \\
+125 & 120 \\
+112 & 104 \\
+108 & 108 \\
+ 98 &  98 \\
+\hline
+\end{array}
+\]
+
+Se pide
+\begin{enumerate}
+\item Crear un conjunto de datos con las varaibles \variable{tens.habitual} y \variable{tens.muñeca}.
+
+\item Calcular el coeficiente de correlación intraclase e interpretar el resultado.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Concordancia\flecha Coeficiente de correlación
+intraclase}.
+\item Seleccionar las variables \variable{tens.habitual} en el campo \campo{Primera medida}, la
+variable\variable{tens.muñeca} en el campo \campo{Segunda medida} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}
+
+El coeficiente de correlación intraclase aparece en la fila ICC1 y vale $0.93$, lo que indica que el nivel de
+concordancia entre las medidas de la presión arterial obtenidas con el tensiómetro habitual y con el de muñeca es muy
+buena.}
+\end{indicacion}
+
+% \item Dibujar un gráfico de dispersión en el que aparezca la recta de regresión de la presión arterial medida con el
+% tensiómetro de muñeca en función de la medida con el tensiómetro habitual.
+% \begin{indicacion}{
+% \begin{enumerate}
+% \item Seleccionar el menú \menu{Gráficas->Diagrama de dispersión}.
+% \item En el cuadro de diálogo que aparece seleccionar la variable \variable{tens\_muñeca} como \campo{variable x} y la
+% variable \variable{tens\_habitual} como \campo{variable y}, activar únicamente la opción \opcion{Línea de mínimos
+% cuadrados} y hacer click en el botón \boton{Aceptar}.
+% \end{enumerate}}
+% \end{indicacion}
+% 
+% \item Añadir al gráfico obtenido en el apartado anterior, la recta que correspondería si ambas tensiómetros diesen la
+% misma medida.
+% \begin{indicacion}{
+% Sin cerrar la ventana gráfica del apartado anterior, ejecutar el comando \comando{abline(0,1)} para dibujar la recta
+% $y=x$, que tiene término independiente $0$ y pendiente $1$.}
+% \end{indicacion}
+\end{enumerate}
+
+
+\item Se entregaron a dos radiólogos A y B un conjunto de radiografías de tórax de pacientes oncológicos, para que
+informaban si presentaban metástasis en los pulmones o no. Ambos radiólogos analizaron todas las radiografías y cada uno
+de ellos emitió su informe, indicando en cuáles de ellas se apreciaban metástasis y en cuáles no. Como resultado de
+dichos informes hubo 32 radiografías en que ambos radiólogos apreciaron metástasis, 68 radiografías en que ninguno las
+apreció, 6 radiografías en que el radiólogo A las apreció y el B no, y 10 en que el B las apreció y el A no.
+\begin{enumerate}
+\item Crear un conjunto de datos con las variables \variable{radiologoA} y \variable{radiologoB}.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Concordancia\flecha Kappa de Cohen}.
+\item Seleccionar las variables \variable{radiologoA} en el campo \campo{Primera medida}, la
+variable \variable{radiologoB} en el campo \campo{Segunda medida} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}
+El valor del índice de Kappa obtenido es $0.7$ por lo que la concordancia es buena.}
+\end{indicacion}
+\end{enumerate}
+
+
+% \item Un tribunal médico tiene que evaluar las aptitudes psicofísicas de un grupo de aspirantes a ingreso en un cuerpo de la Administración.
+% El tribunal está formado por tres médicos, cada uno de los cuales tiene que analizar los datos de todos los aspirantes, mantener una
+% entrevista personal con cada uno de ellos y emitir un informe que se concreta en: Apto, Dudoso o No Apto. Los resultados de dicho informe
+% fueron los siguientes:
+% \[
+% \begin{tabular}{|l|l|l|}
+% \hline
+% \multicolumn{1}{|c|}{Médico 1} & \multicolumn{1}{c|}{Médico 2} & \multicolumn{1}{c|}{Médico 3}\\
+% \hline\hline
+% \multicolumn{1}{|c|}{Apto} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Apto} & \multicolumn{1}{c|}{Dudoso} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Dudoso} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{No Apto} & \multicolumn{1}{c|}{No Apto} & \multicolumn{1}{c|}{Dudoso} \\
+% \hline
+% \multicolumn{1}{|c|}{No Apto} & \multicolumn{1}{c|}{No Apto} & \multicolumn{1}{c|}{No Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Apto} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Apto} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Dudoso} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Dudoso} \\
+% \hline
+% \multicolumn{1}{|c|}{No Apto} & \multicolumn{1}{c|}{Dudoso} & \multicolumn{1}{c|}{No Apto} \\
+% \hline
+% \multicolumn{1}{|c|}{Apto} & \multicolumn{1}{c|}{Apto} & \multicolumn{1}{c|}{Apto} \\
+% \hline
+% \end{tabular}
+% \]
+% 
+% \begin{enumerate}
+% \item Crear las variables \textsf{médico1}, \textsf{médico2} y \textsf{médico3} e introducir los datos, asignando el valor {0} a No
+% Apto, el {1} a Dudoso y el {2} a Apto.
+% 
+% \item Calcular el coeficiente de concordancia \texttt{W de Kendall} e interpretar el resultado..
+% \begin{indicacion}{
+% \begin{enumerate}
+% \item Seleccionar el menú \texttt{Analizar->Pruebas no paramétricas->Cuadros de diálogo antiguos->K muestras relacionadas}.
+% \item En el cuadro de diálogo resultante seleccionar las variables \textsf{médico1}, \textsf{médico2} y \textsf{médico3} en el campo
+% \texttt{Variables de contraste}, marcar en  \texttt{Tipo de prueba} la opción \texttt{W de Kendall} y hacer click en el botón \texttt{Aceptar}.
+% \item El coeficiente de correlación \texttt{W de Kendall} es $0.233$, lo que indica que hay poca concordancia.
+% \end{enumerate}}
+% \end{indicacion}
+% \end{enumerate}
+
+\end{enumerate}
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item Se ha medido la concentración de ácido úrico en sangre en un grupo de diez pacientes con el equipo tradicional y con un  equipo nuevo,
+obteniéndose los siguientes resultados, expresados en mg./dl.:\[
+\begin{array}{cc}
+\hline
+\text{Tradicional} & \text{Nuevo}\\
+\hline
+5.4 & 5.8 \\
+6.2 & 6.9 \\
+3.7 & 3.4 \\
+7.6 & 6.4 \\
+4.5 & 4.5 \\
+3.8 & 4.4 \\
+5.2 & 5.8 \\
+4.7 & 5.6 \\
+4.9 & 4.2 \\
+5.5 & 6.8 \\
+\end{array}
+\]
+
+Se desea:
+\begin{enumerate}
+\item Calcular el coeficiente de correlación intraclase e interpretarlo en términos de concordancia de las medidas de la concentración de ácido úrico en sangre obtenidas con ambos equipos.
+\item Dibujar el diagrama de dispersión, en el que aparezca la recta de regresión de las concentraciones de ácido úrico obtenidas con el equipo nuevo sobre las obtenidas con el equipo tradicional, y la recta de regresión que se obtendría si el equipo nuevo siempre diera un resultado $0,8 mg/dl$ superior al que proporciona el equipo tradicional.
+\end{enumerate}
+
+\item Se plantean a un grupo de personas dos tests A y B para determinar si su régimen alimenticio es adecuado o no. Como resultado de los
+test hubo $72$ personas cuyo régimen alimenticio evaluado con ambos tests resultó adecuado, $34$ personas en que con ninguno de los tests
+resultó adecuado, $12$ personas cuyo régimen era adecuado según el test A pero no según el test B y $10$ personas cuyo régimen era adecuado
+según el test B pero no según el test A. Se pide:
+\begin{enumerate}
+\item Obtener la tabla de contingencia correspondiente a los resultados obtenidos con ambos tests.
+\item ¿Hay mucha coincidencia entre los resultados obtenidos con ambos tests? Calcular el índice de Kappa y contestar a partir del resultado obtenido.
+\end{enumerate}
+\end{enumerate}

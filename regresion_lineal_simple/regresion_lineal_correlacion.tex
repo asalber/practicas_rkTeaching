@@ -1,0 +1,686 @@
+\chapter{Regresión Lineal Simple y Correlación}
+
+\section{Fundamentos teóricos}
+\subsection{Regresión}
+La \emph{regresión} es la parte de la estadística que trata de determinar la posible relación entre una variable
+numérica $Y$, que suele llamarse \emph{variable dependiente}, y otro conjunto de variables numéricas, $X_1,
+X_2,\ldots,X_n$, conocidas como \emph{variables independientes}, de una misma población. 
+Dicha relación se refleja mediante un modelo funcional $y=f(x_1,\ldots,x_n)$.
+
+El caso más sencillo se da cuando sólo hay una variable independiente $X$, y entonces se habla de \emph{regresión
+simple}. 
+En este caso el modelo que explica la relación entre $X$ e $Y$ es una función de una variable $y=f(x)$.
+
+Dependiendo de la forma de esta función, existen muchos tipos de regresión simple.
+Los más habituales son los que aparecen en la siguiente tabla:
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+ Modelo      &     Ecuación genérica      \\
+\hline\hline
+ Lineal                  &          $y=a+bx$          \\
+\hline
+ Parabólico              &       $y=a+bx+cx^2$        \\
+\hline
+ Polinómico de grado $n$ & $y=a_0+a_1x+\cdots+a_nx^n$ \\
+\hline
+ Potencial               &       $y=ax^b$       \\
+\hline
+ Exponencial             &     $y=e^{a+bx}$      \\
+\hline
+ Logarítmico             &       $y=a+b\log x$        \\
+\hline
+Inverso & $y=a+b/x$ \\
+\hline
+Curva S & $y= e^{a+b/x}$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Para elegir un tipo de modelo u otro, se suele representar el \emph{diagrama de dispersión}, que consiste en dibujar
+sobre unos ejes cartesianos correspondientes a las variables $X$ e $Y$, los pares de valores $(x_i,y_j)$ observados en
+cada individuo de la muestra.
+
+\begin{ejemplo}
+En la figura la figura \ref{g:estatura-peso} aparece el diagrama de dispersión correspondiente a una muestra de 30
+individuos en los que se ha medido la estatura en cm ($X$) y el peso en kg ($Y$).
+En este caso la forma de la nube de puntos refleja una relación lineal entre la estatura y el peso.
+
+\begin{figure}[h!]
+\centering
+\scalebox{0.75}{\input{regresion_lineal_simple/img/diagrama_dispersion_estatura_peso}}
+\caption{Diagrama de dispersión. El punto (179,85) indicado corresponde a un individuo de la muestra que mide 179 cm y
+pesa 85 Kg.}
+\label{g:estatura-peso}
+\end{figure}
+\end{ejemplo}
+
+Según la forma de la nube de puntos del diagrama, se elige el modelo más apropiado (figura~\ref{g:tiposrelaciones}), y
+se determinan los parámetros de dicho modelo para que la función resultante se ajuste lo mejor posible a la nube de
+puntos.
+
+\begin{figure}[h!]
+\centering 
+\subfigure[Sin relación.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_sin_relacion}}}\qquad
+\subfigure[Relación lineal.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_lineal}}}\qquad
+\subfigure[Relación polinómica.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_parabolica}}}\\
+\subfigure[Relación exponencial.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_exponencial}}}\qquad
+\subfigure[Relación logarítmica.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_logaritmica}}}\qquad
+\subfigure[Relación inversa.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_inversa}}}\\
+\caption{Diagramas de dispersión correspondientes a distintos tipos de relaciones
+entre variables.} \label{g:tiposrelaciones}
+\end{figure}
+
+\clearpage
+
+El criterio que suele utilizarse para obtener la función óptima, es que la distancia de cada punto a la curva, medida en
+el eje Y, sea lo menor posible.
+A estas distancias se les llama \emph{residuos} o \emph{errores} en $Y$ (figura~\ref{g:residuos}).
+La función que mejor se ajusta a la nube de puntos será, por tanto, aquella que hace mínima la suma de los cuadrados de
+los residuos.\footnote{Se elevan al cuadrado para evitar que en la suma se compensen los residuos positivos con los
+negativos.}
+
+\begin{figure}[h!]
+\centering
+\scalebox{0.8}{\input{regresion_lineal_simple/img/residuos_y}}
+\caption{Residuos o errores en $Y$. El residuo correspondiente a un punto $(x_i,y_j)$ es la diferencia entre el valor
+$y_j$ observado en la muestra, y el valor teórico del modelo $f(x_i)$, es decir, $e_{ij}=y_j-f(x_i)$.}
+\label{g:residuos}
+\end{figure}
+
+\subsubsection{Rectas de regresión}
+En el caso de que la nube de puntos tenga forma lineal y optemos por explicar la relación entre $X$ e $Y$ mediante una
+recta $y=a+bx$, los parámetros a determinar son $a$ (punto de corte con el eje de ordenadas) y $b$ (pendiente de la
+recta).
+Los valores de estos parámetros que hacen mínima la suma de residuos al cuadrado, determinan la recta óptima. Esta recta
+se conoce como \emph{recta de regresión de $Y$ sobre $X$} y explica la variable $Y$ en función de la variable
+$X$. Su ecuación es
+\[ y= \bar{y}+\frac{s_{xy}}{s_x^2}(x-\bar{x}),\]
+donde $s_{xy}$ es un estadístico llamado \emph{covarianza} que mide el grado de relación lineal, y cuya fórmula es
+\[s_{xy}=\frac{1}{n}\sum_{i,j} (x_i-\bar{x}) (y_j-\bar{y}) n_{ij}.\]
+
+\begin{ejemplo}
+En la figura~\ref{g:rectas-estatura-peso} aparecen las rectas de regresión de Estatura sobre Peso y de Peso sobre Estatura del ejemplo anterior.
+
+\begin{figure}[h!]
+\centering
+\scalebox{0.8}{\input{regresion_lineal_simple/img/rectas_regresion}}
+\caption{Rectas de regresión de Estatura sobre Peso y de Peso sobre Estatura. 
+Las rectas de regresión siempre se cortan en el punto de medias $(\bar x, \bar y)$}
+\label{g:rectas-estatura-peso}
+\end{figure}
+\end{ejemplo}
+
+La pendiente de la recta de regresión de $Y$ sobre $X$ se conoce como \emph{coeficiente de regresión de $Y$ sobre $X$},
+y mide el incremento que sufrirá la variable $Y$ por cada unidad que se incremente la variable $X$, según la recta.
+
+Cuanto más pequeños sean los residuos, en valor absoluto, mejor se ajustará el modelo a la nube de puntos, y por tanto,
+mejor explicará la relación entre $X$ e $Y$.
+Cuando todos los residuos son nulos, la recta pasa por todos los puntos de la nube, y la relación es perfecta.
+En este caso ambas rectas, la de $Y$ sobre $X$ y la de $X$ sobre $Y$ coinciden (figura~\ref{g:dependenciafuncional}).
+
+Por contra, cuando no existe relación lineal entre las variables, la recta de regresión de $Y$ sobre $X$ tiene pendiente
+nula, y por tanto la ecuación es $y=\bar y$, en la que, efectivamente no aparece $x$, o $x=\bar x$ en el caso de la
+recta de regresión $X$ sobre $Y$, de manera que ambas rectas se cortan perpendicularmente
+(figura~\ref{g:independencialineal}).
+
+\begin{figure}[htbp]
+\centering 
+\subfigure[Dependencia funcional lineal.] {\label{g:dependenciafuncional}
+\scalebox{0.7}{\input{regresion_lineal_simple/img/rectas_dependencia_lineal_perfecta}}}\qquad
+\subfigure[Independencia lineal.]{\label{g:independencialineal}
+\scalebox{0.7}{\input{regresion_lineal_simple/img/rectas_independencia_lineal}}}
+\caption{Distintos grados de dependencia. En el primer caso, la relación es perfecta
+y los residuos son nulos. En el segundo caso no existe relación lineal y la
+pendiente de la recta es nula.}
+\end{figure}
+
+
+\subsection{Correlación}
+El principal objetivo de la regresión simple es construir un modelo funcional $y=f(x)$ que explique lo mejor posible la
+relación entre dos variables $X$ (variable independiente) e $Y$ (variable dependiente) medidas en una misma muestra.
+Generalmente, el modelo construido se utiliza para realizar inferencias predictivas de $Y$ en función de $X$ en el resto
+de la población.
+Pero aunque la regresión garantiza que el modelo construido es el mejor posible, dentro del tipo de modelo elegido
+(lineal, polinómico, exponencial, logarítmico, etc.), puede que aún así, no sea un buen modelo para hacer predicciones,
+precisamente porque no haya relación de ese tipo entre $X$ e $Y$.
+Así pues, con el fin de validar un modelo para realizar predicciones fiables, se necesitan medidas que nos hablen del
+grado de dependencia entre $X$ e $Y$, con respecto a un modelo de regresión construido. Estas medidas se conocen como
+medidas de \emph{correlación}.
+
+Dependiendo del tipo de modelo ajustado, habrá distintos tipos de medidas de correlación.
+Así, si el modelo de regresión construido es una recta, hablaremos de correlación lineal; si es un polinomio, hablaremos
+de correlación polinómica; si es una función exponencial, hablaremos de correlación exponencial, etc.
+En cualquier caso, estas medidas nos hablarán de lo bueno que es el modelo construido, y como consecuencia, de si
+podemos fiarnos de las predicciones realizadas con dicho modelo.
+
+La mayoría de las medidas de correlación surgen del estudio de los residuos o errores en $Y$, que son las distancias de
+los puntos del diagrama de dispersión a la curva de regresión construida, medidas en el eje $Y$, tal y como se muestra
+en la figura ~(\ref{g:residuos}).
+Estas distancias, son en realidad, los errores predictivos del modelo sobre los propios valores de la muestra.
+
+Cuanto más pequeños sean los residuos, mejor se ajustará el modelo a la nube de puntos, y por tanto, mejor explicará la
+relación entre $X$ e $Y$.
+Cuando todos los residuos son nulos, la curva de regresión pasa por todos los puntos de la nube, y entonces se dice que
+la relación es perfecta, o bien que existe una dependencia funcional entre $X$ e $Y$
+(figura~\ref{g:dependenciafuncional}).
+Por contra, cuando los residuos sean grandes, el modelo no explicará bien la relación entre $X$ e $Y$, y por tanto, sus
+predicciones no serán fiables (figura~\ref{g:independencialineal}).
+
+
+\subsubsection{Varianza residual}
+Una primera medida de correlación, construida a partir de los residuos es la \emph{varianza residual}, que se define
+como el promedio de los residuos al cuadrado:
+\[
+s^2_{ry}=\frac{\sum_{i,j} e_{ij}^2 n_{ij}}{n}= \frac{\sum_{i,j} (y_j-f(x_i))^2
+n_{ij}}{n}.
+\]
+
+Cuando los residuos son nulos, entonces $s^2_{ry}=0$ y eso indica que hay dependencia funcional.
+Por otro lado, cuando las variables son independientes, con respecto al modelo de regresión ajustado, entonces los
+residuos se convierten en las desviaciones de los valores de $Y$ con respecto a su media, y se cumple que
+$s^2_{ry}=s_y^2$.
+Así pues, se cumple que \[  0 \leq s^2_{ry}\leq s_y^2. \] Según esto, cuanto menor sea la varianza residual, mayor será
+la dependencia entre $X$ e $Y$, de acuerdo al modelo ajustado.
+No obstante, la varianza tiene como unidades las unidades de $Y$ al cuadrado, y eso dificulta su interpretación.
+
+
+\subsubsection{Coeficiente de determinación}
+Puesto que el valor máximo que puede tomar la varianza residual es la varianza de $Y$, se puede definir fácilmente un
+coeficiente a partir de la comparación de ambas medidas. 
+Surge así el \emph{coeficiente de determinación} que se define como
+\[
+R^2=1-\frac{s^2_{ry}}{s_y^2}.
+\]
+
+Se cumple que
+\[ 0\leq R^2\leq 1,\]
+y además no tiene unidades, por lo que es más fácil de interpretar que la varianza residual:
+\begin{itemize}
+\item $R^2=0$ indica que existe independencia según el tipo de relación planteada por el modelo de regresión.
+\item $R^2=1$ indica dependencia funcional.
+\end{itemize}
+Por tanto, cuanto mayor sea $R^2$, mejor será el modelo de regresión.
+
+Si multiplicamos el coeficiente de determinación por 100, se obtiene el porcentaje de variabilidad de $Y$ que explica el
+modelo de regresión.
+El porcentaje restante corresponde a la variabilidad que queda por explicar y se corresponde con el error predictivo del
+modelo.
+Así, por ejemplo, si tenemos un coeficiente de determinación $R^2=0.5$, el modelo de regresión explicaría la mitad de la
+variabilidad de $Y$, y en consecuencia, si se utiliza dicho modelo para hacer predicciones, estas tendrían la mitad de
+error que si no se utilizase, y se tomase como valor de la predicción el valor de la media de $Y$.
+
+\subsubsection{Coeficiente de determinación lineal}
+En el caso de que el modelo de regresión sea lineal, la fórmula del coeficiente de determinación se simplifica y se
+convierte en
+\[
+r^2=\frac{s_{xy}^2}{s_x^2 s_y^2},
+\]
+que se conoce como \emph{coeficiente de determinación lineal}.
+
+\subsubsection{Coeficiente de correlación}
+Otra medida de dependencia bastante habitual es el \emph{coeficiente de correlación}, que se define como la raíz
+cuadrada del coeficiente de determinación:
+\[
+R=\pm\sqrt{1-\frac{s^2_{ry}}{s_y^2}},
+\]
+tomando la raíz del mismo signo que la covarianza.
+
+La única ventaja del coeficiente de correlación con respecto al coeficiente de determinación, es que tiene signo, y por
+tanto, además del grado de dependencia entre $X$ e $Y$, también nos habla de si la relación es directa (signo +) o
+inversa (signo -). 
+Su interpretación es:
+\begin{itemize}
+\item $R=0$ indica independencia con respecto al tipo de relación planteada por el modelo de
+regresión.
+\item $R=-1$ indica dependencia funcional inversa.
+\item $R=1$ indica dependencia funcional directa.
+\end{itemize}
+Por consiguiente, cuanto más próximo esté a -1 o a 1, mejor será el modelo de regresión.
+
+
+\subsubsubsection{Coeficiente de correlación lineal}
+Al igual que ocurría con el coeficiente de determinación, cuando el modelo de regresión es lineal, la fórmula del
+coeficiente de correlación se convierte en
+\[
+r=\frac{s_{xy}}{s_x s_y},
+\]
+y se llama \emph{coeficiente de correlación lineal}.
+
+Por último, conviene remarcar que un coeficiente de determinación o de correlación nulo, indica que hay independencia
+según el modelo de regresión construido, pero puede haber dependencia de otro tipo.
+Esto se ve claramente en el ejemplo de  la figura~\ref{g:dependenciaparabolica}.
+
+\begin{figure}[h!]
+\centering \subfigure[Dependencia lineal débil.]
+{\label{g:dependencialinealdebil}
+\scalebox{0.7}{\input{regresion_lineal_simple/img/recta_regresion_relacion_parabolica}}}\qquad
+\subfigure[Dependencia parabólica fuerte.] {\label{g:dependenciaparabolicafuerte}
+\scalebox{0.7}{\input{regresion_lineal_simple/img/regresion_parabolica}}}
+\caption{En la figura de la izquierda se ha ajustado un modelo lineal y se ha obtenido un $R^2=0$, lo que indica que el
+modelo no explica nada de la relación entre $X$ e $Y$, pero no podemos afirmar que $X$ e $Y$ son independientes. De
+hecho, en la figura de la derecha se observa que al ajustar un modelo parabólico, $R^2=0.97$, lo que indica que casi hay
+una dependencia funcional parabólica entre $X$ e $Y$.}
+\label{g:dependenciaparabolica}
+\end{figure}
+
+
+\subsubsection{Fiabilidad de las predicciones}
+Aunque el coeficiente de determinación o de correlación nos hablan de la bondad de un modelo de regresión, no es el
+único dato que hay que tener en cuenta a la hora de hacer predicciones.
+
+La fiabilidad de las predicciones que hagamos con un modelo de regresión depende de varias cosas:
+\begin{itemize}
+\item El coeficiente de determinación: Cuando mayor sea, menores serán los errores predictivos y mayor la fiabilidad de
+las predicciones.
+\item La variablidad de la población: Cuanto más variable es una población, más difícil es predecir y por tanto menos
+fiables serán las predicciones del modelo.
+\item El tamaño muestral: Cuanto mayor sea, más información tendremos y, en consecuencia, más fiables serán las
+predicciones.
+\end{itemize} 
+
+Además, hay que tener en cuenta que un modelo de regresión es válido para el rango de valores observados en la muestra,
+pero fuera de ese rango no tenemos información del tipo de relación entre las variables, por lo que no deberíamos hacer
+predicciones para valores que estén lejos de los observados en la muestra.
+
+\clearpage
+\newpage
+
+
+
+\section{Ejercicios resueltos}
+\begin{enumerate}[leftmargin=*]
+\item Se han medido dos variables $X$ e $Y$ en 10 individuos obteniendo los siguientes resultados:
+\[
+\begin{array}{lrrrrrrrrrr}
+\hline
+X & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+Y & 2 & 5 & 8 & 11 & 14 & 17 & 20 & 23 & 26 & 29\\
+\hline
+\end{array}
+\]
+
+Se pide:
+
+\begin{enumerate}
+\item  Crear un conjunto de datos con las variables \variable{X} y \variable{Y} e introducir estos datos.
+\item  Dibujar el diagrama de dispersión correspondiente.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{Y} y como
+\campo{Variable X} la variable \variable{X}, y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+En vista del diagrama, ¿qué tipo de modelo crees que explicará mejor la relación entre  \variable{X} y \variable{Y}?
+
+\item Calcular la recta de regresión de $Y$ sobre $X$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Y} como \campo{Variable dependiente} y la
+variable \variable{X} como \campo{Variable independiente}, seleccionar \opcion{Guardar el modelo}, introducir un nombre
+para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar dicha recta sobre el diagrama de dispersión.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{Y} y como
+\campo{Variable X} la variable \variable{X}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la recta de regresión de $X$ sobre $Y$ y dibujarla sobre el correspondiente diagrama de dispersión.
+\begin{indicacion}{
+Repetir los pasos de los apartados anteriores pero escogiendo como \campo{Variable dependiente} la variable \variable{X},
+y como \campo{Variable independiente} la variable \variable{Y}}
+\end{indicacion}
+
+\item ¿Son grandes los residuos? Comentar los resultados.
+\end{enumerate}
+
+
+\item  En una licenciatura se quiere estudiar la relación entre el número medio de horas de estudio diarias y el número
+de asignaturas suspensas. Para ello se obtuvo la siguiente muestra:
+\[
+\begin{array}{cccccccc}
+\text{Horas} & \text{Suspensos} &  & \text{Horas} & \text{Suspensos} & & \text{Horas} & \text{Suspensos}  \\
+\cline{1-2}\cline{4-5}\cline{7-8}
+3.5 & 1 & & 2.2 & 2 & & 1.3 & 4 \\
+0.6 & 5 & & 3.3 & 0 & & 3.1 & 0 \\
+2.8 & 1 & & 1.7 & 3 & & 2.3 & 2 \\
+2.5 & 3 & & 1.1 & 3 & & 3.2 & 2 \\
+2.6 & 1 & & 2.0 & 3 & & 0.9 & 4 \\
+3.9 & 0 & & 3.5 & 0 & & 1.7 & 2 \\
+1.5 & 3 & & 2.1 & 2 & & 0.2 & 5 \\
+0.7 & 3 & & 1.8 & 2 & & 2.9 & 1 \\
+3.6 & 1 & & 1.1 & 4 & & 1.0 & 3 \\
+3.7 & 1 & & 0.7 & 4 & & 2.3 & 2 \\
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item  Crear un conjunto de datos con las variables \variable{horas\_estudio} y \variable{suspensos} e introducir estos
+datos.
+
+\item  Calcular la recta de regresión de \variable{suspensos} sobre \variable{horas\_estudio} y dibujarla.
+\begin{indicacion}{
+Para calcular la recta de regresión:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{suspensos} como \campo{Variable
+dependiente} y la variable \variable{horas\_estudio} como \campo{Variable independiente}, seleccionar \opcion{Guardar el
+modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}
+Para dibujar la recta de regresión:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{suspensos} y como
+\campo{Variable X} la variable \variable{horas\_estudio}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Indicar el coeficiente de regresión de \variable{suspensos} sobre \variable{horas estudio}. 
+¿Cómo lo interpretarías?
+\begin{indicacion}{
+El coeficiente de regresión es la pendiente de la recta de regresión.}
+\end{indicacion}
+
+\item La relación lineal entre estas dos variables, ¿es mejor o peor que la del ejercicio anterior? 
+Comentar los resultados a partir las gráficas de las rectas de regresión y sus residuos.
+
+\item Calcular los coeficientes de correlación y de determinación lineal. 
+¿Es un buen modelo la recta de regresión?
+¿Qué porcentaje de la variabilidad del número de suspensos está explicada por el modelo?
+\begin{indicacion}{
+El coeficiente de determinación aparece en la ventana de resultados como \resultado{Multiple R-squared}, y el
+coeficiente de correlación es su raíz cuadrada.}
+\end{indicacion}
+
+\item Utilizar la recta de regresión para predecir el número de suspensos correspondiente a 3 horas de estudio diarias.
+¿Es fiable esta predicción? \begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada en el segundo
+apartado, introducir los valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer click
+sobre el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Según el modelo lineal, ¿cuántas horas diarias tendrá que estudiar como mínimo un alumno si quiere aprobarlo
+todo?
+\begin{indicacion}{
+Seguir los mismos pasos de los apartados anteriores, pero escogiendo como variable dependiente \variable{horas\_estudio},
+y como independiente \variable{suspensos}, y haciendo la predicción para 0 suspensos.}
+\end{indicacion}
+\end{enumerate}
+
+
+\item Después de tomar un litro de vino se ha medido la concentración de alcohol en la sangre en distintos instantes,
+obteniendo:
+\[
+\begin{array}{lrrrrrrr}
+\hline 
+\mbox{Tiempo después (minutos)} & 30 & 60 & 90 & 120 & 150 & 180 & 210\\ 
+\mbox{Concentración (gramos/litro)} & 1.6 & 1.7 & 1.5 & 1.1 & 0.7 & 0.2 & 2.1\\
+\hline
+\end{array}
+\]
+
+Se pide:
+\begin{enumerate}
+\item Crear las variables \variable{tiempo} y \variable{alcohol} e introducir estos datos.
+\item Calcular el coeficiente de correlación lineal entre el alcohol y el tiempo e interpretarlo. ¿Es bueno el modelo
+lineal? 
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{alcohol} como \campo{Variable dependiente}
+y la variable \variable{tiempo} como \campo{Variable independiente}, y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar la recta de regresión del alcohol sobre el tiempo. 
+¿Existe algún individuo con un residuo demasiado grande? 
+Si es así, eliminar dicho individuo de la muestra y volver a calcular el coeficiente de correlación. 
+¿Ha mejorado el modelo?
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{alcohol} y como
+\campo{Variable X} la variable \variable{tiempo}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
+\boton{Aceptar}.
+\end{enumerate}
+Se observa que hay un residuo atípico para el punto que corresponde al los 210 minutos. 
+Para eliminarlo:
+En la ventana de edición del conjunto de datos hacer click con el botón derecho del ratón sobre la fila correspondiente
+al dato con el residuo atípico y seleccionar \opcion{Borrar esta fila}.}
+\end{indicacion}
+
+
+\item Si la concentración máxima de alcohol en la sangre que permite la ley para poder conducir es $0.5$ g/l, ¿cuánto
+tiempo habrá que esperar después de tomarse un litro de vino para poder conducir sin infringir la ley? 
+¿Es fiable esta predicción?
+\begin{indicacion}{
+Para construir la recta de regresión:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{tiempo} como \campo{Variable dependiente} y la
+variable \variable{alcohol} como \campo{Variable independiente}.
+\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}
+Para hacer la predicción:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada e introducir los
+valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer click sobre el botón
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+\end{enumerate}
+
+
+\item En un estudio se ha medido la estatura y la edad de 30 personas y se han guardado en el fichero
+\texttt{edad\_estatura.txt}.
+Se pide:
+\begin{enumerate}
+\item Importar los datos del fichero \texttt{edad\_estatura.txt} en un conjunto de datos.
+
+\item Calcular la recta de regresión de la estatura sobre la edad. ¿Es un buen modelo la recta de regresión?
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} como \campo{Variable dependiente}
+y la variable \variable{edad} como \campo{Variable independiente}, 
+\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar el diagrama de dispersión de la estatura sobre la edad. 
+¿Alrededor de qué edad se observa un cambio en la tendencia? 
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{estatura} y como
+\campo{Variable X} la variable \variable{edad}, y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Recodificar la variable edad en dos grupos para mayores y menores de 20 años.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha  Datos\flecha Recodificar variable}.
+\item En el cuadro de diálogo que aparece seleccionar en el campo \vampo{Variable a recodificar} la variable
+\variable{edad}.
+\item En el campo \campo{Reglas de recodificación} introducir
+\begin{quote}
+\lstinline{lo:20 = ``menores''}\\
+\lstinline{20:hi = ``mayores''}
+\end{quote}
+\item En el cuadro \campo{Guardar nueva variable} hacer click sobre el botón \boton{Cambiar}.
+\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{edad\_estatura} y hacer click sobre el botón \boton{Aceptar}.
+\item Introducir el nombre de la nueva variable \variable{grupo\_edad} y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la recta de regresión de la estatura sobre la edad para cada grupo de edad. 
+¿En qué grupo explica mejor la recta de regresión la relación entre la estatura y la edad? 
+Justificar la respuesta.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} como \campo{Variable dependiente}
+y la variable \variable{edad} como \campo{Variable independiente}.
+\item Seleccionar la opición \opcion{Filtro} e introducir en el campo \campo{Condición de selección} la condición
+\lstinline{grupo_edad="menores"}.
+\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón
+\boton{Aceptar}.
+\end{enumerate}
+Repetir lo mismo pero con la condición \lstinline{grupo_edad="mayores"}.}
+\end{indicacion}
+
+\item Dibujar las rectas de regresión anteriores.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{estatura} y como
+\campo{Variable X} la variable \variable{edad}.
+\item Seleccionar la opción \opcion{Diferenciar grupos} e introducir la variable \variable{grupo\_edad} en el campo
+\campo{Variable de agrupación}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item ¿Qué estatura se espera que tenga una persona de 14 años? ¿Y una de 38?
+\begin{indicacion}{
+Para predecir la estatura de la persona de 14 años:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada para los menores e
+introducir 14 en el campo \campo{Predicciones para} y hacer click sobre el botón
+\boton{Aceptar}.
+\end{enumerate}
+para predecir la estatura de la persona de 38 años, repetir lo mismo pero seleccionando la recta de regresión para los
+mayores e introducidento 38 en el campo \campo{Predicciones para}.
+}
+\end{indicacion}
+\end{enumerate}
+
+\opt{largo}{
+\item El fichero \texttt{naciones.txt} contiene información sobre el desarrollo de distintos países (tasa de fertilidad, tasa de uso de
+anticonceptivos, tasa de mortalidad infantil, producto interior bruto per cápita y continente). Se pide:
+\begin{enumerate}
+\item Importar el fichero \texttt{naciones.txt} en un conjunto de datos.
+\item ¿Entre qué variables existe relación lineal?
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
+\item En el cuadro de diálogo que aparece seleccionar todas las variables numéricas y hacer click sobre el botón \boton{Aceptar}. 
+\end{enumerate}}
+\end{indicacion}
+
+\item ¿Existe relación lineal entre la tasa de mortalidad infantil y tasa de fertilidad en Europa? ¿Y en África? ¿Qué relación es más fuerte?
+\begin{indicacion}{
+Para la correlación en Europa:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Datos\flecha Filtrar datos}.
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{naciones}.
+\item Introducir la condición \lstinline{region=="Europe"} en el campo \campo{Condición de selección}.
+\item Introducir el nombre \variable{europa} en el campo \campo{Guardar nuevo conjunto de
+datos} y hacer click en el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
+\item En el cuadro de diálogo que aparece seleccionar las variables \variable{fertilidad} y
+\variable{mortalidad.infantil} del conjunto de datos \variable{europa} y hacer click sobre el botón \boton{Aceptar}.
+\end{enumerate}
+Para la correlación de África repetir los mismos pasos pero cambiando la condición de selección por
+\lstinline{region=="Africa"}.
+}
+\end{indicacion}
+\end{enumerate}
+
+
+\item La siguiente tabla recoge la información de las calificaciones obtenidas por un grupo de alumnos en dos
+asignaturas $X$ e $Y$.
+\begin{center}
+\begin{tabular}{lcccccccccccc}
+Alumno & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12\\
+\hline
+$X$ & NT & AP & SS & SS & AP & AP & SS & NT & SB & SS & AP & AP\\
+$Y$ & SB & SS & AP & SS & AP & NT & SS & NT & NT & AP & AP & NT
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Crear un conjunto de datos con las variables \varaible{X} e \variable{Y} e introducir los datos.
+
+\item ¿Existe relación entre las calificaciones de $X$ e $Y$? Justificar la respuesta.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
+\item En el cuadro de diálogo que aparece seleccionar la variables \variable{X} e \variable{Y}.
+\item En la solapa \menu{Opciones de correlación} seleccionar el método de \opcion{Ro de Spearman} y hacer click sobre
+el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+\end{enumerate}
+}
+
+\end{enumerate}
+
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item  Se determina la pérdida de actividad que experimenta un medicamento desde el momento de su fabricación a lo
+largo del tiempo, obteniéndose el siguiente resultado:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline 
+Tiempo (en años) & 1 & 2 & 3 & 4 & 5 \\ 
+\hline 
+Actividad restante (\%) & 96 & 84 & 70 & 58 & 52 \\ 
+\hline
+\end{tabular}
+\end{center}
+Se desea calcular:
+\begin{enumerate}
+\item  La relación fundamental (recta de regresión) entre actividad restante y tiempo transcurrido.
+\item ¿En qué porcentaje disminuye la actividad cada año que pasa?
+\item ¿Cuándo tiempo debe pasar para que el fármaco tenga una actividad del 80\%? ¿Cuándo será nula la actividad?
+¿Son igualmente fiables estas predicciones?
+\end{enumerate}
+
+\item Al realizar un estudio sobre la dosificación de un cierto medicamento, se trataron 6 pacientes con dosis diarias
+de 2 mg, 7 pacientes con 3 mg y otros 7 pacientes con 4 mg. De los pacientes tratados con 2 mg, 2 curaron al cabo de 5
+días, y 4 al cabo de 6 días. De los pacientes tratados con 3 mg diarios, 2 curaron al cabo de 3 días, 4 al cabo de 5
+días y 1 al cabo de 6 días. Y de los pacientes tratados con 4 mg diarios, 5 curaron al cabo de 3 días y 2 al cabo de 4
+días. Se pide: 
+\begin{enumerate}
+\item Calcular la recta de regresión del tiempo de curación con respecto a la dosis suministrada.
+\item Calcular el coeficiente de regresión del tiempo de curación con respecto a la dosis e interpretarlo.
+\item Calcular el coeficiente de correlación lineal e interpretarlo.
+\item Determinar el tiempo esperado de curación para una dosis de 5 mg diarios. ¿Es fiable esta predicción?
+\item ¿Qué dosis debe aplicarse si queremos que el paciente tarde 4 días en curarse? ¿Es fiable la predicción?
+\end{enumerate}
+
+\item En una clase de alumnos universitarios se ha medido la estatura, el peso y el sexo de cada uno y se han guardado
+en el fichero \texttt{estaturas\_pesos\_alumnos.txt}. Se pide:
+\begin{enumerate}
+\item Importar los datos del fichero \texttt{estaturas\_pesos\_alumnos.txt} en un conjunto de datos.
+\item Calcular la recta de regresión del peso sobre la estatura y dibujarla.
+\item Calcular las rectas de regresión del peso sobre la estatura para cada sexo y dibujarlas.
+\item Calcular los coeficientes de determinación de ambas rectas. ¿Qué recta es mejor modelo? Justificar la respuesta.
+\item ¿Qué peso tendrá un hombre que mida 170 cm? ¿Y una mujer de la misma estatura?
+\end{enumerate}
+
+\end{enumerate}

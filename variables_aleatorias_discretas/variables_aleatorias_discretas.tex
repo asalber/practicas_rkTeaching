@@ -1,0 +1,451 @@
+% Version control information:
+%$HeadURL: https://practicas-r.googlecode.com/svn/trunk/variables_aleatorias_discretas/variables_aleatorias_discretas.tex $
+%$LastChangedDate: 2011-12-05 13:41:27 +0100 (lun 05 de dic de 2011) $
+%$LastChangedRevision: 17 $
+%$LastChangedBy: asalber $
+%$Id: variables_aleatorias_discretas.tex 17 2011-12-05 12:41:27Z asalber $
+
+\chapter{Variables Aleatorias Discretas}
+
+\section{Fundamentos teóricos}
+\subsection{Variables Aleatorias}
+Se define una \emph{variable aleatoria} asignando a cada resultado del experimento aleatorio un número. Esta asignación
+puede realizarse de distintas maneras, obteniéndose de esta forma diferentes variables aleatorias.
+Así, en el lanzamiento de dos monedas podemos considerar el número de caras o el número de cruces.
+En general, si los resultados del experimento son numéricos, se tomarán dichos números como los valores de la variable,
+y si los resultados son cualitativos, se hará corresponder a cada modalidad un número arbitrariamente.
+
+Formalmente, una \emph{variable aleatoria} $X$ es una función real definida sobre los puntos del espacio muestral $E$ de
+un experimento aleatorio. \[ X:E\rightarrow \mathbb{R}\]
+
+De esta manera, la distribución de probabilidad del espacio muestral $E$, se transforma en una distribución de
+probabilidad para los valores de $X$.
+
+El conjunto formado por todos los valores distintos que puede tomar la variable aleatoria se llama \emph{Rango} o
+\emph{Recorrido} de la misma.
+
+Las variables aleatorias pueden ser de dos tipos: discretas o continuas. Una variable es \emph{discreta} cuando sólo
+puede tomar valores aislados, mientras que es \emph{continua} si puede tomar todos los valores posibles de un intervalo.
+
+\subsection{Variables Aleatorias Discretas (v.a.d.)}
+Se considera una v.a.d. $X$ que puede tomar los valores $x_i$, $i=1,2,...,n$.
+
+\subsubsection{Función de probabilidad}
+La \emph{distribución de probabilidad} de $X$ se suele caracterizar mediante una función $f(x)$, conocida como
+\emph{función de probabilidad}, que asigna a cada valor de la variable su probabilidad. 
+Esto es 
+\[
+f(x_i)=P(X=x_i),\
+i=1,..,n
+\]
+verificándose que 
+\[
+\sum_{i=1}^{n} f(x_i)=1
+\]
+
+
+\subsubsection{Función de distribución}
+Otra forma equivalente de caracterizar la distribución de probabilidad de $X$ es mediante otra función $F(x)$, llamada
+\emph{función de distribución}, que asigna a cada $x\in \mathbb{R}$ la probabilidad de que $X$ tome un valor menor o
+igual que dicho número $x$. Así,
+
+\[
+F(x) = P(X \le x) = \sum\limits_{x_i  \le x} {f(x_i)}
+\]
+
+Tanto la función de probabilidad como la función de distribución pueden representarse de forma gráfica, tal y como se
+muestra en la figura \ref{g:graficasvad}.
+
+\begin{figure}[h!]
+\centering \subfigure[Función de probabilidad.]{
+\scalebox{0.6}{\input{variables_aleatorias_discretas/img/funcion_probabilidad_lanzamiento_2_monedas}}}\qquad
+\subfigure[Función de distribución.]{
+\scalebox{0.6}{\input{variables_aleatorias_discretas/img/funcion_distribucion_lanzamiento_2_monedas}}}
+\caption{Función de probabilidad y función de distribución de la variable aleatoria $X$ que mide el número de caras obtenido en el lanzamiento de dos monedas.} \label{g:graficasvad}
+\end{figure}
+
+
+\subsubsection{Estadísticos poblacionales}
+Los parámetros descriptivos más importantes de una v.a.d. $X$ son:
+\begin{description}
+\item [Media o Esperanza]
+\[
+E[X]=\mu  = \sum\limits_{i = 1}^n {x_i f(x_i )}
+\]
+
+\item [Varianza]
+\[
+V[X]=\sigma ^2  = \sum\limits_{i = 1}^n {(x_i  - \mu )^2 f(x_i ) = }
+\sum\limits_{i = 1}^n {x_i ^2 f(x_i ) - \mu ^2 }
+\]
+
+\item [Desviación típica]
+\[
+D[X]=\sigma  =  + \sqrt {\sigma ^2 }
+\]
+\end{description}
+
+La media es una medida de tendencia central, mientras que la varianza y la desviación típica son medidas de dispersión.
+
+Entre las v.a.d. cabe destacar las denominadas \emph{Binomial} y de \emph{Poisson}.
+
+
+\subsubsection{Variable Binomial}
+
+Se considera un experimento aleatorio en el que puede ocurrir el suceso $A$ o su contrario $\overline{A}$, con
+probabilidades $p$ y $1-p$ respectivamente.
+
+Si se realiza el experimento anterior $n$ veces, la v.a.d. $X$ que recoge el número de veces que ha ocurrido el suceso
+$A$, se denomina \emph{Variable Binomial} y se designa por $X\sim B(n,\ p)$.
+
+El recorrido de la variable $X$ es $\{0,1,...,n\}$ y su función de probabilidad viene dada por 
+\[
+f(x)= \binom{n}{x} p^x \left( {1 - p} \right)^{n - x} 
+\] 
+cuya gráfica se puede apreciar en la figura~\ref{g:binomial}.
+
+\begin{figure}[h!]
+\centering
+\scalebox{0.8}{\input{variables_aleatorias_discretas/img/funcion_probabilidad_binomial}} 
+\caption{Función de probabilidad de una variable aleatoria binomial de 10 repeticiones y probabilidad de éxito 0.5}\label{g:binomial}
+\end{figure}
+
+A partir de la expresión anterior se puede demostrar que
+\begin{align*}
+\mu  &= n p\\
+\sigma ^2  &= n p (1 - p)\\
+\sigma  &=  + \sqrt {n p (1 - p)}
+\end{align*}
+
+En el caso particular de que el experimento se realice una sola vez, la variable aleatoria recibe el nombre de
+\variable{Variable de Bernouilli}.
+Una variable Binomial $X\sim B(n,\ p)$ se puede considerar como suma de $n$ variables de Bernouilli idénticas con
+distribución $B(1,\ p)$.
+
+
+\subsubsection{Variable de Poisson}
+Las variables de Poisson surgen de la observación de un conjunto discreto de fenómenos puntuales en un soporte continuo
+de tiempo, longitud o espacio.
+Por ejemplo: nº de llamadas que llegan a una centralita telefónica en un tiempo establecido, nº de hematíes en un
+volumen de sangre, etc.
+Se supone además que en un soporte continuo suficientemente grande, el número medio de fenómenos ocurridos por unidad de
+soporte considerado, es una constante que designaremos por $\lambda$.
+
+A la v.a.d. $X$, que recoge el número de fenómenos puntuales que ocurren en un intervalo de amplitud establecida, se le
+denomina \emph{Variable de Poisson} y se designa por $X\sim P(\lambda)$.
+
+El recorrido de la variable $X$ es $\{0,1,2,...\}$, no existiendo un valor máximo que pueda alcanzar. Su función de
+probabilidad viene dada por \[ f(x) = \frac{{\lambda ^x }}{{x!}}\  e^{ - \lambda } \] y su gráfica aparece en la
+figura~\ref{g:poisson}
+
+\begin{figure}[h!]
+\centering
+\scalebox{0.8}{\input{variables_aleatorias_discretas/img/funcion_probabilidad_poisson}} 
+\caption{Función de probabilidad de una variable aleatoria Poisson de media $\lambda=4$}\label{g:poisson}
+\end{figure}
+
+Se puede demostrar que
+\begin{align*}
+\mu  &= \lambda\\
+\sigma ^2  &= \lambda\\
+\sigma  &=  + \sqrt {\lambda}
+\end{align*}
+
+La distribución de Poisson aparece como límite de la distribución Binomial cuando el número $n$ de repeticiones del
+experimento es muy grande y la probabilidad $p$ de que ocurra el suceso $A$ considerado es muy pequeña.
+Por ello, la distribución de Poisson se llama también \emph{Ley de los Casos Raros}.
+En la práctica se considera aceptable realizar los cálculos de probabilidades correspondientes a una variable $B(n,\ p)$
+mediante las fórmulas correspondientes a una variable $P(\lambda)$ con $\lambda=n p$, siempre que $n\geq 50$ y $p<0.1$.
+
+\clearpage
+\newpage
+
+\section{Ejercicios resueltos}
+\begin{enumerate}[leftmargin=*] \opt{largo}{ \item La ley de los grandes números establece que cuando un experimento
+aleatorio se repite de manera indefinida, la frecuencia relativa de cada suceso tiende a estabilizarse en torno a un
+valor que es la probabilidad del suceso. Para comprobar la ley se realiza un experimento que consiste en lanzar un dado
+varias veces y anotar la frecuencia relativa de cada cara. Se pide:
+\begin{enumerate}
+\item Lanzar el dado 10 veces y calcular las frecuencias relativas de las caras obtenidas y el diagrama de barras
+asociado. 
+\begin{indicacion}{
+Para generar los 10 lanzamientos del dado:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Simulaciones\flecha Lanzamiento de dados}.
+\item En el cuadro de diálogo que aparece, introducir 10 en el campo \campo{Número de lanzamientos}, introducir un
+nombre para el conjunto de datos y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}
+Para observar las frecuencias:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribución de frecuencias\flecha Tabla de frecuencias}.
+\item En el cuadro de diálogo que aparece, seleccionar como variable a tabular la variable \variable{dado1} y hacer click en el botón
+\boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de barras}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{dado1}.
+\item En la solapa \menu{Opciones de las barras} seleccionar la opción \opcion{Frecuencias relativas} y hacer click en
+el botón \boton{Aceptar}.
+\item Observar las diferencias entre las frecuencias relativas y en la altura de las barras. 
+\end{enumerate}}
+\end{indicacion}
+
+\item Repetir el apartado anterior para 100, 1000 y 1000000 lanzamientos. ¿Se cumple la ley de los grandes números?
+¿En torno a qué valor se estabilizan las frecuencias relativas?
+\end{enumerate}
+}
+
+\item Sea $X$ la variable que mide el número de caras obtenidas al lanzar 10 monedas. Para ver de manera experimental
+la distribución de probabilidad de $X$ se realiza un experimento aleatorio que consiste en lanzar varias veces las 10
+monedas y anotar el número de caras obtenido en cada lanzamiento. Se pide:
+\begin{enumerate}
+\item Lanzar las 10 monedas 1000 veces y calcular las frecuencias relativas de las caras obtenidas y el diagrama de
+barras asociado.
+\begin{indicacion}{Para generar los lanzamientos de monedas:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Simulaciones\flecha Lanzamiento de monedas}.
+\item En el cuadro de diálogo que aparece, introducir 10 en el campo \campo{Número de monedas}, 1000 en el campo
+\campo{Número de lanzamientos}, introducir un nombre para el conjunto de datos y hacer click en el
+botón aceptar\boton{Aceptar}.
+\end{enumerate}
+Para calcular las frecuencias relativas:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribución de frecuencias\flecha Tabla de frecuencias}.
+\item En el cuadro de diálogo que aparece, seleccionar como variable a tabular la variable \variable{sum} y hacer click
+en el botón \boton{Aceptar}.
+\end{enumerate}
+Para dibujar el diagrama de barras:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de barras}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{sum}.
+\item En la solapa \menu{Opciones de las barras} marcar la opción \opcion{Frecuencias relativas} y hacer click en el
+botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Generar la distribución de probabilidad de una variable Binomial $B(10\,,\,0.5)$ y compararla con la distribución de frecuencias relativas del apartado anterior.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 0,1,2,3,4,5,6,7,8,9,10 en el campo \campo{Valores de la variable},
+itroducir 10 en el campo \campo{Número de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}, y hacer click
+en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar la gráfica de la función de probabilidad de la Binomial $X\sim B(10\,,\,0.5)$ y compararla con el
+diagrama de barras de frecuencias relativas del primer apartado.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Gráfico de probabilidad}.
+\item En el cuadro de diálogo que aparece, introducir 10 en el campo \campo{Número de repeticiones},
+$0.5$ en el campo \campo{Probabilidad de éxito} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar la gráfica de la función de distribución.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Gráfico de probabilidad}.
+\item En el cuadro de diálogo que aparece, introducir 10 en el campo \campo{Número de repeticiones}, $0.5$ en el campo
+\campo{Probabilidad de éxito}, seleccionar la opción \opcion{Función de distribución} y hacer click en el botón
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular $P(X=7)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 7 en el campo \campo{Valores de la variable},
+itroducir 10 en el campo \campo{Número de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}, y hacer click
+en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular $P(X\leq 4)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 4 en el campo \campo{Valores de la variable}, 10 en el campo
+\campo{Número de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}.
+\item Seleccionar la opción \opcion{Probabilidades acumuladas} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular $P(X>5)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 5 en el campo \campo{Valores de la variable}, 10 en el campo
+\campo{Número de repeticones}, $0.5$ en el campo \campo{Probabilidad de éxito}.
+\item Seleccionar la opción \opcion{Probabilidades acumuladas}, seleccionar la opción \opcion{derecha}
+en el campo \campo{cola de acumulación} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular $P(2\leq X < 9)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
+Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir los valores $1$, $8$ en el campo \campo{Valores de la variable}, 10 en el campo
+\campo{Número de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}.
+\item Seleccionar la opción \opcion{Probabilidades acumuladas} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}
+La probabilidad del intervalo $P(2\leq X<9)$ es la resta de las probabilidades obtenidas $P(X<9)=P(X\leq 8)$ y $P(X<2)=P(X\leq 1)$.
+}
+\end{indicacion}
+\end{enumerate}
+
+
+\item El número de nacimientos diarios en una determinada población sigue una distribución de Poisson de media 6
+nacimientos al día. Se pide:
+\begin{enumerate}
+\item Dibujar la gráfica de la función de probabilidad.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha
+Gráfico de probabilidad}.
+\item En el cuadro de diálogo que aparece, introducir el valor 6 en el campo \campo{Media} y hacer click en el botón
+\boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar la gráfica de la función de distribución.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha
+Gráfico de probabilidad}.
+\item En el cuadro de diálogo que aparece, introducir el valor 6 en el campo \campo{Media}, marcar la opción
+\opcion{Función de distribución} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la probabilidad de un día haya 1 nacimiento.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir el valor 1 en el campo \campo{Valores de la variable}, introducir
+el valor 6 en el campo \campo{Media}, y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la probabilidad de que un día haya menos de 6 nacimientos.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 5 en el campo \campo{Valores de la variable} y 6 en el campo
+\campo{Media}.
+\item Seleccionar la opción \opcion{Probabilidades acumuladas} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la probabilidad de que un día haya 4 o más nacimientos. 
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir 3 en el campo \campo{Valores de la variable} y 6 en el campo
+\campo{Media}. 
+\item Seleccionar la opción \opcion{Probabilidades acumuladas}, seleccionar la opción \opcion{derecha} en el campo
+\campo{cola de acumulación} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Calcular la probabilidad de que un día haya entre 4 y 8 nacimientos, inclusives.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir los valores 3, 8 en el campo \campo{Valores de la variable} y
+6 en el campo \campo{Media}.
+\item Seleccionar la opción \opcion{Probabilidades acumuladas} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}
+La probabilidad del intervalo $P(4\leq X\leq 8)$ es la resta de las probabilidades obtenidas $P(X\leq 8)$ y $P(X<4)=P(X\leq 3)$.
+}
+\end{indicacion}
+\end{enumerate}
+
+
+\item La ley de los casos raros dice que en una distribución Binomial $B(n\,,\,p)$, cuando $n\geq 30$ y $p\leq
+0.1$ la distribución se parece mucho a una distribución Poisson $P(np)$. 
+Para comprobar hasta qué punto se parecen esta distribuciones, se pide:
+\begin{enumerate}
+\item Generar la distribución de probabilidad de una variable Binomial $B(30\,,0.1)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir los valores 0,1,2,3,4,5,6,7,8,9,10 en el campo \campo{Valores de
+la variable}, introducir el valor 30 en el campo \campo{Número de repeticiones}, $0.1$ en el campo \campo{Probabilidad
+de éxito} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Generar la distribución de probabilidad de una variable Poisson $P(3)$ y compararla con la de la binomial
+$B(30\,,0.1)$.
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Poisson\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir los valores 0,1,2,3,4,5,6,7,8,9,10 en el campo \campo{Valores de
+la variable}, introducir el valor 3 en el campo \campo{Media} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Generar la distribución de probabilidad de una variable Binomial $B(100\,,0.03)$ y compararla con la de la
+Poisson $P(3)$. ¿Se parecen más estas distribuciones que las anteriores? 
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha Probabilidades}.
+\item En el cuadro de diálogo que aparece, introducir los valores 0,1,2,3,4,5,6,7,8,9,10 en el campo \campo{Valores de
+la variable}, introducir el valor 100 en el campo \campo{Número de repeticiones}, $0.03$ en
+el campo \campo{Probabilidad de éxito} y hacer click en el botón \boton{Aceptar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Dibujar las gráficas de las distribuciones anteriores y ver cuáles se parecen más. 
+¿Se cumple la ley de los casos raros?
+\begin{indicacion}{
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching\flecha Simulaciones\flecha Ley de los casos raros}.
+\item En el cuadro de diálogo que aparece, desplazar el deslizador de \opcion{n} hasta 30 y el de \opcion{p} hasta 0.1.
+\item Después desplazar el deslizador de \opcion{n} hasta 100 y el de \opcion{p} hasta 0.03.
+\end{enumerate}}
+\end{indicacion}
+\end{enumerate}
+\end{enumerate}
+
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item Al lanzar 100 veces una moneda, ¿cuál es la probabilidad de obtener entre 40 y 60 caras inclusive?
+
+\item La probabilidad de curación de un paciente al ser sometido a un determinado tratamiento es $0.85$. Calcular la probabilidad de que en un grupo de 6 enfermos sometidos a tratamiento:
+\begin{enumerate}
+\item Se curen la mitad.
+\item Se curen al menos 4.
+\end{enumerate}
+
+\item La probabilidad de que al administrar una vacuna dé una determinada reacción es $0.001$. 
+Si se vacunan 2000 personas ¿cuál es la probabilidad de que aparezca alguna reacción adversa?
+
+\item El número medio de llamadas por minuto que llegan a una centralita telefónica es igual a 120. Se pide:
+\begin{enumerate}
+\item Dar la distribución de probabilidad del número de llamadas en 2 segundos y dibujar su gráfica. 
+\item Calcular al probabilidad de que durante 2 segundos lleguen a la centralita menos de 4 llamadas.
+\item Calcular la probabilidad de que durante 3 segundos lleguen a la centralita 3 llamadas como mínimo.
+\end{enumerate}
+
+\item Se sabe que la probabilidad de que aparezca una bacteria en un mm$^3$ de cierta disolución es de $0.002$.
+Si en cada mm$^3$ a los sumo puede aparecer una bacteria, determinar la probabilidad de que en un cm$^3$ haya como
+máximo $5$ bacterias.
+\end{enumerate}
+
+
+
+
+
+
+

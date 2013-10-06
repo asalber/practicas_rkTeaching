@@ -1,0 +1,77 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Variables Aleatorias Continuas}{59}{chapter.7}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Fundamentos te\IeC {\'o}ricos}{59}{section.7.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.1}Variables Aleatorias}{59}{subsection.7.1.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1.2}Variables Aleatorias Continuas (v.a.c.)}{59}{subsection.7.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Funci\IeC {\'o}n de densidad}{59}{subsection.7.1.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces En una v.a.c. la probabilidad asociada a un intervalo $[a,b]$, es el \IeC {\'a}rea que queda encerrada por la funci\IeC {\'o}n de densidad y el eje de abscisas entre los l\IeC {\'\i }mites del intervalo.\relax }}{60}{figure.caption.21}}
+\newlabel{g:probabilidadintervalo}{{7.1}{60}{En una v.a.c. la probabilidad asociada a un intervalo $[a,b]$, es el área que queda encerrada por la función de densidad y el eje de abscisas entre los límites del intervalo.\relax \relax }{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Funci\IeC {\'o}n de distribuci\IeC {\'o}n}{60}{figure.caption.21}}
+\@writefile{toc}{\contentsline {subsubsection}{Estad\IeC {\'\i }sticos poblacionales}{60}{figure.caption.21}}
+\@writefile{toc}{\contentsline {subsubsection}{Distribuci\IeC {\'o}n Uniforme Continua}{61}{figure.caption.21}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.2}{\ignorespaces Funci\IeC {\'o}n de densidad de una variable aleatoria uniforme continua $U(0,\tmspace  +\thinmuskip {.1667em}1)$.\relax }}{61}{figure.caption.22}}
+\newlabel{g:uniforme}{{7.2}{61}{Función de densidad de una variable aleatoria uniforme continua $U(0,\,1)$.\relax \relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Distribuci\IeC {\'o}n Normal}{61}{figure.caption.22}}
+\@writefile{toc}{\contentsline {subsubsection}{Distribuci\IeC {\'o}n Chi-cuadrado}{61}{figure.caption.23}}
+\newlabel{g:funciondensidadnormal}{{7.3(a)}{62}{Subfigure 7 7.3(a)\relax }{subfigure.7.3.1}{}}
+\newlabel{sub@g:funciondensidadnormal}{{(a)}{62}{Subfigure 7 7.3(a)\relax }{subfigure.7.3.1}{}}
+\newlabel{g:funciondistribucionnormal}{{7.3(b)}{62}{Subfigure 7 7.3(b)\relax }{subfigure.7.3.2}{}}
+\newlabel{sub@g:funciondistribucionnormal}{{(b)}{62}{Subfigure 7 7.3(b)\relax }{subfigure.7.3.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.3}{\ignorespaces Funci\IeC {\'o}n de densidad y funci\IeC {\'o}n de distribuci\IeC {\'o}n de la variable aleatoria continua $Z$ Normal de media 0 y desviaci\IeC {\'o}n t\IeC {\'\i }pica 1 \tmspace  +\thinmuskip {.1667em}\tmspace  +\thinmuskip {.1667em} $Z\sim N(0,1)$\relax }}{62}{figure.caption.23}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Funci\IeC {\'o}n de densidad.}}}{62}{figure.caption.23}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Funci\IeC {\'o}n de distribuci\IeC {\'o}n.}}}{62}{figure.caption.23}}
+\newlabel{g:graficasvac}{{7.3}{62}{Función de densidad y función de distribución de la variable aleatoria continua $Z$ Normal de media 0 y desviación típica 1 \,\, $Z\sim N(0,1)$\relax \relax }{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.4}{\ignorespaces Funci\IeC {\'o}n de densidad de una variable aleatoria Chi cuadrado de 6 grados de libertad\relax }}{62}{figure.caption.24}}
+\newlabel{g:chicuadrado}{{7.4}{62}{Función de densidad de una variable aleatoria Chi cuadrado de 6 grados de libertad\relax \relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Distribuci\IeC {\'o}n $T$ de Student}{63}{figure.caption.24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.5}{\ignorespaces Funci\IeC {\'o}n de densidad de una variable aleatoria t de student de 10 grados de libertad\relax }}{63}{figure.caption.25}}
+\newlabel{g:tstudent}{{7.5}{63}{Función de densidad de una variable aleatoria t de student de 10 grados de libertad\relax \relax }{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Distribuci\IeC {\'o}n $F$ de Fisher-Snedecor}{63}{figure.caption.25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.6}{\ignorespaces Funci\IeC {\'o}n de densidad de una variable aleatoria F de Fisher-Snedecor de 6 y 8 grados de libertad\relax }}{64}{figure.caption.26}}
+\newlabel{g:ffisher}{{7.6}{64}{Función de densidad de una variable aleatoria F de Fisher-Snedecor de 6 y 8 grados de libertad\relax \relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Ejercicios resueltos}{65}{section.7.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {7.3}Ejercicios propuestos}{69}{section.7.3}}
+\@setckpt{variables_aleatorias_continuas/variables_aleatorias_continuas}{
+\setcounter{page}{71}
+\setcounter{equation}{0}
+\setcounter{enumi}{3}
+\setcounter{enumii}{3}
+\setcounter{enumiii}{3}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{7}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{6}
+\setcounter{table}{0}
+\setcounter{parentequation}{0}
+\setcounter{FancyVerbLine}{0}
+\setcounter{definition}{0}
+\setcounter{definicion}{0}
+\setcounter{remark}{0}
+\setcounter{observacion}{0}
+\setcounter{teorema}{0}
+\setcounter{lema}{0}
+\setcounter{corolario}{0}
+\setcounter{teoremasn}{0}
+\setcounter{example}{0}
+\setcounter{ejemplo}{4}
+\setcounter{ejercicio}{0}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{Item}{491}
+\setcounter{Hfootnote}{2}
+\setcounter{ContinuedFloat}{0}
+\setcounter{lstnumber}{1}
+\setcounter{section@level}{0}
+\setcounter{lstlisting}{0}
+}

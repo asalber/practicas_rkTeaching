@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Aug 28 19:33:26 CEST 2012
+markTmpDer=true
+builderNum=6
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=practicas_rkTeaching.tex
+outputFile=practicas_rkTeaching.pdf
+langSpell=es
+markDer=true
+srcDir=
