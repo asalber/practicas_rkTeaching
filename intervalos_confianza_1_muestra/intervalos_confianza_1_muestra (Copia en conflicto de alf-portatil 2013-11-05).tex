@@ -221,7 +221,7 @@ Repetir los mismos pasos del apartado anterior, cambiando el nivel de confianza 
 }
 \end{indicacion}
 
-\item Si definimos la precisión del intervalo como la inversa de su amplitud, ¿cómo afecta a la precisión del intervalo de confianza el
+\item  Si definimos la precisión del intervalo como la inversa de su amplitud, ¿cómo afecta a la precisión del intervalo de confianza el
 tomar niveles de significación cada vez más altos? ¿Cuál puede ser la explicación?
 
 \item ¿Qué tamaño muestral sería necesario para obtener una estimación del contenido medio de principio activo con un margen de error de
@@ -232,10 +232,9 @@ $\pm 0.5$ mg/mm$^3$ y una confianza del 95\%?
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concenctracion} en el campo
 \campo{Variable}.
 \item En la solapa \menu{Estadísticos básicos} marcar el estadístico \campo{Cuasidesviación típica} y hacer clic en el botón \boton{Enviar}.
-\item Seleccionar el menú \menu{Teaching>Test paramétricos>Medias>Cálculo del tamaño muestral para la media}.
-\item En el cuadro de diálogo que aparece introducir la cuasidesviación típica muestral en el campo \campo{Desviación
-típica}, el nivel de confianza deseado, en este caso $0.95$, en el campo \campo{Nivel de confianza}, el margen de
-error deseado, en este caso $0.5$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos >Cálculo del tamaño muestral para la media}.
+\item En el cuadro de diálogo que aparece introducir la cuasidesviación típica muestral en el campo \campo{Desviación típica}, el nivel de significación deseado, en este caso $0.05$, en el campo \campo{Nivel de
+significación}, el margen de error deseado, en este caso $0.5$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 }
 \end{indicacion}
@@ -320,7 +319,7 @@ Respuesta & no & si & si & si & no & no & si & no & no & si & si & no & no & si 
 \item Calcular el intervalo de confianza con $\alpha=0.01$ para la proporción del alumnado que utiliza habitualmente la biblioteca. 
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Test para una proporción}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Test de proporciones para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{respuesta} en el campo \campo{Variable} e
 introducir \texttt{si} en el campo \campo{Categoría}.
 \item En la solapa \menu{Opciones de contraste} introducir $0.99$ en el campo \campo{Nivel de confianza} y hacer clic en
@@ -336,14 +335,12 @@ con un margen de error de un 1\% y una confianza del 95\%?
 \begin{indicacion}{
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Cálculo del tamaño muestral para una proporción}.
-\item En el cuadro de diálogo que aparece introducir la proporción muestral en el campo \campo{p}, el nivel de confianza
-deseado, en este caso $0.95$, en el campo \campo{Nivel de confianza}, el margen de error deseado, en este caso
-$0.01$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
+\item En el cuadro de diálogo que aparece introducir la proporción muestral en el campo \campo{p}, el nivel de significación deseado, en este caso $0.05$, en el campo \campo{Nivel de significación}, el margen de error deseado, en este caso $0.01$, en el campo \campo{Error}, y
+hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 }
 \end{indicacion}
 \end{enumerate}
-
 
 
 \item El Ministerio de Sanidad está interesado en la elaboración de un intervalo de confianza para la proporción de
@@ -360,7 +357,7 @@ muestral} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
-\item Si entre los objetivos del Ministerio se encontraba alcanzar una proporción del al menos un 70\% de vacunados en
+\item Si entre los objetivos del Ministerio se encontraba alcanzar una proporción de al menos un 70\% de vacunados en
 dicho colectivo, ¿se puede concluir que se han cumplido los objetivos? Justificar la respuesta.
 \end{enumerate}
 \end{enumerate}
@@ -385,12 +382,15 @@ una estimación sobre la proporción de voto que cada uno de ellos obtendrá, se
 300 personas, de las cuales 60 piensan votar a A, 80 a B, 90 a C, 15 en blanco y 55 abstenciones. Calcular un intervalo
 de confianza para la proporción de votos, sobre el total del censo, de cada uno de los partidos que se presentan.
 
-\item El fichero \texttt{nations.txt} contiene información sobre el desarrollo de distintos países (tasa de uso de
-anticonceptivos (contraception), producto interior bruto per cápita (GDP), tasa de mortalidad infantil
-(infant.mortality) y tasa de fertilidad (TFR)). Se pide:
+\item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Se pide:
 \begin{enumerate}
-\item Importar el fichero \texttt{nations.txt} en un conjunto de datos.
-\item Calcular el intervalo de confianza de la tasa de uso de anticonceptivos y de la tasa de fertilidad para los países con un producto
-interior bruto per cápita superior a 10000 US\$ e inferiores a dicha cantidad. Interpretar los intervalos. 
+\item Calcular el intervalo de confianza del 99\% para el peso medio de los recién nacidos. ¿Entre qué valores estará el
+peso medio?
+\item Calcular el intervalo de confianza para la puntuación media del Apgar al minuto de nacer y compararlo con el de la
+puntuación Apgar a ls 5 minutos. ¿Existen diferencias significativas entre las medias de ambas puntuaciones?
+\item Calcular el intervalo de confianza para el porcentaje de niños con peso menor o igual que 2.5 Kg en el grupo de
+las madres que han fumado durante el embarazo y en el de las que no. 
 \end{enumerate}
 \end{enumerate}

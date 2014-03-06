@@ -307,9 +307,9 @@ Se pide:
 \item  Dibujar el diagrama de dispersión correspondiente.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{Y} y como
-\campo{Variable X} la variable \variable{X}, y hacer click en el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Y} en el campo \campo{Variable Y}, la
+variable \variable{X} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -318,20 +318,21 @@ En vista del diagrama, ¿qué tipo de modelo crees que explicará mejor la relac
 \item Calcular la recta de regresión de $Y$ sobre $X$.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Y} como \campo{Variable dependiente} y la
-variable \variable{X} como \campo{Variable independiente}, seleccionar \opcion{Guardar el modelo}, introducir un nombre
-para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Y} en el campo \campo{Variable
+dependiente} y la variable \variable{X} en el campo \campo{Variable independiente}, y hacer clic sobre el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
 \item Dibujar dicha recta sobre el diagrama de dispersión.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{Y} y como
-\campo{Variable X} la variable \variable{X}.
-\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Y} en el campo \campo{Variable Y}, la
+variable \variable{X} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer clic en el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -366,29 +367,39 @@ de asignaturas suspensas. Para ello se obtuvo la siguiente muestra:
 
 Se pide:
 \begin{enumerate}
-\item  Crear un conjunto de datos con las variables \variable{horas\_estudio} y \variable{suspensos} e introducir estos
+\item  Crear un conjunto de datos con las variables \variable{horas.estudio} y \variable{suspensos} e introducir estos
 datos.
 
-\item  Calcular la recta de regresión de \variable{suspensos} sobre \variable{horas\_estudio} y dibujarla.
+\item Construir la tabla de frecuencias bidimensional de las variables \variable{horas.estudio} y \variable{suspensos}. 
 \begin{indicacion}{
-Para calcular la recta de regresión:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{suspensos} como \campo{Variable
-dependiente} y la variable \variable{horas\_estudio} como \campo{Variable independiente}, seleccionar \opcion{Guardar el
-modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}
-Para dibujar la recta de regresión:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{suspensos} y como
-\campo{Variable X} la variable \variable{horas\_estudio}.
-\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
-\boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Distribución de frecuencias>Tabla de frecuencias bidimensional}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{horas.estudio} en el campo \campo{Variable
+a tabular en filas}, la variable \variable{suspensos} en el campo \campo{Variable a tabular en columnas}, y hacer clic
+sobre el botón \boton{Enviar}. 
 \end{enumerate}}
 \end{indicacion}
 
-\item Indicar el coeficiente de regresión de \variable{suspensos} sobre \variable{horas estudio}. 
+\item  Calcular la recta de regresión de \variable{suspensos} sobre \variable{horas.estudio} y dibujarla.
+\begin{indicacion}{
+Para calcular la recta de regresión:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{suspensos} en el campo \campo{Variable
+dependiente} y la variable \variable{horas.estudio} en el campo \campo{Variable independiente}, seleccionar
+\opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
+\end{enumerate}
+Para dibujar la recta de regresión:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{suspensos} en el campo \campo{Variable Y} y
+la variable \variable{horas.estudio} en el campo \campo{Variable X}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Lineal} y hacer clic en el botón
+\boton{Enviar}.
+\end{enumerate}}
+\end{indicacion}
+
+\item Indicar el coeficiente de regresión de \variable{suspensos} sobre \variable{horas.estudio}. 
 ¿Cómo lo interpretarías?
 \begin{indicacion}{
 El coeficiente de regresión es la pendiente de la recta de regresión.}
@@ -401,24 +412,24 @@ Comentar los resultados a partir las gráficas de las rectas de regresión y sus
 ¿Es un buen modelo la recta de regresión?
 ¿Qué porcentaje de la variabilidad del número de suspensos está explicada por el modelo?
 \begin{indicacion}{
-El coeficiente de determinación aparece en la ventana de resultados como \resultado{Multiple R-squared}, y el
+El coeficiente de determinación aparece en la ventana de resultados como \resultado{R$^2$ ajustado}, y el
 coeficiente de correlación es su raíz cuadrada.}
 \end{indicacion}
 
 \item Utilizar la recta de regresión para predecir el número de suspensos correspondiente a 3 horas de estudio diarias.
 ¿Es fiable esta predicción? \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada en el segundo
-apartado, introducir los valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer click
-sobre el botón \boton{Aceptar}.
+apartado, introducir los valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer clic
+sobre el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
 \item Según el modelo lineal, ¿cuántas horas diarias tendrá que estudiar como mínimo un alumno si quiere aprobarlo
 todo?
 \begin{indicacion}{
-Seguir los mismos pasos de los apartados anteriores, pero escogiendo como variable dependiente \variable{horas\_estudio},
+Seguir los mismos pasos de los apartados anteriores, pero escogiendo como variable dependiente \variable{horas.estudio},
 y como independiente \variable{suspensos}, y haciendo la predicción para 0 suspensos.}
 \end{indicacion}
 \end{enumerate}
@@ -442,9 +453,10 @@ Se pide:
 lineal? 
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{alcohol} como \campo{Variable dependiente}
-y la variable \variable{tiempo} como \campo{Variable independiente}, y hacer click sobre el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{alcohol} en el campo \campo{Variable
+dependiente} y la variable \variable{tiempo} en el campo \campo{Variable independiente}, y hacer clic sobre el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -454,55 +466,52 @@ Si es así, eliminar dicho individuo de la muestra y volver a calcular el coefic
 ¿Ha mejorado el modelo?
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{alcohol} y como
-\campo{Variable X} la variable \variable{tiempo}.
-\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
-\boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{alcohol} en el campo \campo{Variable Y} y
+la variable \variable{tiempo} en el campo \campo{Variable X}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Lineal} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 Se observa que hay un residuo atípico para el punto que corresponde al los 210 minutos. 
 Para eliminarlo:
-En la ventana de edición del conjunto de datos hacer click con el botón derecho del ratón sobre la fila correspondiente
+En la ventana de edición del conjunto de datos hacer clic con el botón derecho del ratón sobre la fila correspondiente
 al dato con el residuo atípico y seleccionar \opcion{Borrar esta fila}.}
 \end{indicacion}
 
-
-\item Si la concentración máxima de alcohol en la sangre que permite la ley para poder conducir es $0.5$ g/l, ¿cuánto
+\item Si la concentración máxima de alcohol en la sangre que permite la ley para poder conducir es $0.3$ g/l, ¿cuánto
 tiempo habrá que esperar después de tomarse un litro de vino para poder conducir sin infringir la ley? 
 ¿Es fiable esta predicción?
 \begin{indicacion}{
 Para construir la recta de regresión:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{tiempo} como \campo{Variable dependiente} y la
-variable \variable{alcohol} como \campo{Variable independiente}.
-\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{tiempo} en el campo \campo{Variable
+dependiente} y la variable \variable{alcohol} en el campo \campo{Variable independiente}.
+\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
 \end{enumerate}
 Para hacer la predicción:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada e introducir los
-valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer click sobre el botón
-\boton{Aceptar}.
+valores para los que se desea la predicción en el campo \campo{Predicciones para} y hacer clic sobre el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 \end{enumerate}
 
 
-\item En un estudio se ha medido la estatura y la edad de 30 personas y se han guardado en el fichero
-\texttt{edad\_estatura.txt}.
+\item El conjunto de datos \variable{edad.estatura} del paquete \variable{rk.Teaching} contine la edad y la estatura
+de 30 personas. 
 Se pide:
 \begin{enumerate}
-\item Importar los datos del fichero \texttt{edad\_estatura.txt} en un conjunto de datos.
+\item Cargar datos del conjunto de datos \variable{edad.estatura} desde el paquete \variable{rk.Teaching}.
 
 \item Calcular la recta de regresión de la estatura sobre la edad. ¿Es un buen modelo la recta de regresión?
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} como \campo{Variable dependiente}
-y la variable \variable{edad} como \campo{Variable independiente}, 
-\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón \boton{Aceptar}.
-\boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} en el campo \campo{Variable
+dependiente} y la variable \variable{edad} en el campo \campo{Variable independiente}, y hacer clic en el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -510,16 +519,16 @@ y la variable \variable{edad} como \campo{Variable independiente},
 ¿Alrededor de qué edad se observa un cambio en la tendencia? 
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{estatura} y como
-\campo{Variable X} la variable \variable{edad}, y hacer click en el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} en el campo \campo{Variable Y},
+la variable \variable{edad} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
 \item Recodificar la variable edad en dos grupos para mayores y menores de 20 años.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha  Datos\flecha Recodificar variable}.
+\item Seleccionar el menú \menu{Teaching> Datos>Recodificar variable}.
 \item En el cuadro de diálogo que aparece seleccionar en el campo \vampo{Variable a recodificar} la variable
 \variable{edad}.
 \item En el campo \campo{Reglas de recodificación} introducir
@@ -527,9 +536,9 @@ y la variable \variable{edad} como \campo{Variable independiente},
 \lstinline{lo:20 = ``menores''}\\
 \lstinline{20:hi = ``mayores''}
 \end{quote}
-\item En el cuadro \campo{Guardar nueva variable} hacer click sobre el botón \boton{Cambiar}.
-\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{edad\_estatura} y hacer click sobre el botón \boton{Aceptar}.
-\item Introducir el nombre de la nueva variable \variable{grupo\_edad} y hacer click sobre el botón \boton{Aceptar}.
+\item En el cuadro \campo{Guardar nueva variable} hacer clic sobre el botón \boton{Cambiar}.
+\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{edad\_estatura} y hacer clic sobre el botón \boton{Aceptar}.
+\item Introducir el nombre de la nueva variable \variable{grupo.edad} y hacer clic sobre el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -538,27 +547,24 @@ y la variable \variable{edad} como \campo{Variable independiente},
 Justificar la respuesta.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Regresión lineal}.
-\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} como \campo{Variable dependiente}
-y la variable \variable{edad} como \campo{Variable independiente}.
-\item Seleccionar la opición \opcion{Filtro} e introducir en el campo \campo{Condición de selección} la condición
-\lstinline{grupo_edad="menores"}.
-\item Seleccionar \opcion{Guardar el modelo}, introducir un nombre para el modelo y hacer click sobre el botón
-\boton{Aceptar}.
-\end{enumerate}
-Repetir lo mismo pero con la condición \lstinline{grupo_edad="mayores"}.}
+\item Seleccionar el menú \menu{Teaching>Regresión>Regresión lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} en el campo \campo{Variable
+dependiente} y la variable \variable{edad} como \campo{Variable independiente}.
+\item Seleccionar la opición \opcion{Ajuste por grupos}, introducir la variable \variable{grupo.edad} en el campo
+\campo{Variable de agrupación}, y hacer clic en el \boton{Enviar}.
+\end{enumerate}}
 \end{indicacion}
 
 \item Dibujar las rectas de regresión anteriores.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de Dispersión}.
-\item En el cuadro de diálogo que aparece, seleccionar como \campo{Y} la variable \variable{estatura} y como
-\campo{Variable X} la variable \variable{edad}.
-\item Seleccionar la opción \opcion{Diferenciar grupos} e introducir la variable \variable{grupo\_edad} en el campo
+\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{estatura} en el campo \campo{Variable Y} y
+la variable \variable{edad} en el campo \campo{Variable X}.
+\item Seleccionar la opción \opcion{Dibujar por grupos} e introducir la variable \variable{grupo.edad} en el campo
 \campo{Variable de agrupación}.
-\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Dibujar recta de regresión} y hacer click en el botón
-\boton{Aceptar}.
+\item En la solapa \menu{Línea de ajuste}, seleccionar \opcion{Lineal} y hacer clic en el botón
+\boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 
@@ -566,10 +572,10 @@ Repetir lo mismo pero con la condición \lstinline{grupo_edad="mayores"}.}
 \begin{indicacion}{
 Para predecir la estatura de la persona de 14 años:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Predicciones}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar como modelo de regresión la recta calculada para los menores e
-introducir 14 en el campo \campo{Predicciones para} y hacer click sobre el botón
-\boton{Aceptar}.
+introducir 14 en el campo \campo{Predicciones para} y hacer clic sobre el botón
+\boton{Enviar}.
 \end{enumerate}
 para predecir la estatura de la persona de 38 años, repetir lo mismo pero seleccionando la recta de regresión para los
 mayores e introducidento 38 en el campo \campo{Predicciones para}.
@@ -578,38 +584,6 @@ mayores e introducidento 38 en el campo \campo{Predicciones para}.
 \end{enumerate}
 
 \opt{largo}{
-\item El fichero \texttt{naciones.txt} contiene información sobre el desarrollo de distintos países (tasa de fertilidad, tasa de uso de
-anticonceptivos, tasa de mortalidad infantil, producto interior bruto per cápita y continente). Se pide:
-\begin{enumerate}
-\item Importar el fichero \texttt{naciones.txt} en un conjunto de datos.
-\item ¿Entre qué variables existe relación lineal?
-\begin{indicacion}{
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
-\item En el cuadro de diálogo que aparece seleccionar todas las variables numéricas y hacer click sobre el botón \boton{Aceptar}. 
-\end{enumerate}}
-\end{indicacion}
-
-\item ¿Existe relación lineal entre la tasa de mortalidad infantil y tasa de fertilidad en Europa? ¿Y en África? ¿Qué relación es más fuerte?
-\begin{indicacion}{
-Para la correlación en Europa:
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Datos\flecha Filtrar datos}.
-\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{naciones}.
-\item Introducir la condición \lstinline{region=="Europe"} en el campo \campo{Condición de selección}.
-\item Introducir el nombre \variable{europa} en el campo \campo{Guardar nuevo conjunto de
-datos} y hacer click en el botón \boton{Aceptar}.
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
-\item En el cuadro de diálogo que aparece seleccionar las variables \variable{fertilidad} y
-\variable{mortalidad.infantil} del conjunto de datos \variable{europa} y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}
-Para la correlación de África repetir los mismos pasos pero cambiando la condición de selección por
-\lstinline{region=="Africa"}.
-}
-\end{indicacion}
-\end{enumerate}
-
-
 \item La siguiente tabla recoge la información de las calificaciones obtenidas por un grupo de alumnos en dos
 asignaturas $X$ e $Y$.
 \begin{center}
@@ -627,10 +601,11 @@ Se pide:
 \item ¿Existe relación entre las calificaciones de $X$ e $Y$? Justificar la respuesta.
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
-\item En el cuadro de diálogo que aparece seleccionar la variables \variable{X} e \variable{Y}.
-\item En la solapa \menu{Opciones de correlación} seleccionar el método de \opcion{Ro de Spearman} y hacer click sobre
-el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Teaching>Regresión>Correlación}.
+\item En el cuadro de diálogo que aparece seleccionar la variables \variable{X} e \variable{Y} en el campo
+\campo{Variables}.
+\item En la solapa \menu{Opciones de correlación} seleccionar el método de \opcion{Ro de Spearman} y hacer clic sobre
+el botón \boton{Enviar}.
 \end{enumerate}}
 \end{indicacion}
 \end{enumerate}
@@ -673,14 +648,39 @@ días. Se pide:
 \item ¿Qué dosis debe aplicarse si queremos que el paciente tarde 4 días en curarse? ¿Es fiable la predicción?
 \end{enumerate}
 
-\item En una clase de alumnos universitarios se ha medido la estatura, el peso y el sexo de cada uno y se han guardado
-en el fichero \texttt{estaturas\_pesos\_alumnos.txt}. Se pide:
+\item El fichero \variable{estaturas.pesos.alumnos} del paquete \variable{rk.Teaching}, contiene la estatura, el peso y
+el sexo de una muestra de alumnos universitarios.
+Se pide:
 \begin{enumerate}
-\item Importar los datos del fichero \texttt{estaturas\_pesos\_alumnos.txt} en un conjunto de datos.
+\item Cargar el conjunto de datos \variable{estaturas.pesos.alumnos} desde el paquete \variable{rk.Teaching}.
 \item Calcular la recta de regresión del peso sobre la estatura y dibujarla.
 \item Calcular las rectas de regresión del peso sobre la estatura para cada sexo y dibujarlas.
 \item Calcular los coeficientes de determinación de ambas rectas. ¿Qué recta es mejor modelo? Justificar la respuesta.
 \item ¿Qué peso tendrá un hombre que mida 170 cm? ¿Y una mujer de la misma estatura?
 \end{enumerate}
 
+\item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Se pide:
+\begin{enumerate}
+\item Construir la tabla de frecuencias bidimensional del Agpar al minuto de nacer frente a si la madre ha fumado o no
+durante el embarazo. ¿Qué conclusiones se pueden sacar?
+\item Construir la tabla de frecuencias bidimensional del peso de los recién nacidos frente a la edad de la madre. ¿Qué
+conclusiones se pueden sacar?
+\item Construir la recta de regresión del peso de los recién nacidos sobre el número de cigarros fumados al día por las
+madres. ¿Existe una relación lineal fuerte entre el peso y el número de cigarros?
+\item Dibujar la recta de regresión calculada en el apartado anterior. ¿Por qué la recta no se ajusta bien a la nube de
+puntos?
+\item Calcular y dibujar la recta de regresión del peso de los recién nacidos sobre el número de cigarros fumados al día
+por las madres en el grupo de las madres que si fumaron durante el embarazo. ¿Es este modelo mejor o pero que la recta
+de los apartados anteriores? 
+
+Según este modelo, ¿cuánto disminuirá el peso del recién nacido por cada cigarro más diario
+que fume la madre? 
+\item Según el modelo anterior, ¿qué peso tendrá un recién nacido de una madre que ha fumado 5 cigarros diarios durante
+el embarazo? ¿Y si la madre ha fumado 30 cigarros diarios durante el embarazo? ¿Son fiables estas predicciones?
+\item ¿Existe la misma relación lineal entre el peso de los recién nacidos y el número de cigarros fumados al día por
+las madres que fumaron durante el embarazo en el grupo de las madres menores de 20 y en el grupo de las madres mayores de
+20? ¿Qué se puede concluir?
+\end{enumerate}
 \end{enumerate}

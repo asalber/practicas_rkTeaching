@@ -15,7 +15,7 @@ mantenido por una enorme comunidad científica en todo el mundo.
 \includegraphics[scale=0.5]{introduccion_r/img/Rlogo}
 \end{center} 
 
-La ventajas de R frente a otros programas habituales de análisis de datos, como pueden ser SPSS, SAS, SPlus, Matlab o
+Las ventajas de R frente a otros programas habituales de análisis de datos, como pueden ser SPSS, SAS, SPlus, Matlab o
 Minitab, son múltiples:
 \begin{itemize}
 \item Es software libre y por tanto gratuito. Puede descargarse desde la web 
@@ -69,31 +69,32 @@ ocasiones, para otros análisis será necesario cargar algún paquete adicional 
 \variable{rkTeaching} que incorpora un nuevo menú a RKWard con la mayoría de los análisis que se realizarán en estas
 prácticas.
 
-Para instalar el paquete rkTeaching, basta con arrancar R o RKWard y, en la consola de comandos teclear el
-comando
+Para instalar el paquete rk.Teaching, basta con descargarlo desde la dirección
+\url{http://asalber.github.io/rkTeaching_es/}, arrancar R o RKWard y, en la consola de comandos, teclear el comando
 \begin{lstlisting}
-> install.packages("rkTeaching", dependencies=TRUE)
+> setwd("ruta_a_descargas")
+> install.packages("rk.Teaching",repos=NULL,dep=True)
 \end{lstlisting}
 
 La instalación de cualquier otro paquete se realiza con el mismo comando, cambiando el nombre del paquete por el
 deseado.
 
-En RKWard, también puede instalarse desde la ventana de R mediante el menú \menu{Preferencias\flecha Configurar
+En RKWard, también puede instalarse desde la ventana de R mediante el menú \menu{Preferencias>Configurar
 paquetes}.
 Con esto aparecerá una ventana donde se muestran los paquetes instalados localmente.
-Para cargar un paquete instalado localmente basta son seleccionarlo y hacer click sobre el botón \boton{Cargar}.
+Para cargar un paquete instalado localmente basta son seleccionarlo y hacer clic sobre el botón \boton{Cargar}.
 En esa misma ventana aparece una solapa \menu{Install/Update/Remove} que permite instalar nuevos paquetes desde un
 repositorio de R.
-Al hacer click sobre esta solapa se abrirá una conexión a internet y aparecerá una ventana con los distintos
+Al hacer clic sobre esta solapa se abrirá una conexión a internet y aparecerá una ventana con los distintos
 repositorios disponibles. Normalmente seleccionaremos en más cercano geográficamente, en nuestro caso Spain(Madrid).
 Después aparecerá un lista de paquetes instalados y nuevos.
-Para instalar un paquete nuevo basta con seleccionarlo y hacer click en el botón \boton{Aceptar}.
+Para instalar un paquete nuevo basta con seleccionarlo y hacer clic en el botón \boton{Aceptar}.
 Una vez instalado localmente, podrá cargarse como se ha indicado antes.
 
 
 \section{Arranque}
-Como cualquier otra aplicación de Windows, para arrancar el programa hay que hacer click sobre la opción
-correspondiente del menú \menu{Inicio\flecha Programas\flecha RKWard}, o bien sobre el icono de escritorio
+Como cualquier otra aplicación de Windows, para arrancar el programa hay que hacer clic sobre la opción
+correspondiente del menú \menu{Inicio>Programas>RKWard}, o bien sobre el icono de escritorio
 \begin{center}
   \includegraphics[scale=0.3]{introduccion_r/img/icono_rkward}
 \end{center}
@@ -113,7 +114,7 @@ La interfaz gráfica de usuario RKWard consta de los siguientes elementos:
 Si se ha instalado el paquete rkTeaching debe de aparecer el menú Teaching. 
 \item \textbf{Barra de botones}. Contiene botones para abrir, crear y guardar conjuntos de datos, espacios de trabajo y guiones de comandos. 
 \item \textbf{Ventana principal}. Es la ventana central donde apareceran la ventana de introducción de datos, los resultados de los comandos ejecutados o de las búsquedas realizadas. 
-\item \textbf{Espacio de trabajo}. Es una ventana desplegable al hacer click sobre la solapa situada en el lado izquierdo que contiene todos los elementos del espacio de trabajo de R.
+\item \textbf{Espacio de trabajo}. Es una ventana desplegable al hacer clic sobre la solapa situada en el lado izquierdo que contiene todos los elementos del espacio de trabajo de R.
 Entre estos elementos aparecen los paquetes cargados, los conjuntos de datos y las variables que contienen los datos de la sesión actual. 
 \item \textbf{Bitácora de comandos} Es una solapa desplegable situada en la parte inferior donde aparece un registro de todas las acciones realizadas o comandos ejecutados en la sesión de trabajo actual.
 Cada vez que se seleccione un menú que lleve asociado la ejecución de algún comando, dicho comando aparecerá en esta
@@ -268,7 +269,7 @@ Para eliminar un objeto de la memoria se utiliza el comando \lstinline{rm()}.
 
 \subsection{Introducción de datos en RKWard}
 RKWard dispone de una interfaz gráfica para introducir los datos sin necesidad de saberse los comandos anteriores.
-Para ello hay que ir al menu \menu{Archivo\flecha Nuevo \flecha Conjunto de datos}. Con esto
+Para ello hay que ir al menu \menu{Archivo>Nuevo >Conjunto de datos}. Con esto
 aparecerá una ventana donde hay que darle un nombre al conjunto de datos y tras esto aparece la ventana de la
 figura~\ref{g:matriz_datos} con una tabla en la que se pueden introducir los datos de la muestra.
 Al igual que antes, cada variable debe introducirse en una columna y cada individuo en una fila.
@@ -281,7 +282,7 @@ Al igual que antes, cada variable debe introducirse en una columna y cada indivi
 \end{center}
 \end{figure}
 
-Haciendo click en las casillas de la cabecera cada fila es posible cambiar el nombre de la variable, ponerle una
+Haciendo clic en las casillas de la cabecera cada fila es posible cambiar el nombre de la variable, ponerle una
 etiqueta, su tipo, su formato y los niveles en caso de tratarse de un factor o variable categórica.
 Los nombres de variables deben comenzar con una letra o un punto y pueden contener cualquier letra, punto, subrayado
 (\lstinline{_}) o número.
@@ -293,9 +294,9 @@ la misma columna.
 
 R permite definir más de un conjunto de datos en un mismo espacio de trabajo.
 
-Los objetos definidos en el espacio de trabajo pueden verse haciendo click en la solapa \menu{Espacio de trabajo}.
-Para editar una variable o un conjunto de datos basta con hacer doble click sobre él.
-También puede obtenerse un resumen como el que se muestra en la figura~\ref{g:resumen_datos} haciendo click en el botón
+Los objetos definidos en el espacio de trabajo pueden verse haciendo clic en la solapa \menu{Espacio de trabajo}.
+Para editar una variable o un conjunto de datos basta con hacer doble clic sobre él.
+También puede obtenerse un resumen como el que se muestra en la figura~\ref{g:resumen_datos} haciendo clic en el botón
 derecho y seleccionando \menu{ver} en el menú contextual que aparece.
 
 \begin{figure}[htp]
@@ -309,7 +310,7 @@ derecho y seleccionando \menu{ver} en el menú contextual que aparece.
 \subsection{Ponderación de datos}
 Cuando una variable o un conjunto de datos tiene unos pocos valores que se repiten mucho, en lugar de teclearlos es más
 rápido indicar los valores y ponderarlos por sus frecuencias.
-Para ello se utiliza el menú \menu{Teaching\flecha Datos\flecha Ponerar datos}.
+Para ello se utiliza el menú \menu{Teaching>Datos>Ponerar datos}.
 Al seleccionarlo aparece una ventana donde hay que seleccionar el conjunto de datos a ponderar, la variable numérica de
 dicho conjunto de datos que contiene las frecuencias de ponderación, e indicar un nombre para el nuevo conjunto de datos.
 Por ejemplo, si en una clase hay 20 chicas y 30 chicos, se puede crear un conjunto de datos con la variables sexo y
@@ -336,11 +337,11 @@ los datos que aparencen la figura~\ref{g:ponderar_variable2}.
 \subsection{Guardar datos}
 Una vez introducidos los datos, conviene guardarlos en un fichero para no tener que volver a introducirlos en futuras
 sesiones. Para guardar los conjunto de datos definidos en el espacio de trabajo, se utiliza el menú \menu{Espacio de
-trabajo\flecha Guardar espacio de trabajo}.
+trabajo>Guardar espacio de trabajo}.
 Con esto aparece una ventana donde hay que darle un nombre al fichero y seleccionar la carpeta donde se guardará.
 Los conjuntos de datos se guardan siempre en ficheros de R con extensión \comando{rda} o \comando{rData}.
 
-También es posible guardar los datos en un fichero de texto plano mediante el menú \menu{Archivo\flecha Exportar\flecha
+También es posible guardar los datos en un fichero de texto plano mediante el menú \menu{Archivo>Exportar\flecha
 Export tabular data}.
 Tras esto aparece una ventana donde hay que seleccionar el conjunto de datos a exportar, darle un nombre al fichero de
 texto y seleccionar la carpeta donde se guardará.
@@ -350,12 +351,12 @@ no, el separador de decimales o el separador de los datos, que puede ser un espa
 
 \subsection{Abrir datos}
 Si los datos con los que se pretende trabajar ya están guardados en un fichero de R, entonces tendremos que abrir dicho
-fichero. Para ello se utiliza el \menu{Espacio de trabajo\flecha Abrir espacio de trabajo} y en la ventana que aparece
+fichero. Para ello se utiliza el \menu{Espacio de trabajo>Abrir espacio de trabajo} y en la ventana que aparece
 se selecciona el fichero que se desea abrir.
 Automáticamente se cargará el conjunto de datos del fichero y pasará a ser el conjunto de datos activo.
 
 También es posible cargar datos de ficheros con otros formatos, como por ejemplo un fichero de texto.
-Para ello se utiliza el menú \menu{Archivo\flecha Importar\flecha Importar datos} y en la ventana que aparece se
+Para ello se utiliza el menú \menu{Archivo>Importar>Importar datos} y en la ventana que aparece se
 selecciona el fichero de texto que se desea abrir y en el cuadro desplegable del formato de archivo se debes seleccionar
 \opcion{Text}.
 Después aparecerá una ventana donde habrá que darle un nombre al conjunto de datos y seleccionar el tipo de separador y
@@ -364,14 +365,14 @@ si los nombres de las variables aparecen en la primera línea del fichero.
 
 \subsection{Eliminación de datos}
 Para eliminar una variable del conjunto de datos primero hay que editar el conjunto de datos, y después, en la ventana
-de edición de datos, hay que hacer click con el botón derecho del ratón sobre la cabecera de la columna correspondiente
+de edición de datos, hay que hacer clic con el botón derecho del ratón sobre la cabecera de la columna correspondiente
 y seleccionar en el menú contextual que aparece \menu{Borrar esta variable}.
 
-Para eliminar individuos del conjunto de datos que hacer click con el botón derecho del ratón sobre la cabecera de la
+Para eliminar individuos del conjunto de datos que hacer clic con el botón derecho del ratón sobre la cabecera de la
 fila correspondiente y seleccionar en el menú contextual que aparece \menu{Borrar esta fila}.
 
 En la ventana del espacio de trabajo también es posible borrar cualquier objeto del espacio de trabajo de R haciendo
-click con el botón derecho del ratón sobre él y seleccionando el menú \menu{Eliminar}.
+clic con el botón derecho del ratón sobre él y seleccionando el menú \menu{Eliminar}.
 
 
 \section{Transformación de datos}
@@ -382,7 +383,7 @@ A continuación se presentan las transformaciones más habituales.
 \subsection{Filtrado de datos}
 Cuando se desea realizar un análisis con un subconjunto de individuos del conjunto de datos activo que cumplen una
 determinada condición es posible filtrar el conjunto de datos para quedarse con esos individuos.
-Para ello se utiliza el menú \menu{Teaching\flecha Datos\flecha Filtrar}.
+Para ello se utiliza el menú \menu{Teaching>Datos>Filtrar}.
 Con esto aparece un cuadro de diálogo en el que hay que seleccionar el conjunto de datos que se desea filtrar, y en el
 cuadro de texto \opcion{Condición de selección} indicar la condición lógica que tienen que cumplir los individuos
 seleccionados.
@@ -401,7 +402,7 @@ Por ejemplo, para seleccionar los alumnos del grupo de la mañana habría que in
 
 \subsection{Cálculo de variables}
 Para calcular una nueva variable a partir de otras ya existentes en el espacio de trabajo de R se utiliza el menú
-\menu{Teaching\flecha Datos\flecha Calcular variable}.
+\menu{Teaching>Datos>Calcular variable}.
 Con esto aparece un cuadro de diálogo en el que hay que introducir la expresión a partir de la que se calculará la nueva
 variable en el cuadro de texto \opcion{Expresión de cálculo}, e indicar el nombre de la nueva variable.
 La expresión de cálculo puede ser cualquier expresión aritmética o lógica de R, en las que pueden utilizarse cualquiera
@@ -423,7 +424,7 @@ Otra transformación habitual es la recodificación de variables que permite tra
 acuerdo a un conjunto de reglas de reescritura. Normalmente se utiliza para convertir una variable numérica en una
 variable categórica que pueda usarse como un factor. 
 
-Para recodificar una variable se utiliza el menú \menu{Teaching\flecha Datos\flecha Recodificar variable}.
+Para recodificar una variable se utiliza el menú \menu{Teaching>Datos>Recodificar variable}.
 Con esto aparece una ventana en la que hay que seleccionar la variable que se desea recodificar, indicar el nombre de la
 nueva variable recodificada e introducir las reglas de recodificación en el cuadro de texto \opcion{Reglas de
 recodificación}.
@@ -456,7 +457,7 @@ salida quedan registrados en la bitácora de comandos. Sin embargo, esta salida 
 muchos de los procedimientos recogidos en los menús producen además una salida mucho más comprensible en formato HTML en
 la ventana de resultados.
 
-Para guardar el contenido de la ventana de resultados en un fichero se utiliza el menú \menu{Archivo\flecha Exportar
+Para guardar el contenido de la ventana de resultados en un fichero se utiliza el menú \menu{Archivo>Exportar
 página como HTML}.
 Con esto aparece un cuadro de diálogo en el que hay que indicar el nombre del fichero y la carpeta donde se desea
 guardar. El fichero resultante está en formato HTML por lo que se podrá visualizar con cualquier navegador web.
@@ -464,7 +465,7 @@ guardar. El fichero resultante está en formato HTML por lo que se podrá visual
 \subsection{Limpiar la ventana de resultados}
 La vetana de resultados va acumulando todas las salidas de los análisis realizados en cada sesión de trabajo. 
 Para no mezclar los resultados de estudios distintos, conviene limpiar la ventana de resultados cada vez que se empiece un estudio nuevo.
-Para ello hay que seleccionar el menú \menu{Edición\flecha Limpiar salida}.
+Para ello hay que seleccionar el menú \menu{Edición>Limpiar salida}.
  
 
 \section{Manipulación de guiones de comandos}
@@ -473,13 +474,13 @@ Para ello hay que seleccionar el menú \menu{Edición\flecha Limpiar salida}.
 RKWard también incorpora un entorno de desarrollo para programadores de R que permite crear guiones de comandos que
 pueden ejecutarse todos seguidos.
 Esta opción es muy interesante para repetir análisis o automatizar tareas repetitivas.
-Para crear un guión de comandos hay que seleccionar el menú \menu{Archivo\flecha Nuevo\flecha Archivo de guiones}.
+Para crear un guión de comandos hay que seleccionar el menú \menu{Archivo>Nuevo>Archivo de guiones}.
 Con esto aparecerá una venta como la que aparece en la figura~\ref{g:guiones_comandos} donde se podrán teclecar los
 comandos de R para después ejecutarlos uno a uno o en bloque.
 
 \begin{figure}[htp]
 \begin{center}
-  \includegraphics[scale=0.6]{introduccion_r/img/recodificar}
+  \includegraphics[scale=0.6]{introduccion_r/img/guiones_comandos}
   \caption{Ventana de edición de guiones de comandos}
   \label{g:guiones_comandos}
 \end{center}
@@ -488,12 +489,12 @@ comandos de R para después ejecutarlos uno a uno o en bloque.
 
 \subsection{Guardar un guión de comandos}
 Los guiones de comandos también pueden guardarse en un fichero de texto plano mediante el menú
-\menu{Archivo\flecha Guardar guión} e indicando el nombre del fichero y la carpeta donde se guardará en el
+\menu{Archivo>Guardar guión} e indicando el nombre del fichero y la carpeta donde se guardará en el
 cuadro de diálo que aparece.
 
 
 \subsection{Abrir un guión de comandos}
-Para abrir un fichero con un guión de comandos se utiliza el menú \menu{Archivo\flecha Abrir archivo de guiones de R} y
+Para abrir un fichero con un guión de comandos se utiliza el menú \menu{Archivo>Abrir archivo de guiones de R} y
 después seleccionar el fichero que se desea abrir en el cuadro de diálogo que aparece. 
 
 
@@ -513,9 +514,9 @@ teclear
 \end{lstlisting}
 y con esto aparecerá una ventana con todos los ficheros de ayuda que contienen la palabra logarithm.
 
-Finalmente, también es posible invocar la ayuda general de R en RKWard con el menú \menu{Ayuda\flecha Ayuda de R} con lo
+Finalmente, también es posible invocar la ayuda general de R en RKWard con el menú \menu{Ayuda>Ayuda de R} con lo
 que aparecerá una página web desde donde podremos navegar a la información deseada. También es posible buscar ayuda
-sobre un comando concreto en el menú \menu{Ayuda\flecha Buscar en la ayuda de R}.
+sobre un comando concreto en el menú \menu{Ayuda>Buscar en la ayuda de R}.
 
 Para más información sobre R se recomienda visitar la página \url{http://www.r-project.org/}, y para más información
 sobre RKWard se recomienda visitar la página \url{http://rkward.sourceforge.net/}. 
@@ -542,17 +543,17 @@ Antonio Ruiz Cruz & H & 66 & 174 & 249\\
 \end{tabular}
 \end{center}
 
-\begin{indicacion}{ Para crear el conjunto de datos:
+\begin{indicacion}{Para crear el conjunto de datos:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Archivo\flecha Nuevo\flecha Conjunto de datos}.
-\item En el cuadro de diálogo que aparece introducir el nombre del conjunto de datos \variable{colesterol} y hacer click en el botón \boton{Aceptar}.
+\item Seleccionar el menú \menu{Archivo>Nuevo>Conjunto de datos}.
+\item En el cuadro de diálogo que aparece introducir el nombre del conjunto de datos \variable{colesterol} y hacer clic en el botón \boton{Aceptar}.
 \item En la ventana del editor de datos hay que definir una variable en cada columna introduciendo su nombre y tipo en las casillas de la cabecera de cada columna.
 \item Una vez definidas las variables hay que introducir los datos de cada variable en la columna correspondiente. 
 \end{enumerate}
 Para guardar los datos:
 \begin{enumerate}
-\item Selecionar el menú \menu{Espacio de trabajo\flecha Guardar espacio de trabajo}.
-\item En el cuadro de diálogo que aparece hay que darle un nombre al fichero, seleccionar la carpeta donde guardarlo y hacer click en el
+\item Selecionar el menú \menu{Espacio de trabajo>Guardar espacio de trabajo}.
+\item En el cuadro de diálogo que aparece hay que darle un nombre al fichero, seleccionar la carpeta donde guardarlo y hacer clic en el
 botón \boton{Aceptar}.
 \end{enumerate}
 }
@@ -579,14 +580,14 @@ Antonio Ruiz Cruz & 68 \\
 
 \begin{indicacion}{ Para abrir el conjunto de datos del ejercicio anterior:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Espacio de trabajo\flecha Abrir espacio de trabajo}.
+\item Seleccionar el menú \menu{Espacio de trabajo>Abrir espacio de trabajo}.
 \item En el cuadro de diálogo que aparece seleccionar la carpeta donde se encuentra el fichero con los datos del ejercicio anterior,
-seleccionar el fichero y hacer click en el botón \boton{Aceptar}.
+seleccionar el fichero y hacer clic en el botón \boton{Aceptar}.
 \end{enumerate}
 Para insertar la variable \variable{Edad}:
 \begin{enumerate}
-\item Hacer click en la solapa \boton{Espacio de trabajo}.
-\item En la ventana del espacio de trabajo doble click sobre el conjunto de datos \variable{colesterol}.
+\item Hacer clic en la solapa \boton{Espacio de trabajo}.
+\item En la ventana del espacio de trabajo doble clic sobre el conjunto de datos \variable{colesterol}.
 \item En la ventana del editor de datos introducir el nombre de la variable \variable{edad} y su tipo en las casillas de la cabecera de una nueva columna vacía, e introducir los datos de las edades en las celdas de maś abajo. 
 \end{enumerate}
 }
@@ -616,12 +617,12 @@ Colesterol: 220 mg/dl.
 
 \begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Datos\flecha Calcular variable}.
+\item Seleccionar el menú \menu{Teaching>Datos>Calcular variable}.
 \item En el cuadro de diálogo que aparece introducir la fórmula para calcular el índice de masa
 corporal en el campo \campo{Expresión de cálculo}.
-\item En el cuadro \campo{Guardar nueva variable} hacer click sobre el botón \boton{Cambiar}.
-\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{colesterol} y hacer click sobre el botón \boton{Aceptar}.
-\item Introducir el nombre de la nueva variable \variable{imc} y hacer click sobre el botón \boton{Aceptar}.
+\item En el cuadro \campo{Guardar nueva variable} hacer clic sobre el botón \boton{Cambiar}.
+\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{colesterol} y hacer clic sobre el botón \boton{Aceptar}.
+\item Introducir el nombre de la nueva variable \variable{imc} y hacer clic sobre el botón \boton{Aceptar}.
 \end{enumerate} 
 }
 \end{indicacion}
@@ -638,18 +639,20 @@ Mayor de $30$  & Obeso
 
 \begin{indicacion}{
 \begin{enumerate}
-\item Selecionar el menú \menu{Teaching\flecha Datos\flecha Recodificar variable}.
+\item Selecionar el menú \menu{Teaching>Datos>Recodificar variable}.
 \item En el cuadro de diálogo que aparece seleccionar como variable a recodificar la variable \variable{imc}.
 \item Introducir las reglas de recodificación en el campo \campo{Reglas de recodificación}:
 \begin{quote}
-\lstinline{lo:18.5 = "Bajo peso"}\\
-\lstinline{18.5:24.5 = "Saludable"}\\
-\lstinline{24.5:30 = "Sobrepeso"}\\
-\lstinline{30:hi = "Obeso"}
+\lstinline{lo:18.5 = 1}\\
+\lstinline{18.5:24.5 = 2}\\
+\lstinline{24.5:30 = 3}\\
+\lstinline{30:hi = 4}
 \end{quote}
-\item En el cuadro \campo{Guardar nueva variable} hacer click sobre el botón \boton{Cambiar}.
-\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{colesterol} y hacer click sobre el botón \boton{Aceptar}.
-\item Introducir el nombre de la nueva variable \variable{obesidad} y hacer click sobre el botón \boton{Aceptar}.
+\item En el cuadro \campo{Guardar nueva variable} hacer clic sobre el botón \boton{Cambiar}.
+\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{colesterol} y hacer clic sobre el botón \boton{Aceptar}.
+\item Introducir el nombre de la nueva variable \variable{obesidad} y hacer clic sobre el botón \boton{Aceptar}.
+\item En la ventada de edición de datos introducir los niveles del factor, asignando Bajo peso a la categoría 1,
+Saludable a la categoría 2, Sobrepeso a la categoría 3 y Obeso a la categoría 4. 
 \end{enumerate}
 }
 \end{indicacion}
@@ -658,10 +661,10 @@ Mayor de $30$  & Obeso
 \item Filtrar el conjunto de datos para obtener un nuevo conjunto de datos con los datos de los hombres
 \begin{indicacion}{
 \begin{enumerate}
-\item Selecionar el menú \menu{Teaching\flecha Datos\flecha Filtrar}.
+\item Selecionar el menú \menu{Teaching>Datos>Filtrar}.
 \item En el cuadro de diálogo que aparece seleccionar como conjunto de datos \variable{colesterol}.
 \item En el campo \campo{Condición de selección} introducir la condición \lstinline{sexo=="H"}. 
-\item Introducir el nombre del  nuevo conjunto de datos \variable{colesterol.hombres} y hacer click sobre el botón \boton{Aceptar}.
+\item Introducir el nombre del  nuevo conjunto de datos \variable{colesterol.hombres} y hacer clic sobre el botón \boton{Aceptar}.
 \end{enumerate}
 }
 \end{indicacion}
@@ -670,5 +673,32 @@ Mayor de $30$  & Obeso
 
 %\item Filtrar el conjunto de datos para quedarse únicamente con los países de Europa.
 
+\end{enumerate}
+\end{enumerate}
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item  El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Se pide:
+\begin{enumerate}
+\item Cargar el conjunto de datos.
+\begin{indicacion}{
+\begin{enumerate}
+\item Hacer clic en la solapa \campo{Espacio de trabajo} para desplegarla y ver los paquetes del espacio de trabajo. 
+\item Hacer doble clic sobre el paquete \variable{rk.Teaching} para ver todos los conjuntos de datos que contiene. 
+\item Hacer clic con el botón derecho sobre el conjunto de datos \variable{nenonatos} y en el menú contextual que
+aparece selecconar \menu{Copiar a .GlobalEnv} para hacer una copia del conjunto de datos en nuestro entorno de trabajo. 
+\end{enumerate}
+}
+\end{indicacion}
+
+\item Calcular la variable \variable{apgar.medio} como la media de las variables \variable{apgar1} y \variable{apgar5}.
+\item Recodificar la varible \variable{peso} en el factor \variable{categoria.peso} con dos categorias que se
+correspondan con los pesos menores y mayores de $2.5$ Kg.
+\item Recodificar la variable \variable{apgar1} en el factor \variable{estado.apgar1} con tres categorías: deprimido
+(Apgar$\leq 3$), moderadamente deprimido ($3<$Apgar$\leq 6$) y normal (Apgar$>6$).
+\item Filtrar el conjunto de datos para quedarse con los hijos de las madres no fumadoras con una puntuación Apgar al
+minuto de nacer menor o igual que 3. ¿Cuántos niños hay?
 \end{enumerate}
 \end{enumerate}
