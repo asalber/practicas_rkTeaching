@@ -2,9 +2,8 @@
 
 \documentclass[a4paper,openright,twoside]{report}
 %=======================================================
-% GENERAL PACKAGES
-\usepackage[spanish]{babel}
-\usepackage[utf8x]{inputenc}
+% GENERAL PACKAGES 
+\usepackage[utf8]{inputenc}
 \usepackage{type1cm}
 \usepackage{amsmath}
 \usepackage{macros}
@@ -68,6 +67,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\floatpagefraction}{.8}
 \renewcommand{\textfraction}{.1} 
+
+%LANGUAGE
+\usepackage[spanish]{babel}
 
 % TÍTULO DE LAS PRÁCTICAS
 \usepackage[rigidchapters,explicit]{titlesec}
@@ -146,6 +148,7 @@ Alfredo Sánchez Alberca (\url{asalber@ceu.es})
 \renewcommand{\thepage}{\roman{page}}
 \setcounter{page}{1} 
 \thispagestyle{plain}
+\addto\captionsspanish{\renewcommand{\contentsname}{Contenidos}}
 \tableofcontents
 \cleardoublepage
 \renewcommand{\thepage}{\arabic{page}}
@@ -156,16 +159,17 @@ Alfredo Sánchez Alberca (\url{asalber@ceu.es})
 \include{estadisticos/estadisticos}
 \include{regresion_lineal_simple/regresion_lineal_correlacion}
 \include{regresion_no_lineal/regresion_no_lineal}
+\include{probabilidad/probabilidad}
 \include{variables_aleatorias_discretas/variables_aleatorias_discretas}
 \include{variables_aleatorias_continuas/variables_aleatorias_continuas}
-\include{intervalos_confianza_1_muestra/intervalos_confianza_1_muestra} 
+\include{intervalos_confianza_1_muestra/intervalos_confianza_1_muestra}
 \include{intervalos_confianza_2_muestras/intervalos_confianza_2_muestras}
 \include{contrastes/contrastes}
 \include{anova_1_factor/anova_1_factor}
-% \include{anova_2_factores/anova_2_factores}
-% \include{contrastes_no_parametricos/contrastes_no_parametricos}
-% \include{chi_cuadrado/chi_cuadrado} 
-% \include{concordancia/concordancia}
+\include{anova_2_factores/anova_2_factores}
+\include{contrastes_no_parametricos/contrastes_no_parametricos}
+\include{chi_cuadrado/chi_cuadrado}
+\include{concordancia/concordancia}
 %\appendix
-%\include{comandos_R}
+%\include{comandos_R} 
 \end{document}
