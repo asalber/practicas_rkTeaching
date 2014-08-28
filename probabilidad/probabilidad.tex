@@ -803,6 +803,86 @@ Repetir los mismos pasos del apartado anterior pero además activando la casilla
 \end{indicacion}
 \end{enumerate}
 
+\item Gregor Mendel, monje austríaco, desarrollo en el siglo XIX los principios fundamentales de genética.
+Mendel demostró que las características heredables se transmiten en unidades discretas que se heredan por separado en cada generación.
+Estas unidades discretas, que Mendel llamó \emph{elemente}, se conocen hoy como \emph{genes}.
+
+Cada característica hereditaria depende de dos factores separados que provienen uno de cada progenitor.
+Estos factores son los \emph{alelos} de cada gen, que pueden ser \emph{dominantes} (cuando se expresan en el fenotipo sin tener en cuenta el
+otro alelo) o \emph{recesivos} (que se expresa sólo cuando el otro alelo es igual).
+
+Mendel demostró que en la reproducción los alelos se combinan aleatoriamente y de manera independiente para formar el gen del hijo.
+
+En uno de sus experimentos cruzó dos plantas de gisantes con idéntico genotipo Aa y Bb, donde el primer gen se refiere al color del guisante
+(A amarillo y a verde) y el segundo gen se refiere a la forma del guisante (B liso y b rugoso). Se pide:
+\begin{enumerate}
+\item Construir el espacio probabilístico correspondiente al genotipo del gen del color. 
+¿Cuál es la probabilidad que la planta resultante diese guisantes con fenotipo amarillo? 
+¿Y verde?
+\begin{indicacion}
+Para construir el espacio probabilístico: 
+\begin{enumerate}
+\item Crear un conjunto de datos \variable{mendel.color} con la variable \variable{alelo.color.progenitor} con los dos posibles alelos del
+progenitor correspondientes al gen del color (A y a).
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color}, darle el nombre
+\variable{mendel.color.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilístico}.
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color.ep}, darle el mismo nombre al espacio
+probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
+\end{enumerate}
+Para calcular la probabilidad de fenotipo amarillo:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
+\comando{alelo.color.progenitor1 == "A" | alelo.color.progenitor2 == "A"} en el campo \campo{Suceso} y hacer clic en el botón
+\boton{Enviar}.
+\end{enumerate}
+Para calcular la probabilidad de fenotipo verde:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
+\comando{alelo.color.progenitor1 == "a" \& alelo.color.progenitor2 == "a"} en el campo \campo{Suceso} y hacer clic en el botón
+\boton{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Construir el espacio probabilístico correspondiente al genotipo de ambos genes. 
+¿Cuál es la probabilidad que la planta resultante diese guisantes con fenotipo amarillo y liso? 
+¿Y verde y rugoso?
+\begin{indicacion}
+Para construir el espacio probabilístico: 
+\begin{enumerate}
+\item Crear un conjunto de datos \variable{mendel.forma} con la variable \variable{alelo.forma.progenitor} con los dos posibles alelos del
+progenitor correspondientes al gen de la forma (B y b).
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.forma}, darle el nombre
+\variable{mendel.forma.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilístico}.
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.forma.ep}, darle el mismo nombre al espacio
+probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Combinar espacios probabilísticos independientes}.
+\item En el cuadro de diálogo que aparece, seleccionar los conjuntos de datos correspondientes a los espacios probalísticos
+\variable{mendel.color.ep} y \variable{mendel.forma.ep}, y hacer clic en el botón \boton{Enviar}.
+\end{enumerate}
+Para calcular la probabilidad de fenotipo amarillo y liso:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
+\comando{(alelo.color.progenitor1 == "A" | alelo.color.progenitor2 == "A") \& (alelo.forma.progenitor1 == "B" | alelo.forma.progenitor2 ==
+"B")} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\end{enumerate}
+Para calcular la probabilidad de fenotipo verde y rugoso:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
+\comando{alelo.color.progenitor1 == "a" \& alelo.color.progenitor2 == "a" \& alelo.forma.progenitor1 == "a" \& alelo.forma.progenitor2 ==
+"a"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\end{enumerate}
+\end{indicacion}
+\end{enumerate}
+
+
 \item En una población se ha hecho un estudio epidemiológico sobre tres enfermedades asociadas habitualmente a la infancia, como son la
 varicela, el sarampión y la rubeola.
 Las frecuencias observadas aparecen en la siguiente tabla:
@@ -860,7 +940,7 @@ Se pide:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{enfermedades.infantiles.ep}, introducir
-\comando{sarampion == "Si" & rubeola=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{sarampion == "Si" \& rubeola=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 
@@ -880,7 +960,7 @@ Se pide:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{enfermedades.infantiles.ep}, introducir
-\comando{rubeola == "No" & sarampion=="No"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
+\comando{rubeola == "No" \& sarampion=="No"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
 \comando{varicela == "Si"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
