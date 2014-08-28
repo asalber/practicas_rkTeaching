@@ -543,7 +543,8 @@ Antonio Ruiz Cruz & H & 66 & 174 & 249\\
 \end{tabular}
 \end{center}
 
-\begin{indicacion}{Para crear el conjunto de datos:
+\begin{indicacion}
+Para crear el conjunto de datos:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Archivo>Nuevo>Conjunto de datos}.
 \item En el cuadro de diálogo que aparece introducir el nombre del conjunto de datos \variable{colesterol} y hacer clic en el botón \boton{Aceptar}.
@@ -556,7 +557,6 @@ Para guardar los datos:
 \item En el cuadro de diálogo que aparece hay que darle un nombre al fichero, seleccionar la carpeta donde guardarlo y hacer clic en el
 botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Abrir el fichero creado en el ejercicio anterior y realizar las siguientes operaciones:
@@ -578,7 +578,8 @@ Antonio Ruiz Cruz & 68 \\
 \end{tabular}
 \end{center}
 
-\begin{indicacion}{ Para abrir el conjunto de datos del ejercicio anterior:
+\begin{indicacion} 
+Para abrir el conjunto de datos del ejercicio anterior:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Espacio de trabajo>Abrir espacio de trabajo}.
 \item En el cuadro de diálogo que aparece seleccionar la carpeta donde se encuentra el fichero con los datos del ejercicio anterior,
@@ -590,7 +591,6 @@ Para insertar la variable \variable{Edad}:
 \item En la ventana del espacio de trabajo doble clic sobre el conjunto de datos \variable{colesterol}.
 \item En la ventana del editor de datos introducir el nombre de la variable \variable{edad} y su tipo en las casillas de la cabecera de una nueva columna vacía, e introducir los datos de las edades en las celdas de maś abajo. 
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Insertar un nuevo individuo con siguientes datos
@@ -603,11 +603,10 @@ Altura: 178 cm.\\
 Colesterol: 220 mg/dl.
 \end{quote}
 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
 \item En la ventana del editor de datos introducir los datos de del nuevo individuo en la primera fila vacía.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Crear una nueva variable donde se calcule el índice de masa corporal de cada paciente mediante la formula:
@@ -615,7 +614,7 @@ Colesterol: 220 mg/dl.
 \text{imc} = \frac{\text{Peso (en Kg)}}{\text{Altura (en mt)}^2}
 \]
 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching>Datos>Calcular variable}.
 \item En el cuadro de diálogo que aparece introducir la fórmula para calcular el índice de masa
@@ -623,8 +622,7 @@ corporal en el campo \campo{Expresión de cálculo}.
 \item En el cuadro \campo{Guardar nueva variable} hacer clic sobre el botón \boton{Cambiar}.
 \item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{colesterol} y hacer clic sobre el botón \boton{Aceptar}.
 \item Introducir el nombre de la nueva variable \variable{imc} y hacer clic sobre el botón \boton{Aceptar}.
-\end{enumerate} 
-}
+\end{enumerate}
 \end{indicacion}
 
 \item Recodificar el índice de masa corporal en una nueva variable de acuerdo a las siguientes categorías:
@@ -637,7 +635,7 @@ Mayor de $30$  & Obeso
 \end{tabular}
 \end{center}
 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
 \item Selecionar el menú \menu{Teaching>Datos>Recodificar variable}.
 \item En el cuadro de diálogo que aparece seleccionar como variable a recodificar la variable \variable{imc}.
@@ -654,19 +652,17 @@ Mayor de $30$  & Obeso
 \item En la ventada de edición de datos introducir los niveles del factor, asignando Bajo peso a la categoría 1,
 Saludable a la categoría 2, Sobrepeso a la categoría 3 y Obeso a la categoría 4. 
 \end{enumerate}
-}
 \end{indicacion}
 
 
 \item Filtrar el conjunto de datos para obtener un nuevo conjunto de datos con los datos de los hombres
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
 \item Selecionar el menú \menu{Teaching>Datos>Filtrar}.
 \item En el cuadro de diálogo que aparece seleccionar como conjunto de datos \variable{colesterol}.
 \item En el campo \campo{Condición de selección} introducir la condición \lstinline{sexo=="H"}. 
 \item Introducir el nombre del  nuevo conjunto de datos \variable{colesterol.hombres} y hacer clic sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 %\item Importar el conjunto de datos del fichero de texto \comando{Nations.txt} que se encuentra en el subdirectorio \comando{etc} del
 % paquete \comando{Rcmdr} y visualizar el conjunto de datos.
@@ -683,14 +679,13 @@ muestra de 320 recién nacidos en un hospital durante un año que cumplieron el 
 Se pide:
 \begin{enumerate}
 \item Cargar el conjunto de datos.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
 \item Hacer clic en la solapa \campo{Espacio de trabajo} para desplegarla y ver los paquetes del espacio de trabajo. 
 \item Hacer doble clic sobre el paquete \variable{rk.Teaching} para ver todos los conjuntos de datos que contiene. 
 \item Hacer clic con el botón derecho sobre el conjunto de datos \variable{nenonatos} y en el menú contextual que
 aparece selecconar \menu{Copiar a .GlobalEnv} para hacer una copia del conjunto de datos en nuestro entorno de trabajo. 
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Calcular la variable \variable{apgar.medio} como la media de las variables \variable{apgar1} y \variable{apgar5}.
