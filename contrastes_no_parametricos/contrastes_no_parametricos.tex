@@ -1,9 +1,4 @@
-% Version control information:
-%$HeadURL: https://practicas-r.googlecode.com/svn/trunk/contrastes_no_parametricos/contrastes_no_parametricos.tex $
-%$LastChangedDate: 2011-12-05 14:06:12 +0100 (lun 05 de dic de 2011) $
-%$LastChangedRevision: 19 $
-%$LastChangedBy: asalber $
-%$Id: contrastes_no_parametricos.tex 19 2011-12-05 13:06:12Z asalber $
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \chapter[Contrastes de hipótesis no paramétricos]{Contrastes de Hipótesis\\ No Paramétricos}
 
@@ -524,9 +519,9 @@ valor del contraste.
 % \item Sea una variable con distribución normal estándar. Se pide:
 % \begin{enumerate}
 % \item Generar una muestra aleatoria de tamaño 100.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Distribuciones\flecha Distribuciones continuas\flecha Distribución normal\flecha Muestra de una
+% \item Seleccionar el menú \menu{Distribuciones > Distribuciones continuas > Distribución normal > Muestra de una
 % distribución normal}.
 % \item En el cuadro de diálogo que aparece introducir 100 en el campo \campo{Numero de muestras}, 1 en el campo \campo{Número de
 % observaciones}, darle un nombre al conjunto de datos y hacer click en el botón \boton{Aceptar}. 
@@ -536,9 +531,9 @@ valor del contraste.
 % \end{indicacion}
 % 
 % \item Comprobar la normalidad de los datos mediante un diagrama Q-Q. 
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Gráficas\flecha Gráfica de comparación de cuantiles}.
+% \item Seleccionar el menú \menu{Gráficas > Gráfica de comparación de cuantiles}.
 % \item En el cuadro de diálogo que aparece seleccionar la variable \variable{obs}, activar la opción correspondiente a la distribución normal
 % y hacer click en el botón \boton{Aceptar}.
 % \end{enumerate}
@@ -547,9 +542,9 @@ valor del contraste.
 % \end{indicacion}
 % 
 % \item Comprobar la normalidad de los datos mediante un contraste de Shapiro-Wilk.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Estadísticos\flecha Test no paramétricos\flecha Test de normalidad de Shapiro-Wilk}.
+% \item Seleccionar el menú \menu{Estadísticos > Test no paramétricos > Test de normalidad de Shapiro-Wilk}.
 % \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{obs} en el campo \campo{Variable} y hacer click en el botón
 % \boton{Aceptar}.
 % \end{enumerate}
@@ -560,9 +555,9 @@ valor del contraste.
 % \item Sea una variable con distribución uniforme continua $U(0,1)$. Se pide:
 % \begin{enumerate}
 % \item Generar una muestra aleatoria de tamaño 100.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Distribuciones\flecha Distribuciones continuas\flecha Distribución uniforme\flecha Muestra de una
+% \item Seleccionar el menú \menu{Distribuciones > Distribuciones continuas > Distribución uniforme > Muestra de una
 % distribución uniforme}.
 % \item En el cuadro de diálogo que aparece introducir 100 en el campo \campo{Numero de muestras}, 1 en el campo \campo{Número de
 % observaciones}, darle un nombre al conjunto de datos y hacer click en el botón \boton{Aceptar}. 
@@ -572,9 +567,9 @@ valor del contraste.
 % \end{indicacion}
 % 
 % \item Comprobar la normalidad de los datos mediante un diagrama Q-Q. 
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Gráficas\flecha Gráfica de comparación de cuantiles}.
+% \item Seleccionar el menú \menu{Gráficas > Gráfica de comparación de cuantiles}.
 % \item En el cuadro de diálogo que aparece seleccionar la variable \variable{obs}, activar la opción correspondiente a la distribución normal
 % y hacer click en el botón \boton{Aceptar}.
 % \end{enumerate}
@@ -583,9 +578,9 @@ valor del contraste.
 % \end{indicacion}
 % 
 % \item Comprobar la normalidad de los datos mediante un contraste de Shapiro-Wilk.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Estadísticos\flecha Test no paramétricos\flecha Test de normalidad de Shapiro-Wilk}.
+% \item Seleccionar el menú \menu{Estadísticos > Test no paramétricos > Test de normalidad de Shapiro-Wilk}.
 % \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{obs} en el campo \campo{Variable} y hacer click en el botón
 % \boton{Aceptar}.
 % \end{enumerate}
@@ -602,20 +597,19 @@ valor del contraste.
 \begin{enumerate}
 \item Crear un conjunto de datos con las variables \variable{nota} y \variable{metodologia}.
 \item Comprobar la hipótesis de normalidad de los datos en cada grupo.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Normalidad\flecha Test de Shapiro-Wilk}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Normalidad > Test de Shapiro-Wilk}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{nota} en el campo \campo{Variable},
 seleccionar la opción \opcion{Contraste por grupos}, seleccionar la variable {metodologia} en el campo \campo{según} y
 hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 % \item Contrastar la hipótesis de homocedasticidad (igualdad de varianzas) entre las leches de las dos granjas.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
-% \item Seleccionar el menú \menu{Estadísticos\flecha Varianzas\flecha Test de Levene}
+% \item Seleccionar el menú \menu{Estadísticos > Varianzas > Test de Levene}
 % \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{Nota} en el campo \campo{Variable explicada}, la variable
 % \variable{Metodología} en el campo \campo{Grupos} y hacer click en el botón \boton{Aceptar}.
 % \end{enumerate}
@@ -625,15 +619,14 @@ hacer click en el botón \boton{Aceptar}.
 \item Utilizando el contraste más adecuado, ¿se puede concluir que existen diferencias en la nota media según cada
 metodología?
 \begin{indicacion}
-{Aunque según el análisis anterior, no podemos rechazar la hipótesis de normalidad en los grupos que queremos comparar,
+Aunque según el análisis anterior, no podemos rechazar la hipótesis de normalidad en los grupos que queremos comparar,
 como la muestra es muy pequeña e incluso uno de los grupos tiene menos de 10 observaciones, la más correcto sería
 aplicar el contraste de la U de Mann Whitney.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Test U de Mann-Whitney para dos muestras independientes}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Test U de Mann-Whitney para dos muestras independientes}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{nota} en el campo \campo{Comparar}, la variable
 \variable{metodologia} en el campo \campo{Según} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -651,34 +644,32 @@ obteniéndose los siguientes resultados:
 \item Crear un conjunto de datos \variable{publicidad} con las variables \variable{antes} y \variable{despues}.
 
 \item Comprobar la hipótesis de normalidad de la variable diferencia.
-\begin{indicacion}{
+\begin{indicacion}
 Para calcular la variable diferencia:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Datos\flecha Calcular variable}.
+\item Seleccionar el menú \menu{Teaching > Datos > Calcular variable}.
 \item En el cuadro de diálogo que aparece, introducir la expresión \comando{antes-despues}.
 \item En el campo \campo{Guardar nueva variable} introducir el nombre \variable{diferencia}, hacer click en el botón
 \boton{Cambiar}, seleccionar el conjunto de datos \variable{publicidad} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
 Para contrastar la normalidad:
-\begin{enumerate}\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Normalidad\flecha Test de Shapiro-Wilk}.
+\begin{enumerate}\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Normalidad > Test de Shapiro-Wilk}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{diferencia} en el campo \campo{Variable} y
 hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Utilizando el contraste más adecuado, ¿se puede concluir que la campaña de publicidad ha aumentado las ventas?
 \begin{indicacion}
-{Aunque, según el análisis anterior, no podemos rechazar la hipótesis de normalidad en la variable diferencia, como la
+Aunque, según el análisis anterior, no podemos rechazar la hipótesis de normalidad en la variable diferencia, como la
 muestra es muy pequeña, lo más correcto sería aplicar el contraste de Wilcoxon.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Test de Wilcoxon para dos muestras pareadas}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Test de Wilcoxon para dos muestras pareadas}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{antes} en el campo \campo{Comparar} y la variable
 \variable{despues} en el campo \campo{Con}.
 \item En la solapa \opcion{Opciones del contraste}, seleccionar la opción \opcion{Unilateral menor} en el campo \campo{Hipótesis
 alternativa} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -704,52 +695,49 @@ Fármaco A & Fármaco B & Fármaco C\\
 \item Dibujar el diagrama de cajas de la variación de la presión sistólica según el fármaco recibido.
 A la vista del diagrama, ¿crees que los datos presentan homogeneidad de varianzas? 
 ¿crees que hay algún grupo con un cambio en la presión arterial diferente del resto?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de cajas}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de cajas}.
 \item En el cuadro de diálogo que aparece, seleccionar la opcion \opcion{Cajas agrupadas}, seleccionar la variable
 \variable{variacion.presion} en el campo \campo{Variable}, seleccionar la variable \variable{farmaco} en el campo
 \campo{Variable de agrupación} y hacer click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \item Analizar la normalidad de los datos de los tres grupos. 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Normalidad\flecha Test de Shapiro-Wilk}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Normalidad > Test de Shapiro-Wilk}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{variacion.presion} en el campo \campo{Variable},
 seleccionar la opción \opcion{Contraste por grupos}, seleccionar la variable {farmaco} en el campo \campo{según} y
 hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Analizar la homogeneidad de varianzas de los tres grupos.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Varianzas\flecha Test de Levene}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Varianzas > Test de Levene}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{variacion.presion} en el campo \campo{Comparar}, la
 variable \variable{farmaco} en el campo \campo{Según} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Utilizando el contraste más adecuado, ¿se puede concluir que existen diferencias en los cambios de la presión
 sistólica en función del fármaco recibido?
 \begin{indicacion}
-{En este caso no se cumple la homogeneidad de varianzas, por lo que no se puede aplicar una ANOVA y tendremos que
+En este caso no se cumple la homogeneidad de varianzas, por lo que no se puede aplicar una ANOVA y tendremos que
 recurrir al test de Kruskal-Wallis.
 \begin{enumerate}
-\item  Seleccionar el menú \menu{Teaching\flecha Estadísticos\flecha Test no paramétricos\flecha Test de Kruskal-Wallis}.
+\item  Seleccionar el menú \menu{Teaching > Estadísticos > Test no paramétricos > Test de Kruskal-Wallis}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{variacion.presion} en el campo \campo{Comparar}, la
 variable \variable{farmaco} en el campo \campo{Según} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item ¿Entre qué grupos se dan las diferencias significativas?
 \begin{indicacion}
 \begin{enumerate}
-\item  Seleccionar el menú \menu{Teaching\flecha Estadísticos\flecha Test no paramétricos\flecha Test de Kruskal-Wallis}.
+\item  Seleccionar el menú \menu{Teaching > Estadísticos > Test no paramétricos > Test de Kruskal-Wallis}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{variacion.presion} en el campo \campo{Comparar} y la
 variable \variable{farmaco} en el campo \campo{Según}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación por pares} y hacer click en el botón \boton{Aceptar}.
@@ -779,13 +767,13 @@ de la muestra.
 
 \item ¿Podemos afirmar que el grado de dificultad de los modelos es diferente?
 \begin{indicacion}
-{Puesto que el tamaño muestral es muy pequeño, debe utilizarse el test de Friedman ya que las puntuaciones en los
+Puesto que el tamaño muestral es muy pequeño, debe utilizarse el test de Friedman ya que las puntuaciones en los
 modelos son medidas repetidas en los profesores.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Test de Friedman para medidas repetidas}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Test de Friedman para medidas repetidas}.
 \item En el cuadro de diálogo que aparece seleccionar las variables \textsf{modelo1}, \textsf{modelo2}, \textsf{modelo3} y \textsf{modelo4}
 en el campo \texttt{Variables a comparar (medidas repetidas)} y hacer click sobre el botón \texttt{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 \end{enumerate}
 
@@ -814,27 +802,25 @@ Para ello, se pide:\begin{enumerate}
 \item Crear un conjunto de datos con las variables \variable{apgar1} y \variable{apgar5}.
 
 \item Comprobar si las variables siguen distribuciones normales.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test no paramétricos\flecha Normalidad\flecha Test de Shapiro-Wilk}.
+\item Seleccionar el menú \menu{Teaching > Test no paramétricos > Normalidad > Test de Shapiro-Wilk}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{apgar1} en el campo \campo{Variable} y
 hacer click en el botón \boton{Aceptar}.
 \item Repetir lo mismo para la variable \variable{apgar5}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Realizar el contraste de correlación.
 \begin{indicacion}
-{Como las variables analizadas no siguen distribuciones normales, para realizar un contraste de relación entre ambas hay
+Como las variables analizadas no siguen distribuciones normales, para realizar un contraste de relación entre ambas hay
 que obtener el coeficiente de correlación de Spearman y ver si es o no significativamente diferente de $0$.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Regresión\flecha Correlación}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Correlación}.
 \item En el cuadro de diálogo que aparece, seleccionar las variables \variable{apgar1} y \variable{apgar5} en el campo \campo{Variables}.
 \item En la solapa \menu{Opciones de correlación}, seleccionar la opción \opcion{Ro de Spearman} en el campo
 \campo{Método} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 

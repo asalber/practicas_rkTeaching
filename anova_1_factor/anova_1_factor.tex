@@ -1,9 +1,4 @@
-% Version control information:
-%$HeadURL: https://practicas-r.googlecode.com/svn/trunk/anova_1_factor/anova_1_factor.tex $
-%$LastChangedDate: 2011-12-05 14:06:12 +0100 (lun 05 de dic de 2011) $
-%$LastChangedRevision: 19 $
-%$LastChangedBy: asalber $
-%$Id: anova_1_factor.tex 19 2011-12-05 13:06:12Z asalber $
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \chapter{Análisis de la Varianza de 1 Factor}
 
@@ -269,45 +264,44 @@ Después de 16 semanas se anotó para cada paciente el porcentaje de mejoría en
 la muestra.
 
 \item Dibujar el diagrama de puntos. ¿Se observan diferencias entre los tratamientos en el diagrama?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de puntos}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de puntos}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{mejora} en el campo \campo{Variable}, seleccionar la variable \variable{tratamiento} en el campo \campo{Grupos}, y hacer click sobre el botón
 \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Realizar el contraste de ANOVA. 
 ¿Se puede concluir que los tres tratamientos tienen el mismo efecto medio con un nivel de significación de $0.05$?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{acne} en el campo \campo{Conjunto de datos}.
 \item Seleccionar la variable \variable{mejora} en el campo \campo{Variable dependiente}, la variable
 \variable{tratamiento} en el campo \campo{Factores entre individuos} y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Obtener la tabla de ANOVA correspondiente al problema pero que además muestre los intervalos de confianza de
 comparación de los tres tratamientos con una significación de $0.05$.
 ¿Entre qué parejas de tratamientos hay diferencias estadísticamente significativas?
-\begin{indicacion}{ 
-Repetir los mismos pasos del apartado anterior activando la opción \opcion{Comparaciones de medias por pares} de la solapa \menu{Comparación por pares}.}
+\begin{indicacion} 
+Repetir los mismos pasos del apartado anterior activando la opción \opcion{Comparaciones de medias por pares} de la solapa \menu{Comparación por pares}.
 \end{indicacion}
 
 \item Comprobar que se cumple la hipótesis de igualdad de varianzas entre los tratamientos.
-\begin{indicacion}{ 
-Repetir los mismos pasos del apartado anterior activando la opción \opcion{Test de Levene} de la solapa \menu{Opciones}.}
+\begin{indicacion} 
+Repetir los mismos pasos del apartado anterior activando la opción \opcion{Test de Levene} de la solapa \menu{Opciones}.
 \end{indicacion}
 
 \item Dibujar el gráfico de los intervalos de confianza para la media de cada tratamiento. 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching \flecha Gráficos\flecha Diagrama de medias}.
+\item Seleccionar el menú \menu{Teaching  > Gráficos > Diagrama de medias}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{mejora} en el campo \campo{Variable} y seleccionar la variable \variable{tratamiento} en el campo \campo{Grupos}.
 \item Seleccionar la opción \opcion{Intervalos de confianza} y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 \end{enumerate}
 
@@ -339,29 +333,28 @@ Los resultados fueron:
 \item Crear un conjunto de datos con las variables \variable{nota} y \variable{centro} e introducir los datos de la muestra.
 
 \item Dibujar el diagrama de puntos. ¿Se observan diferencias entre los centros en el diagrama?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching \flecha Gráficos\flecha Diagrama de puntos}.
+\item Seleccionar el menú \menu{Teaching  > Gráficos > Diagrama de puntos}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{nota} en el campo \campo{Variable}, seleccionar la
 variable \variable{centro} en el campo \campo{Grupos} y hacer click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Realizar el contraste de ANOVA. 
 ¿Se puede confimar la sospecha de que hay diferencias entre las notas medias de los centros?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{selectividad} en el campo \campo{Conjunto de datos}.
 \item Seleccionar la variable \variable{notas} en el campo \campo{Variable dependiente}, la variable
 \variable{centro} en el campo \campo{Factores entre individuos} y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item ¿Qué centros son los mejores en la preparación de la selectividad?
-\begin{indicacion}{ 
-Repetir los mismos pasos del apartado anterior activando la opción \opcion{Comparaciones de medias por pares} de la solapa \menu{Comparación por pares}.}
+\begin{indicacion} 
+Repetir los mismos pasos del apartado anterior activando la opción \opcion{Comparaciones de medias por pares} de la solapa \menu{Comparación por pares}.
 \end{indicacion}
 \end{enumerate}
 

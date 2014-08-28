@@ -1,9 +1,4 @@
-% Version control information:
-%$HeadURL: https://practicas-r.googlecode.com/svn/trunk/anova_2_factores/anova_2_factores.tex $
-%$LastChangedDate: 2011-12-05 14:06:12 +0100 (lun 05 de dic de 2011) $
-%$LastChangedRevision: 19 $
-%$LastChangedBy: asalber $
-%$Id: anova_2_factores.tex 19 2011-12-05 13:06:12Z asalber $
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \chapter[ANOVA de múltiples factores y medidas repetidas]{ANOVA de Múltiples Factores y ANOVA de Medidas Repetidas}
 
@@ -592,9 +587,9 @@ y \variable{farmaco}.
 
 \item Mostrar el diagrama de interacción de los kilos perdidos para los distintos grupos según la dieta y el fármaco.
 ¿Qué conclusiones cualitativas pueden sacarse del gráfico obtenido? 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de interacción}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de interacción}.
 \item Seleccionar la variable \variable{kilos\_perdidos} en el campo \campo{Variable respuesta}, la variable
 \variable{dieta} en el campo \campo{Grupos eje X} y la variable \variable{farmaco} en el campo \campo{Grupos de
 trazado}, y hacer click en el botón \boton{Aceptar}.
@@ -602,13 +597,13 @@ trazado}, y hacer click en el botón \boton{Aceptar}.
 Se observa claramente que no hay interacción (líneas paralelas), que los dos puntos del grupo de los que no hacen dieta
 están por debajo de los que sí que la hacen, lo cual hace sospechar que el factor dieta será significativo, e igualmente
 los dos puntos de los que no toman fármaco están por debajo de los que sí que lo toman, lo cual hace sospechar que el
-factor fármaco también será significativo. }
+factor fármaco también será significativo.
 \end{indicacion}  
 
 \item Realizar un contraste de ANOVA de dos factores con los datos e interpretar la tabla de ANOVA obtenida.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{dieta.farmaco}.
 \item Seleccionar la variable \variable{kilos\_perdidos} como \campo{Variable dependiente} y las variables
 \variable{dieta} y \variable{farmaco} en el campo \campo{Factores entre individuos}, y hacer click sobre el botón
@@ -624,26 +619,24 @@ Para la interpretación de la tabla de ANOVA, prestar especial atención a las s
 Una conclusión muy importante a la luz de los resultados es que no hay una interacción significativa entre dieta y
 fármaco, es decir que el efecto del fármaco no dependerá de si una persona toma o no dieta, y a la inversa, que el
 efecto de la dieta no dependerá de si se toma o no fármaco.
-}
 \end{indicacion}
 
 %\item Calcular las medias y desviaciones típicas de los Kg perdidos en todos los grupos.
-%\begin{indicacion}{
+%\begin{indicacion}
 %El procedimiento anterior para obtener el contraste de ANOVA también muestra las medias y desviaciones típicas para cada grupo.
 %}
 %\end{indicacion}
 
 \item Teniendo en cuenta que no hay interacción significativa, calcular el intervalo de confianza para la diferencia de
-medias en los kg perdidos según la variable dieta e igualmente con la variable fármaco.\begin{indicacion}{
+medias en los kg perdidos según la variable dieta e igualmente con la variable fármaco.\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{dieta.farmaco}.
 \item Seleccionar la variable \variable{kilos\_perdidos} como \campo{Variable
 dependiente} y las variables \variable{dieta} y \variable{farmaco} en el campo \campo{Factores entre individuos}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación de medias por pares} y hacer
 click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -670,9 +663,9 @@ y \variable{farmaco}.
 
 \item Mostrar el gráfico de interacción de los kilos perdidos para los distintos grupos según la dieta y el fármaco.
 ¿Qué conclusiones cualitativas pueden sacarse del gráfico obtenido? 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de interacción}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de interacción}.
 \item Seleccionar la variable \variable{kilos\_perdidos} en el campo \campo{Variable respuesta}, la variable
 \variable{dieta} en el campo \campo{Grupos eje X} y la variable \variable{farmaco} en el campo \campo{Grupos de
 trazado}, y hacer click en el botón \boton{Aceptar}.
@@ -681,14 +674,13 @@ Ahora se observa claramente que hay interacción (líneas no paralelas), que los
 dieta están por debajo de los que sí que la hacen, lo cual hace sospechar que el factor dieta será significativo, e
 igualmente los dos puntos de los que no toman fármaco están por debajo de los que sí que lo toman, lo cual hace
 sospechar que el factor fármaco también será significativo.
-}
 \end{indicacion}  
 
 \item Realizar un contraste de ANOVA de dos factores con los datos e interpretar la tabla de ANOVA obtenida. 
 ¿Hay interacción significativa?
-¿Cómo se interpretaría? \begin{indicacion}{
+¿Cómo se interpretaría? \begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{dieta.farmaco}.
 \item Seleccionar la variable \variable{kilos\_perdidos} como \campo{Variable dependiente} y las variables
 \variable{dieta} y \variable{farmaco} en el campo \campo{Factores entre individuos}, y hacer click sobre el botón
@@ -696,21 +688,20 @@ sospechar que el factor fármaco también será significativo.
 \end{enumerate}
 Ahora puede concluirse que sí hay interacción significativa, y eso implica que no hay la misma diferencia en Kg perdidos
 entre los que hacen dieta y los que no si consideramos el grupo de los que no toman fármaco, que si consideramos el
-grupo de los que sí lo toman.}
+grupo de los que sí lo toman.
 \end{indicacion}
 
 \item Teniendo en cuenta que hay interacción significativa, calcular el intervalo de confianza para la diferencia de
 medias en los kg perdidos según la variable dieta y fármaco, así como entre los grupos que surgen de su interacción.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{dieta.farmaco}.
 \item Seleccionar la variable \variable{kilos\_perdidos} como \campo{Variable
 dependiente} y las variables \variable{dieta} y \variable{farmaco} en el campo \campo{Factores entre individuos}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación de medias por pares} y hacer
 click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -735,21 +726,20 @@ Mujer & 24, 27, 29, 25, 23 & 17, 15, 13, 16, 18 & 20, 19, 22, 17, 23 \\
 
 \item Mostrar el gráfico de interacción de los del tiempo de aprendizaje para los distintos grupos según el sexo y el método
 de aprendizaje. 
-¿Qué se puede decir de la interacción de las variables?\begin{indicacion}{
+¿Qué se puede decir de la interacción de las variables?\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de interacción}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de interacción}.
 \item Seleccionar la variable \variable{dias} en el campo \campo{Variable respuesta}, la variable
 \variable{metodo} en el campo \campo{Grupos eje X} y la variable \variable{sexo} en el campo \campo{Grupos de
 trazado}, y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
 Es evidente que las líneas se cruzan, lo cual indica que hay interacción.
-}
 \end{indicacion}
 
 \item Realizar un contraste de ANOVA de dos vías con interacción e interpretar los resultados.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{metodo.aprendizaje}.
 \item Seleccionar la variable \variable{dias} como \campo{Variable dependiente} y las variables
 \variable{sexo} y \variable{metodo} en el campo \campo{Factores entre individuos}, y hacer click sobre el botón
@@ -759,21 +749,19 @@ Se puede observar que no hay diferencias significativas asociadas al sexo ni al 
 Sin embargo sí que hay interacción, es decir la diferencia en el tiempo de respuesta entre hombres y mujeres depende del
 método seguido, e igualmente las diferencias entre los tiempos de respuesta según los diferentes métodos dependen del
 sexo.
-}
 \end{indicacion}
 
 \item Calcular los intervalos de confianza para la diferencia de medias en el tiempo de aprendizaje entre los grupos que
 surgen de la interacción del sexo con el método de aprendizaje.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \texttt{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \texttt{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{metodo.aprendizaje}.
 \item Seleccionar la variable \variable{dias} como \campo{Variable dependiente} y las variables
 \variable{sexo} y \variable{metodo} en el campo \campo{Factores entre individuos}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación de medias por pares} y hacer
 click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -802,28 +790,27 @@ $A$ & $B$ & $C$ \\
 \begin{enumerate}
 \item Crear un conjunto de datos \variable{repigmentación} con las variables \variable{individuo}, \variable{tiempo} y
 \variable{repigmentador}.
-\begin{indicacion}{Aunque todos los repigmentadores se aplican a cada individuo, para hacer un ANOVA de medidas
+\begin{indicacion}Aunque todos los repigmentadores se aplican a cada individuo, para hacer un ANOVA de medidas
 repetidas hay que introducir el individuo como el factor inter-sujetos, mientras que el repigmentador sería el
-factor-intrasujetos.}
+factor-intrasujetos.
 \end{indicacion}
 
 \item Realizar un ANOVA de medidas repetidas e interpretar el resultado obtenido.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{repigmentación}.
 \item Seleccionar la opción de diseño \opcion{Dentro de individuos (medidas repetidas)}.
 \item Seleccionar la variable \variable{tiempo} como \campo{Variable dependiente}, la variable \variable{repigmentador}
 en el campo \campo{Factores dentro de los individuos}, la variable \variable{individuo} en el campo \campo{Identificador
 de los individuos} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item ¿Entre qué medidas del tratamiento repigmentador se dan diferencias estadísticamente significativas?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{repigmentación}.
 \item Seleccionar la opción de diseño \opcion{Dentro de individuos (medidas repetidas)}.
 \item Seleccionar la variable \variable{tiempo} como \campo{Variable dependiente}, la variable \variable{repigmentador}
@@ -832,7 +819,6 @@ los individuos}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación de medias por pares} y hacer
 click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -872,32 +858,31 @@ Los datos obtenidos fueron:
 \begin{enumerate}
 \item Crear un conjunto de datos \variable{entrenamiento.psicologico} con las variables \variable{individuo}, \variable{rendimiento} y
 \variable{entrenamiento} y \variable{semana}.
-\begin{indicacion}{La variable semana contiene varias varias medidas repetidas en cada individuo, de modo que para poder
+\begin{indicacion}La variable semana contiene varias varias medidas repetidas en cada individuo, de modo que para poder
 aplicar el procedimiento de ANOVA de medidas repetidas debe introducirse una fila por cada observación en el conjunto de
-datos}.
+datos.
 \end{indicacion}
 
 \item Mostrar el gráfico de interacción de los del redimiento para los distintos grupos según el tipo de entrenamiento y
 la semana.
 ¿Qué se puede decir de la interacción de las variables?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Gráficos\flecha Diagrama de interacción}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de interacción}.
 \item Seleccionar la variable \variable{rendimiento} en el campo \campo{Variable respuesta}, la variable
 \variable{semana} en el campo \campo{Grupos eje X} y la variable \variable{entrenamiento} en el campo \campo{Grupos de
 trazado}, y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
 Es evidente que las líneas se cruzan, lo cual indica que hay interacción.
-}
 \end{indicacion}
 
 \item Realizar un ANOVA mixto (un factor entre individuos y otro dentro de los individuosmedidas) e interpretar el resultado obtenido.
 ¿Influye significativamente la semana en la que se realiza el test en el resultado? 
 ¿Y el tipo de entrenamiento?
 ¿Es significativa la interacción entre tipo de entrenamiento y la semana en la que se realiza el test?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{entrenamiento.psicologico}.
 \item Seleccionar la opción de diseño \opcion{Mixto}.
 \item Seleccionar la variable \variable{rendimiento} como \campo{Variable dependiente}, la variable
@@ -905,13 +890,12 @@ Es evidente que las líneas se cruzan, lo cual indica que hay interacción.
 \campo{Factores dentro de los individuos}, la variable \variable{individuo} en el campo \campo{Identificador de los
 individuos} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Entre qué medias hay diferencias estadísticamente significativas? 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Tests paramétricos\flecha Medias\flecha ANOVA}.
+\item Seleccionar el menú \menu{Teaching > Tests paramétricos > Medias > ANOVA}.
 \item En el cuadro de diálogo que aparece, seleccionar el conjunto de datos \variable{entrenamiento.psicologico}.
 \item Seleccionar la opción de diseño \opcion{Mixto}.
 \item Seleccionar la variable \variable{rendimiento} como \campo{Variable dependiente}, la variable
@@ -921,7 +905,6 @@ individuos}.
 \item En la solapa \menu{Comparación por pares} seleccionar la opción \opcion{Comparación de medias por pares} y hacer
 click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 \end{enumerate}

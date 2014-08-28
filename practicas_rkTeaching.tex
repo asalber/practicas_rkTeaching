@@ -67,7 +67,7 @@
 
 
 % hyperlinks
-\usepackage[pdfauthor={Alfredo Sánchez Alberca}, pdftitle={Bioestadística aplicada con SPSS},breaklinks,colorlinks=true]{hyperref}
+\usepackage[pdfauthor={Alfredo Sánchez Alberca}, pdftitle={Bioestadistica aplicada con R y RKTeaching},breaklinks,colorlinks=true]{hyperref}
 \usepackage{breakurl}
 
 % Indentation
@@ -139,16 +139,23 @@
 \renewmenumacro{\menu}[>]{paths}
 %\newmenustylesimple*{botonstyle}{\textbf{\CurrentMenuElement}}
 %\renewmenumacro{\keys}{botonstyle}
-\newcommand{\boton}[1]{\textsf{\small #1}}
-\newcommand{\opcion}[1]{\textsf{\small #1}}
-\newcommand{\campo}[1]{\textsf{\small #1}}
+\newcommand{\boton}[1]{\textsf{#1}}
+\newcommand{\opcion}[1]{\textsf{#1}}
+\newcommand{\campo}[1]{\textsf{#1}}
 \newcommand{\comando}[1]{\texttt{#1}}
-\newcommand{\variable}[1]{\textsf{\small #1}}
+\newcommand{\variable}[1]{\textsf{#1}}
 \newcommand{\resultado}[1]{\texttt{#1}}
-\newcommand{\flecha}{ > }
+
+%----------------------------------------------------------------------------------------
+%	HYPHENATION
+%----------------------------------------------------------------------------------------
+\hyphenation{fre-cuen-cias, pro-ba-bi-li-dad, pro-ba-bi-li-da-des, Fre-cuen-cias, Pro-ba-bi-li-dad, Pro-ba-bi-li-da-des}
+
 
 % OTHERS
 \newcommand{\resetcounters}{\setcounter{page}{1} \setcounter{section}{0} \setcounter{footnote}{0} \setcounter{figure}{0} \setcounter{table}{0}}
+
+
 
 
 %========================================================================================
@@ -185,21 +192,21 @@
 %	CHAPTERS
 %----------------------------------------------------------------------------------------
 \include{introduccion_r/introduccion_r}
-% \include{distribuciones_graficas/distribuciones_graficas}
-% \include{estadisticos/estadisticos}
-% \include{regresion_lineal_simple/regresion_lineal_correlacion}
-% \include{regresion_no_lineal/regresion_no_lineal}
-% \include{probabilidad/probabilidad}
-% \include{variables_aleatorias_discretas/variables_aleatorias_discretas}
-% \include{variables_aleatorias_continuas/variables_aleatorias_continuas}
-% \include{intervalos_confianza_1_muestra/intervalos_confianza_1_muestra}
-% \include{intervalos_confianza_2_muestras/intervalos_confianza_2_muestras}
-% \include{contrastes/contrastes}
-% \include{anova_1_factor/anova_1_factor}
-% \include{anova_2_factores/anova_2_factores}
-% \include{contrastes_no_parametricos/contrastes_no_parametricos}
-% \include{chi_cuadrado/chi_cuadrado}
-% \include{concordancia/concordancia}
-%\appendix
-%\include{comandos_R} 
+\include{distribuciones_graficas/distribuciones_graficas}
+\include{estadisticos/estadisticos}
+\include{regresion_lineal_simple/regresion_lineal_correlacion}
+\include{regresion_no_lineal/regresion_no_lineal}
+\include{probabilidad/probabilidad}
+\include{variables_aleatorias_discretas/variables_aleatorias_discretas}
+\include{variables_aleatorias_continuas/variables_aleatorias_continuas}
+\include{intervalos_confianza_1_muestra/intervalos_confianza_1_muestra}
+\include{intervalos_confianza_2_muestras/intervalos_confianza_2_muestras}
+\include{contrastes/contrastes}
+\include{anova_1_factor/anova_1_factor}
+\include{anova_2_factores/anova_2_factores}
+\include{contrastes_no_parametricos/contrastes_no_parametricos}
+\include{chi_cuadrado/chi_cuadrado}
+\include{concordancia/concordancia}
+% \appendix
+% \include{comandos_R} 
 \end{document}

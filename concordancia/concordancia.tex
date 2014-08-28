@@ -1,9 +1,4 @@
-% Version control information:
-%$HeadURL: https://practicas-spss.googlecode.com/svn/trunk/anova_1_factor/anova_1_factor.tex $
-%$LastChangedDate: 2010-09-27 16:37:11 +0200 (lun, 27 sep 2010) $
-%$LastChangedRevision: 3 $
-%$LastChangedBy: asalber $
-%$Id: anova_1_factor.tex 3 2010-09-27 14:37:11Z asalber $
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \chapter{Análisis de Concordancia}
 
@@ -242,9 +237,9 @@ Se pide
 \item Crear un conjunto de datos con las varaibles \variable{tens.habitual} y \variable{tens.muñeca}.
 
 \item Calcular el coeficiente de correlación intraclase e interpretar el resultado.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Concordancia\flecha Coeficiente de correlación
+\item Seleccionar el menú \menu{Teaching > Concordancia > Coeficiente de correlación
 intraclase}.
 \item Seleccionar las variables \variable{tens.habitual} en el campo \campo{Primera medida}, la
 variable\variable{tens.muñeca} en el campo \campo{Segunda medida} y hacer click en el botón \boton{Aceptar}.
@@ -252,12 +247,12 @@ variable\variable{tens.muñeca} en el campo \campo{Segunda medida} y hacer click
 
 El coeficiente de correlación intraclase aparece en la fila ICC1 y vale $0.93$, lo que indica que el nivel de
 concordancia entre las medidas de la presión arterial obtenidas con el tensiómetro habitual y con el de muñeca es muy
-buena.}
+buena.
 \end{indicacion}
 
 % \item Dibujar un gráfico de dispersión en el que aparezca la recta de regresión de la presión arterial medida con el
 % tensiómetro de muñeca en función de la medida con el tensiómetro habitual.
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
 % \item Seleccionar el menú \menu{Gráficas->Diagrama de dispersión}.
 % \item En el cuadro de diálogo que aparece seleccionar la variable \variable{tens\_muñeca} como \campo{variable x} y la
@@ -268,7 +263,7 @@ buena.}
 % 
 % \item Añadir al gráfico obtenido en el apartado anterior, la recta que correspondería si ambas tensiómetros diesen la
 % misma medida.
-% \begin{indicacion}{
+% \begin{indicacion}
 % Sin cerrar la ventana gráfica del apartado anterior, ejecutar el comando \comando{abline(0,1)} para dibujar la recta
 % $y=x$, que tiene término independiente $0$ y pendiente $1$.}
 % \end{indicacion}
@@ -282,13 +277,13 @@ dichos informes hubo 32 radiografías en que ambos radiólogos apreciaron metás
 apreció, 6 radiografías en que el radiólogo A las apreció y el B no, y 10 en que el B las apreció y el A no.
 \begin{enumerate}
 \item Crear un conjunto de datos con las variables \variable{radiologoA} y \variable{radiologoB}.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Concordancia\flecha Kappa de Cohen}.
+\item Seleccionar el menú \menu{Teaching > Concordancia > Kappa de Cohen}.
 \item Seleccionar las variables \variable{radiologoA} en el campo \campo{Primera medida}, la
 variable \variable{radiologoB} en el campo \campo{Segunda medida} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-El valor del índice de Kappa obtenido es $0.7$ por lo que la concordancia es buena.}
+El valor del índice de Kappa obtenido es $0.7$ por lo que la concordancia es buena.
 \end{indicacion}
 \end{enumerate}
 
@@ -330,7 +325,7 @@ El valor del índice de Kappa obtenido es $0.7$ por lo que la concordancia es bu
 % Apto, el {1} a Dudoso y el {2} a Apto.
 % 
 % \item Calcular el coeficiente de concordancia \texttt{W de Kendall} e interpretar el resultado..
-% \begin{indicacion}{
+% \begin{indicacion}
 % \begin{enumerate}
 % \item Seleccionar el menú \texttt{Analizar->Pruebas no paramétricas->Cuadros de diálogo antiguos->K muestras relacionadas}.
 % \item En el cuadro de diálogo resultante seleccionar las variables \textsf{médico1}, \textsf{médico2} y \textsf{médico3} en el campo
@@ -366,7 +361,9 @@ obteniéndose los siguientes resultados, expresados en mg./dl.:\[
 Se desea:
 \begin{enumerate}
 \item Calcular el coeficiente de correlación intraclase e interpretarlo en términos de concordancia de las medidas de la concentración de ácido úrico en sangre obtenidas con ambos equipos.
-\item Dibujar el diagrama de dispersión, en el que aparezca la recta de regresión de las concentraciones de ácido úrico obtenidas con el equipo nuevo sobre las obtenidas con el equipo tradicional, y la recta de regresión que se obtendría si el equipo nuevo siempre diera un resultado $0,8 mg/dl$ superior al que proporciona el equipo tradicional.
+\item Dibujar el diagrama de dispersión, en el que aparezca la recta de regresión de las concentraciones de ácido úrico obtenidas con el
+equipo nuevo sobre las obtenidas con el equipo tradicional, y la recta de regresión que se obtendría si el equipo nuevo siempre diera un
+resultado $0.8$ mg/dl superior al que proporciona el equipo tradicional.
 \end{enumerate}
 
 \item Se plantean a un grupo de personas dos tests A y B para determinar si su régimen alimenticio es adecuado o no. Como resultado de los

@@ -107,19 +107,19 @@ Se pide:
 
 \item Dibujar el diagrama de dispersión correspondiente. En vista del diagrama, ¿qué tipo de modelo crees que explicará
 mejor la relación entre el número de bacterias y el tiempo transcurrido? 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de dispersión}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable Y}
 y la variable \variable{horas} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Calcular los modelos exponencial y cuadrático de las bacterias sobre las horas. ¿Qué tipo de modelo es el mejor?
-\begin{indicacion}{
+\begin{indicacion}
 Para el modelo exponencial:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Regresión no lineal}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable
 dependiente} y la variable \variable{horas} en el campo \campo{Variable independiente}.
 \item En la solapa de \opcion{Modelo de regresión} seleccionar el modelo \opcion{Exponencial}.
@@ -127,38 +127,37 @@ dependiente} y la variable \variable{horas} en el campo \campo{Variable independ
 \end{enumerate}
 Para el modelo cuadrático repetir los pasos pero seleccionando como modelo el \opcion{Cuadrático}. 
 El modelo mejor será aquel que tenga un coeficiente de determinación mayor.
-}
 \end{indicacion}
 
 \item Dibujar la curva del mejor de los modelos anteriores.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de dispersión}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \campo{Variable Y}
 y la variable \variable{horas} en el campo \campo{Variable X}.
 \item En la solapa \menu{Línea de ajuste} seleccionar la opción \opcion{Exponencial} y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Según el modelo anterior, ¿cuántas bacterias habrá al cabo de 3 horas y media del inicio del cultivo? 
 ¿Y al cabo de 10 horas? 
 ¿Son fiables estas predicciones?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar el modelo de regresión exponencial construido antes.
 \item Introducir los valores $3.5, 10$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
 \item Como se trata de un modelo exponencial, las predicciones obtenidas corresponden al logaritmo de bacterias. 
 Para obtener la predicción de bacterias basta con aplicar la función exponencial a los valores obtenidos.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Dar una predicción lo más fiable posible del tiempo que tendría que transcurrir para que en el cultivo hubiese 100
 bacterias.
-\begin{indicacion}{
+\begin{indicacion}
 Para construir el modelo logarítmico:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Regresión no lineal}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{horas} en el campo \campo{Variable
 dependiente} y la variable \variable{bacterias} en el campo \campo{Variable independiente}.
 \item Seleccionar como modelo el \opcion{Logarítmico}.
@@ -166,10 +165,10 @@ dependiente} y la variable \variable{bacterias} en el campo \campo{Variable inde
 \end{enumerate}
 Para hacer la predicción:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar el modelo de regresión logarítmico construido antes.
 \item Introducir el valor $100$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 \end{enumerate}
 
@@ -183,42 +182,42 @@ Se pide:
 
 \item Dibujar el diagrama de dispersión. 
 Según la nube de puntos, ¿qué tipo de modelo explicaría mejor la relación entre los kilos perdidos y los días de dieta?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de dispersión}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable Y}, la
 variable \variable{dias} en el campo \campo{Variable X}, y hacer clic en el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Comparación de modelos}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
 dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
 \item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \boton{Enviar}.
 \item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Dibujar el modelo del apartado anterior.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Gráficos>Diagrama de Dispersión}.
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de Dispersión}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable Y}
 y la variable \variable{dias} en el campo \campo{Variable X}.
 \item En la solapa \menu{Línea de ajuste} seleccionar la opción correspondiente al mejor modelo y hacer
 clic sobre el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
 los que no hacen ejercicio.
-\begin{indicacion}{
+\begin{indicacion}
 Para ver qué modelo es mejor:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Comparación de modelos}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
 dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
 \item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \campo{Condición de selección}.
@@ -227,20 +226,20 @@ dependiente} y la variable \variable{dias} en el campo \campo{Variable independi
 \end{enumerate}
 Para construir el modelo:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Regresión no lineal}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
 dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
 \item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \campo{Condición de selección}.
 \item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
 los que si hacen ejercicio.
-\begin{indicacion}{
+\begin{indicacion}
 Para ver qué modelo es mejor:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Comparación de modelos}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
 dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
 \item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \campo{Condición de selección}.
@@ -249,26 +248,25 @@ dependiente} y la variable \variable{dias} en el campo \campo{Variable independi
 \end{enumerate}
 Para construir el modelo:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Regresión no lineal}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
 \item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \campo{Variable
 dependiente} y la variable \variable{dias} en el campo \campo{Variable independiente}.
 \item Seleccionar la opción \opcion{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \campo{Condición de selección}.
 \item Seleccionar \opcion{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \boton{Enviar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \opt{largo}{
 \item Utilizar el modelo construido para predecir el número de kilos perdidos tras 40 y 500 días de dieta, tanto para
 los que hacen ejercicio como para los que no. ¿Son fiables estas predicciones?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching>Regresión>Predicciones}.
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
 \item En el cuadro de diálogo que aparece seleccionar el modelo de regresión construido antes para los que no hacen ejercicio.
 \item Introducir los valores $40, 500$ en el campo \campo{Predicciones para} y hacer clic sobre el botón \boton{Enviar}.
 \end{enumerate}
 Repetir los pasos anteriores seleccionando el modelo de regresión construido antes para los que si hacen ejercicio.}
 \end{indicacion}
-}
 \end{enumerate}
 
 \end{enumerate}

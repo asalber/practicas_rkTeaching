@@ -1,9 +1,4 @@
-% Version control information:
-%$HeadURL: https://practicas-spss.googlecode.com/svn/trunk/contrastes/contrastes.tex $
-%$LastChangedDate: 2010-09-27 16:37:11 +0200 (lun, 27 sep 2010) $
-%$LastChangedRevision: 3 $
-%$LastChangedBy: asalber $
-%$Id: contrastes.tex 3 2010-09-27 14:37:11Z asalber $
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
 
 \chapter{Contraste de Hipótesis}
 
@@ -444,50 +439,46 @@ muestra de tamaño 10?
 \item Suponiendo cierta la hipótesis nula, ¿cuál es la probabilidad de que en la muestra se obtengan 0 hombres?
 ¿Se aceptaría la hipótesis nula en tal caso? 
 Justificar la respuesta.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
-Probabilidades acumuladas}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Discretas > Binomial > Probabili\-dades acumuladas}.
 \item En el cuadro de diálogo que aparece, introducir 0 en el campo \campo{Valor(es) de la variable}, 10 en el campo
 \campo{Nº de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}, marcar la opción \opcion{Cola izquierda} y
 hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Suponiendo cierta la hipótesis nula, si se decide rechazarla cuando en la muestra haya 2 o menos hombres, ¿cuál es
 el riesgo de equivocarse?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
-Probabilidades acumuladas}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Discretas > Binomial > Probabili\-dades acumuladas}.
 \item En el cuadro de diálogo que aparece, introducir 2 en el campo \campo{Valor(es) de la variable}, 10 en el campo
 \campo{Nº de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}, marcar la opción \opcion{Cola izquierda} y
 hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Si el máximo riesgo de error $\alpha$ que se tolera es $0.05$, ¿qué número de hombres en la muestra formarían la
 región de rechazo de la hipótesis nula?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
-Probabilidades acumuladas}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Discretas > Binomial > Probabili\-dades acumuladas}.
 \item En el cuadro de diálogo que aparece, introducir 1 en el campo \campo{Valor(es) de la variable}, 10 en el campo
 \campo{Nº de repeticiones}, $0.5$ en el campo \campo{Probabilidad de éxito}, marcar la opción \opcion{Cola izquierda} y
 hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Suponiendo que la proporción real de hombres en la población fuese de $0.4$, ¿cuál es la potencia del contraste
 para la región de rechazo del apartado anterior?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Discretas\flecha Binomial\flecha
-Probabilidades acumuladas}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Discretas > Binomial > Probabili\-dades acumuladas}.
 \item En el cuadro de diálogo que aparece, introducir 1 en el campo \campo{Valor(es) de la variable}, 10 en el campo
 \campo{Nº de repeticiones}, $0.4$ en el campo \campo{Probabilidad de éxito}, marcar la opción \opcion{Cola izquierda} y
 hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Si en lugar de una muestra de tamaño 10 se tomase una muestra de tamaño 100, y haciendo uso de la aproximación de
@@ -496,11 +487,10 @@ un riesgo $\alpha=0.05$?
 ¿Qué potencia tendría ahora el contraste si la proporción real de hombres fuese de $0.4$? 
 ¿Es mejor o peor contraste que el anterior? 
 Justificar la respuesta.
-\begin{indicacion}{
+\begin{indicacion}
 Una distribución binomial $B(100,\, 0.5)$ puede aproximarse mediante una normal $N(50,5)$.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Continuas\flecha Normal\flecha
-Cuantiles}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Continuas > Normal > Cuantiles}.
 \item En el cuadro de diálogo que aparece, introducir las probabilidad $0.05$ en el campo \campo{Probabilidades}, 50 en
 el campo \campo{media}, 5 en el campo \campo{desviación típica}, marcar la opción \opcion{Cola izquierda} y hacer click
 en el botón \boton{Aceptar}.
@@ -510,25 +500,24 @@ Si en la muestra se obtienen menos hombres de dicho valor se rechazará la hipó
 más se aceptará. 
 Para calcular la potencia de contraste:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Distribuciones\flecha Continuas\flecha Normal\flecha
-Probabilidades acumuladas}.
+\item Seleccionar el menú \menu{Teaching > Distribuciones > Continuas > Normal > Probabili\-dades acumuladas}.
 \item En el cuadro de diálogo que aparece, introducir el valor de la frontera en el campo \campo{Valor(es) de la
 variable}, 40 en el campo \campo{media}, $4.899$ en el campo \campo{desviación típica}, marcar la opción \opcion{Cola
 izquierda} y hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item Si se toma una muestra de tamaño 100 y se observan 41 hombres, ¿cuál es $p$-valor del contraste? 
 ¿Podría rechazarse la hipótesis nula pra un riesgo $\alpha=0.05$? 
 ¿y para un riesgo $\alpha=0.01$?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Proporciones\flecha Test para una proporción}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Test para una proporción}.
 \item En el cuadro de diálogo que aparece marcar la casilla de \opcion{Introducción manual de frecuencias}, introducir
 41 en el campo \campo{Frecuencia muestral} e introducir 100 en el campo \campo{Tamaño muestral}.
 \item En la solapa \menu{Opciones de contraste}, introducir $0.5$ en el campo \campo{Hipótesis nula}, seleccionar
 como hipótesis alternativa \opcion{Unilateral menor} y hacer click en el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 \end{enumerate}
 
@@ -544,34 +533,33 @@ Se pide:
 
 \item Realizar el contraste de hipótesis bilateral: $H_0$: $\mu=18$ y $H_1$: $\mu\neq18$ con un nivel de significación
 $0.05$.
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha Test t para una muestra}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concentracion}.
 \item En la solapa \menu{Opciones de contraste}, introducir 18 en el campo \campo{Hipótesis nula}, seleccionar como
 hipótesis alternativa la opción \opcion{Bilateral} y hacer click sobre el botón \boton{Aceptar}.
-\end{enumerate}}
+\end{enumerate}
 \end{indicacion}
 
 \item De igual manera realizar los contrastes bilaterales: $H_0$: $\mu=19.5$ y $H_1$: $\mu\neq19.5$ con un niveles de
 significación $0.05$ y $0.01$.
 ¿Cómo afecta la disminución en el nivel de significación en la facilidad para rechazar $H_0$?
 
-\begin{indicacion}{Seguir los mismos pasos del apartado anterior introduciendo $19.5$ en el campo \campo{Hipótesis nula}.}
+\begin{indicacion}Seguir los mismos pasos del apartado anterior introduciendo $19.5$ en el campo \campo{Hipótesis nula}.
 \end{indicacion}
 
 \item Realizar los contrastes bilaterales y unilaterales para la hipótesis nula $H_0$: $\mu=17$ con un nivel de significación de $0.05$.
 ¿Qué relación hay entre el $p$-valor de los contrastes bilateral y unilaterales?
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha Test t para una muestra}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concentracion}.
 \item En la solapa \menu{Opciones de contraste}, introducir 17 en el campo \campo{Hipótesis nula}, seleccionar como
 hipótesis alternativa \opcion{Bilateral} y hacer click sobre el botón \boton{Aceptar}.
 \item Para el contraste de menor repetir lo mismo seleccionando como hipótesis alternativa \opcion{Unilateral menor}.
 \item Para el contraste de mayor repetir lo mismo seleccionando como hipótesis alternativa \opcion{Unilateral mayor}.
 \end{enumerate}
-}
 \end{indicacion}
 
 \item Si el fabricante del lote asegura haber aumentado la concentración de principio activo con respecto a anteriores
@@ -579,25 +567,24 @@ lotes, en los que la media era de 17 mg/mm$^3$, ¿se acepta o se rechaza la afir
 
 \item ¿Cuál sería el tamaño muestral requerido para poder detectar una diferencia de $0.5$ mg/mm$^{3}$ más con un nivel de
 significación $\alpha=0.05$ y una potencia $1-\beta=0.8$?
-\begin{indicacion}{
+\begin{indicacion}
 Para calcular el tamaño muestral se necesita saber la desviación típica de la población o una estimación suya. 
 Para ello se calcula previamente la cuasivarianza muestral
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Estadística descriptiva\flecha Estadísticos}.
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concentracion}.
 \item En la solapa \menu{Estadísticos básicos} marcar la opción \opcion{Cuasidesviación típica} y hacer click en el
 botón \boton{Aceptar}.
 \end{enumerate}
 Para calcular el tamaño muestral:
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha Cálculo del tamaño muestral para el test T}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Cálculo del tamaño muestral para el test T}.
 \item En el cuadro de diálogo que aparece introducir en el campo \campo{Diferencia en las medias} el valor 0.5,
 introducir en el campo \campo{Desviación típica} el valor de la cuasivesviación típica obtenido, introducir el valor
 $0.05$ en el campo \campo{Nivel de significación}, introducir el valor $0.8$ en el campo \campo{Potencia}, marcar la
 opción \opcion{Una muestra} en el campo \campo{Tipo de test}, seleccionar como hipótesis alternativa \opcion{Unilateral}
 y hacer click sobre el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -627,14 +614,13 @@ Respuesta & no & si & si & si & no & no & si & no & no & si & si & no & no & si 
 \item Crear un conjunto de datos con la variable \variable{respuesta} como factor.
 
 \item Contrastar si el porcentaje de alumnos que utiliza regularmente la biblioteca es superior al 40\%. 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Proporciones\flecha Test para una proporción}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Test para una proporción}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{respuesta} e introducir \texttt{Si} en el campo \campo{Categoría}.
 \item En la solapa \menu{Opciones de contraste}, introducir $0.4$ en el campo \campo{Hipótesis nula}, seleccionar como
 hipótesis alternativa \opcion{Unilateral mayor} y hacer click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -653,10 +639,10 @@ Muestra en la población $B$: & $12.5-9.5-13.5-13.8-12.0-13.8-12.5-9.5-12.0-13.5
 
 \item Realizar un contraste de hipótesis con un nivel de significación de $0.05$ para dar respuesta a la conclusión que
 buscan los investigadores.
-\begin{indicacion}{
+\begin{indicacion}
 Primero hay que realizar un constraste de comparación de varianzas.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Varianzas\flecha Test F para dos varianzas}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Varianzas > Test F para dos varianzas}.
 \item En el cuadro de dialogo que aparece seleccionar la variable \variable{edad} en el campo \campo{Comparar} y la
 variable \variable{población} en el campo \campo{Según}.
 \item En la solapa \menu{Opciones de contraste} seleccionar como hipótesis alternativa \opcion{Bilateral} y hacer click
@@ -665,14 +651,13 @@ sobre el botón \boton{Aceptar}.
 Se mantiene la hipótesis de igualdad de varianzas con la confianza fijada si el el $p$-valor es mayor que $0.5$. 
 Después se realiza el contraste de comparación de medias.
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha Test t para dos muestras independientes}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para dos muestras independientes}.
 \item En el cuadro de dialogo que aparece seleccionar la variable \variable{edad} en el campo \campo{Comparar} y la
 variable \variable{población} en el campo \campo{Según}.
 \item En la solapa \menu{Opciones de contraste} seleccionar como hipótesis alternativa \opcion{Bilateral},
 marcar la casilla \opcion{Suponer varianzas iguales} y hacer click sobre el botón \boton{Aceptar}.
 \end{enumerate}
 Hay diferencias entre las poblaciones si el $p$-valor es menor que $0.05$.
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -709,15 +694,14 @@ Los resultados se indican en la tabla siguiente:
 \item Crear un conjunto de datos con las variables \variable{antes} y \variable{después} e introducir los datos.
 
 \item Plantear el contraste de hipótesis adecuado para confirmar o denegar la hipótesis de los investigadores. 
-\begin{indicacion}{
+\begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Medias\flecha Test t para dos muestras pareadas}.
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para dos muestras pareadas}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{antes} en el campo \campo{Comparar} y la variable
 \variable{después} en el campo \campo{Con}.
 \item En la solapa \menu{Opciones de contraste} seleccionar como hipótesis alternativa \opcion{Unilateral mayor} y hacer
 click en el botón \boton{Aceptar}.
 \end{enumerate}
-}
 \end{indicacion}
 \end{enumerate}
 
@@ -727,17 +711,15 @@ tarde. En el de mañana, sobre un total de 80 alumnos, han aprobado 55; y en el 
 han aprobado 32. 
 ¿Se puede afirmar que hay diferencias significativas entre los porcentajes de aprobados en ambos grupos? 
 Justificar la respuesta.
+\begin{indicacion}
 \begin{enumerate}
-\begin{indicacion}{
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching\flecha Test paramétricos\flecha Proporciones\flecha Test para dos proporciones}, marcar la casilla \opcion{Introducción manual de frecuencias}, introducir 55 en el campo \campo{Frecuencia muestral 1}, introducir 80 en el campo
+\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Test para dos proporciones}, marcar la casilla \opcion{Introducción manual de frecuencias}, introducir 55 en el campo \campo{Frecuencia muestral 1}, introducir 80 en el campo
 \campo{Tamaño muestral 1}, introducir 32 en el campo \campo{Frecuencia muestral 2} e introducir 90 en el campo
 \campo{Tamaño muestral 2}.
 \item En la solapa \menu{Opciones de contraste}, seleccionar como hipótesis alternativa \opcion{Bilateral} y hacer click
 en el botón \boton{Aceptar}.
-\end{enumerate}}
-\end{indicacion}
 \end{enumerate}
+\end{indicacion}
 
 \end{enumerate}
 
