@@ -757,7 +757,7 @@ probabilidades} y hacer clic en el botón \boton{Enviar}.
 \item Lanzar dos dados y dos monedas. 
 \begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Combinar espacios probabilísticos independientes}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Combinar espacios probabi\-lís\-ticos independientes}.
 \item En el cuadro de diálogo que aparece, seleccionar los conjuntos de datos correspondientes a los espacios muestrales del lanzamiento de
 dos monedas y del lanzamiento de dos dados generados en los apartados anteriores, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
@@ -824,10 +824,10 @@ Para construir el espacio probabilístico:
 \begin{enumerate}
 \item Crear un conjunto de datos \variable{mendel.color} con la variable \variable{alelo.color.progenitor} con los dos posibles alelos del
 progenitor correspondientes al gen del color (A y a).
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabi\-lís\-tico}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color}, darle el nombre
 \variable{mendel.color.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilístico}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilís\-ti\-co}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color.ep}, darle el mismo nombre al espacio
 probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
 \end{enumerate}
@@ -835,15 +835,15 @@ Para calcular la probabilidad de fenotipo amarillo:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "A" | alelo.color.progenitor2 == "A"} en el campo \campo{Suceso} y hacer clic en el botón
-\boton{Enviar}.
+\comando{alelo.color.progenitor1 == "\mbox{A}"\ | alelo.color.pro\-genitor2 == "\mbox{A}"} en el campo \campo{Suceso} y hacer clic en el
+botón \boton{Enviar}.
 \end{enumerate}
 Para calcular la probabilidad de fenotipo verde:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "a" \& alelo.color.progenitor2 == "a"} en el campo \campo{Suceso} y hacer clic en el botón
-\boton{Enviar}.
+\comando{alelo.color.progenitor1 == "\mbox{a}"\ \& alelo.color.pro\-genitor2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic en el
+botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion}
 
@@ -869,15 +869,15 @@ Para calcular la probabilidad de fenotipo amarillo y liso:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{(alelo.color.progenitor1 == "A" | alelo.color.progenitor2 == "A") \& (alelo.forma.progenitor1 == "B" | alelo.forma.progenitor2 ==
-"B")} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{(alelo.color.progenitor1 == "\mbox{A}"\ | alelo.color.\-pro\-genitor2 == "\mbox{A}")\ \& (alelo.forma.progenitor1 == "B"\ |
+alelo.for\-ma.\-pro\-genitor2 == "B")} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 Para calcular la probabilidad de fenotipo verde y rugoso:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "a" \& alelo.color.progenitor2 == "a" \& alelo.forma.progenitor1 == "a" \& alelo.forma.progenitor2 ==
-"a"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{alelo.color.progenitor1 == "\mbox{a}"\ \& alelo.color.\-pro\-genitor2 == "\mbox{a}"\ \& alelo.forma.progenitor1== "\mbox{a}"\ \&
+alelo.forma.\-progenitor2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion}
 \end{enumerate}
@@ -910,7 +910,7 @@ Se pide:
 \item Crear el espacio probabilístico asociado a la población.
 \begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabi\-lís\-tico}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{enfermedades.infantiles}, activar la casilla
 \opcion{Definir frecuencias}, seleccionar la variable \variable{frecuencia} en el campo \campo{Frecuencia}, darle el nombre
 \variable{enfermedades.infantiles.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
@@ -931,7 +931,7 @@ Se pide:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{enfermedades.infantiles.ep}, introducir
-\comando{varicela == "Si" | sarampion=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{varicela == "Si"\ | sarampion=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 
@@ -940,7 +940,7 @@ Se pide:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{enfermedades.infantiles.ep}, introducir
-\comando{sarampion == "Si" \& rubeola=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{sarampion == "Si"\ \& rubeola=="Si"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 
@@ -960,7 +960,7 @@ Se pide:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{enfermedades.infantiles.ep}, introducir
-\comando{rubeola == "No" \& sarampion=="No"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
+\comando{rubeola == "No"\ \& sarampion=="No"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
 \comando{varicela == "Si"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
@@ -986,7 +986,7 @@ introducir datos de la muestra.
 \item Crear el espacio probabilístico asociado a la población.
 \begin{indicacion}
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabi\-lís\-tico}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{test.embarazo}, activar la casilla
 \opcion{Definir frecuencias}, seleccionar la variable \variable{frecuencia} en el campo \campo{Frecuencia}, darle el nombre
 \variable{test.embarazo.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
@@ -1007,7 +1007,7 @@ introducir datos de la muestra.
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{test.embarazo.ep}, introducir
-\comando{test == "+"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\comando{test == "\mbox{+}"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 
@@ -1016,7 +1016,7 @@ introducir datos de la muestra.
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{test.embarazo.ep}, introducir
-\comando{test=="+"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
+\comando{test=="\mbox{+}"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
 \comando{embarazo == "Si"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
@@ -1026,7 +1026,7 @@ introducir datos de la muestra.
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{test.embarazo.ep}, introducir
-\comando{test=="-"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
+\comando{test=="\mbox{-}"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
 \comando{embarazo == "No"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
@@ -1038,7 +1038,7 @@ introducir datos de la muestra.
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{test.embarazo.ep}, introducir
 \comando{embarazo=="Si"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
-\comando{test=="+"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
+\comando{test=="\mbox{+}"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 
@@ -1049,7 +1049,7 @@ introducir datos de la muestra.
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{test.embarazo.ep}, introducir
 \comando{embarazo=="No"} en el campo \campo{Suceso}, activar la casilla \opcion{Probabilidad condicionada}, introducir
-\comando{test=="-"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
+\comando{test=="\mbox{-}"} en el campo \campo{Condición} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion} 
 \end{enumerate} 

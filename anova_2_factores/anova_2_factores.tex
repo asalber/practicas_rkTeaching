@@ -245,7 +245,9 @@ calcular el p-valor del correspondiente contraste.
 Lo anterior se resume en forma de tabla de un ANOVA de dos vías, considerando un primer factor con $k_1$ niveles, un
 segundo factor con $k_2$ niveles y un total de datos $n$. Si se denomina $F_1$ al primer factor, $F_2$ al segundo, $I$ a
 la interacción y $R$ al residual, la tabla de un ANOVA de dos vías tiene la siguiente forma:
+
 \[
+\resizebox{\textwidth}{!}{
 \renewcommand{\arraystretch}{2}
 \begin{array}{cccccc}
 \hline
@@ -258,6 +260,7 @@ F_2 & SF_2 & k_2-1 & CF_2=\frac{SF_2}{k_2-1} & f_2=\frac{CF_2}{CR} & P(F>f_2) \\
 \hline
 \text{Total} & ST & n-1 &  &  & 
 \end{array}
+}
 \]
 
 Una vez obtenida la tabla, habitualmente mediante un programa de estadística para evitar realizar la gran cantidad de
@@ -474,7 +477,9 @@ un dato y no es viable calcular medias y dispersiones dentro de un grupo con un 
 influencia de cada uno de los factores se realiza mediante un ANOVA de dos factores sin interacción, que genera la
 siguiente tabla:
 
+
 \[
+\resizebox{\textwidth}{!}{
 \renewcommand{\arraystretch}{2}
 \begin{array}{cccccc}
 \hline
@@ -486,7 +491,9 @@ F_2=\text{Individuo} & SF_2 & n-1 & CF_2=\frac{SF_2}{n-1} & f_2=\frac{CF_2}{CR} 
 \hline
 \text{Total} & ST & n-1 &  &  & 
 \end{array}
+}
 \]
+
 Y permite dar respuesta a los siguientes contrastes:
 
 \begin{enumerate}
