@@ -24,3 +24,5 @@
 *.synctex.gz
 tmp/*
 
+/practicas_rkTeaching.pdf
+/practicas_rkTeaching.ps

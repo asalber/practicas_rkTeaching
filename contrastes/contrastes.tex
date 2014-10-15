@@ -308,7 +308,7 @@ un contraste bilateral) definida a partir del estadístico del contraste.
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=0.5]{contrastes/img/estadisticocontraste}
+\scalebox{0.8}{\input{contrastes/img/p-valor.tex}}
 \caption{El $p$-valor de un contraste unilateral con cola a la derecha.}
 \label{g:pvalor}
 \end{center}
@@ -595,16 +595,16 @@ semana) la biblioteca de la misma, se han obtenido los siguientes resultados:
 \begin{tabular}{lcccccccccccc}
 \hline
 Alumno & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12  \\
-Respuesta & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & 1 & 1 & 1 & 0  \\
+Respuesta & No & Si & No & No & No & Si & No & Si & Si & Si & Si & No  \\
 \hline\\
 
 \hline
 Alumno    & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 \\
-Respuesta & 1  & 0  & 1  & 0  & 0  & 0  & 1  & 1  & 1  & 0  & 0  \\
+Respuesta & Si  & No  & Si  & No  & No  & No  & Si  & Si  & Si  & No  & No  \\
 \hline\\
 \hline
 Alumno 	  & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 \\
-Respuesta & 1 & 0 & 0 & 1 & 1 & 0 & 0 & 1 & 0 & 1 & 0 \\
+Respuesta & Si & No & No & Si & Si & No & No & Si & No & Si & No \\
 \hline
 \end{tabular}
 \end{center}
@@ -639,16 +639,6 @@ Los investigadores obtuvieron los siguientes datos para la edad al comenzar a an
 \item Realizar un contraste de hipótesis con un nivel de significación de $0.05$ para dar respuesta a la conclusión que
 buscan los investigadores.
 \begin{indicacion}
-Primero hay que realizar un constraste de comparación de varianzas.
-\begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Varianzas > Test F para dos varianzas}.
-\item En el cuadro de dialogo que aparece seleccionar la variable \variable{edad} en el campo \campo{Comparar} y la
-variable \variable{población} en el campo \campo{Según}.
-\item En la solapa \menu{Opciones de contraste} seleccionar como hipótesis alternativa \opcion{Bilateral} y hacer click
-sobre el botón \boton{Aceptar}.
-\end{enumerate}
-Se mantiene la hipótesis de igualdad de varianzas con la confianza fijada si el el $p$-valor es mayor que $0.5$. 
-Después se realiza el contraste de comparación de medias.
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para dos muestras independientes}.
 \item En el cuadro de dialogo que aparece seleccionar la variable \variable{edad} en el campo \campo{Comparar} y la
