@@ -828,21 +828,21 @@ progenitor correspondientes al gen del color (A y a).
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color}, darle el nombre
 \variable{mendel.color.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilís\-ti\-co}.
-\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color.ep}, darle el mismo nombre al espacio
-probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
+\item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.color.ep}, introducir 2 en el campo
+\campo{Número de repeticiones}, darle el mismo nombre al espacio probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
 \end{enumerate}
 Para calcular la probabilidad de fenotipo amarillo:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "\mbox{A}"\ | alelo.color.pro\-genitor2 == "\mbox{A}"} en el campo \campo{Suceso} y hacer clic en el
+\comando{alelo.color.progenitor.1 == "\mbox{A}"\ | alelo.color.pro\-genitor.2 == "\mbox{A}"} en el campo \campo{Suceso} y hacer clic en el
 botón \boton{Enviar}.
 \end{enumerate}
 Para calcular la probabilidad de fenotipo verde:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
 \item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "\mbox{a}"\ \& alelo.color.pro\-genitor2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic en el
+\comando{alelo.color.progenitor.1 == "\mbox{a}"\ \& alelo.color.pro\-genitor.2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic en el
 botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion}
@@ -858,26 +858,27 @@ progenitor correspondientes al gen de la forma (B y b).
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Construir espacio probabilístico}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.forma}, darle el nombre
 \variable{mendel.forma.ep} al espacio probabilístico y hacer clic en el botón \boton{Enviar}.
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetir espacio probabilístico}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Repetición de espacio probabilístico}.
 \item En el cuadro de diálogo que aparece seleccionar el conjunto de datos \variable{mendel.forma.ep}, darle el mismo nombre al espacio
 probabilístico resultante y hacer clic en el botón \boton{Enviar}. 
-\item Seleccionar el menú \menu{Teaching > Probabilidad > Combinar espacios probabilísticos independientes}.
+\item Seleccionar el menú \menu{Teaching > Probabilidad > Combinación de espacios probabilísticos independientes}.
 \item En el cuadro de diálogo que aparece, seleccionar los conjuntos de datos correspondientes a los espacios probalísticos
-\variable{mendel.color.ep} y \variable{mendel.forma.ep}, y hacer clic en el botón \boton{Enviar}.
+\variable{mendel.color.ep} y \variable{mendel.forma.ep},  darle el nombre \variable{mendel.color.forma.ep} al espacio
+probabilístico resultante y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 Para calcular la probabilidad de fenotipo amarillo y liso:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
-\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{(alelo.color.progenitor1 == "\mbox{A}"\ | alelo.color.\-pro\-genitor2 == "\mbox{A}")\ \& (alelo.forma.progenitor1 == "B"\ |
-alelo.for\-ma.\-pro\-genitor2 == "B")} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.forma.ep}, introducir
+\comando{(alelo.color.progenitor.1 == "\mbox{A}"\ | alelo.color.\-pro\-genitor.2 == "\mbox{A}")\ \& (alelo.forma.progenitor.1 == "B"\ |
+alelo.for\-ma.\-pro\-genitor.2 == "B")} en el campo \campo{Suceso}, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 Para calcular la probabilidad de fenotipo verde y rugoso:
 \begin{enumerate}
 \item Seleccionar el menú \menu{Teaching > Probabilidad > Calcular probabilidad}.
-\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.ep}, introducir
-\comando{alelo.color.progenitor1 == "\mbox{a}"\ \& alelo.color.\-pro\-genitor2 == "\mbox{a}"\ \& alelo.forma.progenitor1== "\mbox{a}"\ \&
-alelo.forma.\-progenitor2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
+\item En el cuadro de diálogo que aparece seleccionar el espacio probabilístico \variable{mendel.color.forma.ep}, introducir
+\comando{alelo.color.progenitor.1 == "\mbox{a}"\ \& alelo.color.\-pro\-genitor.2 == "\mbox{a}"\ \& alelo.forma.progenitor.1== "\mbox{b}"\ \&
+alelo.forma.\-progenitor.2 == "\mbox{b}"} en el campo \campo{Suceso} y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
 \end{indicacion}
 \end{enumerate}
@@ -886,7 +887,7 @@ alelo.forma.\-progenitor2 == "\mbox{a}"} en el campo \campo{Suceso} y hacer clic
 \item En una población se ha hecho un estudio epidemiológico sobre tres enfermedades asociadas habitualmente a la infancia, como son la
 varicela, el sarampión y la rubeola.
 Las frecuencias observadas aparecen en la siguiente tabla:
-\begin{center}
+\begin{center} 
 \begin{tabular}{cccr}
 \hline
 Varicela & Sarampión & Rubeola & Frecuencia\\
