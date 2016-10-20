@@ -205,36 +205,38 @@ Se pide:
 \item  Crear un conjunto de datos con la variable \variable{concentracion}.
 \item  Calcular el intervalo de confianza para la media de la concentración del lote con nivel de confianza del 95\%
 (nivel de significación $\alpha =0.05$).
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para una muestra}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Medias>Test t para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concentracion} en el campo \campo{Variable}
 y hacer clic sobre el botón \boton{Enviar}.
 \end{enumerate}
+}
 \end{indicacion}
 
 \item Calcular los intervalos de confianza para la media con niveles del 90\% y del 99\% (niveles de significación
 $\alpha=0.1$ y $\alpha=0.01$).
-\begin{indicacion}
+\begin{indicacion}{
 Repetir los mismos pasos del apartado anterior, cambiando el nivel de confianza para cada intervalo en la solapa \opcion{Opciones de contraste}
+}
 \end{indicacion}
 
-\item Si definimos la precisión del intervalo como la inversa de su amplitud, ¿cómo afecta a la precisión del intervalo de confianza el
+\item  Si definimos la precisión del intervalo como la inversa de su amplitud, ¿cómo afecta a la precisión del intervalo de confianza el
 tomar niveles de significación cada vez más altos? ¿Cuál puede ser la explicación?
 
 \item ¿Qué tamaño muestral sería necesario para obtener una estimación del contenido medio de principio activo con un margen de error de
 $\pm 0.5$ mg/mm$^3$ y una confianza del 95\%? 
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item Seleccionar el menú \menu{Teaching>Estadística descriptiva>Estadísticos}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{concenctracion} en el campo
 \campo{Variable}.
 \item En la solapa \menu{Estadísticos básicos} marcar el estadístico \campo{Cuasidesviación típica} y hacer clic en el botón \boton{Enviar}.
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Cálculo del tamaño muestral para la media}.
-\item En el cuadro de diálogo que aparece introducir la cuasidesviación típica muestral en el campo \campo{Desviación
-típica}, el nivel de confianza deseado, en este caso $0.95$, en el campo \campo{Nivel de confianza}, el margen de
-error deseado, en este caso $0.5$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos >Cálculo del tamaño muestral para la media}.
+\item En el cuadro de diálogo que aparece introducir la cuasidesviación típica muestral en el campo \campo{Desviación típica}, el nivel de significación deseado, en este caso $0.05$, en el campo \campo{Nivel de
+significación}, el margen de error deseado, en este caso $0.5$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
+}
 \end{indicacion}
 
 \item Si, para que sea efectivo, el fármaco debe tener una concentración mínima de 16 mg/mm$^3$ de principio activo, ¿se
@@ -263,25 +265,27 @@ los siguientes resultados:
 \item Crear un conjunto de datos con las variables \variable{grasa} y \variable{granja}.
 \item Calcular el intervalo de confianza con un 95\% de confianza para el contenido medio de materia grasa de la leche
 sin tener en cuenta si la misma procede de una u otra granja.
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para una muestra}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Medias>Test t para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{grasa} en el campo \campo{Variable} y hacer
 clic sobre el botón \boton{Enviar}.
 \end{enumerate}
+}
 \end{indicacion}
 
 \item Calcular los intervalos de confianza con un 95\% de confianza para el contenido medio de materia grasa de la leche
 dividiendo los datos según la granja de procedencia de la leche. 
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Medias > Test t para una muestra}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Medias>Test t para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{grasa} en el campo \campo{Variable}.
 \item Seleccionar la casilla de \opcion{Filtro} e introducir la condición \comando{granja==``X''} hacer
 clic sobre el botón \boton{Enviar}.
 \item Repetir los mismos pasos para el intervalo de confianza de la granja $Y$, introduciendo la condición
 \comando{granja==``Y''} en el campo \campo{Condición de selección}.
 \end{enumerate}
+}
 \end{indicacion}
 
 \item A la vista de los intervalos obtenidos en el punto anterior, ¿se puede concluir que existen diferencias
@@ -291,51 +295,52 @@ significativas en el contenido medio de grasa según la procedencia de la leche?
 
 \item En una encuesta realizada en una facultad, sobre si el alumnado utiliza habitualmente (al menos una vez a la
 semana) la biblioteca de la misma, se han obtenido los siguientes resultados:
-\begin{center}
-\begin{tabular}{lcccccccccccc}
+\begin{flushleft}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
 \hline
-Alumno & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12  \\
-Respuesta & No & Si & No & No & No & Si & No & Si & Si & Si & Si & No  \\
-\hline\\
-
+Alumno & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\
 \hline
-Alumno    & 13 & 14 & 15 & 16 & 17 & 18 & 19 & 20 & 21 & 22 & 23 \\
-Respuesta & Si  & No  & Si  & No  & No  & No  & Si  & Si  & Si  & No  & No  \\
-\hline\\
-\hline
-Alumno 	  & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 \\
-Respuesta & Si & No & No & Si & Si & No & No & Si & No & Si & No \\
+Respuesta & no & si & no & no & no & si & no & si & si & si & si & no & si & no & si & no & no \\
 \hline
 \end{tabular}
-\end{center}
+\newline
+
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|}
+\hline
+Alumno & 18 & 19 & 20 & 21 & 22 & 23 & 24 & 25 & 26 & 27 & 28 & 29 & 30 & 31 & 32 & 33 & 34 \\
+\hline
+Respuesta & no & si & si & si & no & no & si & no & no & si & si & no & no & si & no & si & no \\
+\hline
+\end{tabular}
+\end{flushleft}
 
 \begin{enumerate}
 \item Crear un conjunto de datos con la variable \variable{respuesta}.
 \item Calcular el intervalo de confianza con $\alpha=0.01$ para la proporción del alumnado que utiliza habitualmente la biblioteca. 
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Test para una proporción}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Test de proporciones para una muestra}.
 \item En el cuadro de diálogo que aparece seleccionar la variable \variable{respuesta} en el campo \campo{Variable} e
 introducir \texttt{si} en el campo \campo{Categoría}.
 \item En la solapa \menu{Opciones de contraste} introducir $0.99$ en el campo \campo{Nivel de confianza} y hacer clic en
 el botón \boton{Enviar}.
 \end{enumerate}
+}
 \end{indicacion}
 
 \item ¿Qué interpretación tiene dicho intervalo? ¿Cómo es su precisión?
 
 \item ¿Qué tamaño muestral sería necesario para obtener una estimación del porcentaje de alumnos que utilizan regularmente la biblioteca 
 con un margen de error de un 1\% y una confianza del 95\%? 
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Cálculo del tamaño muestral para una proporción}.
-\item En el cuadro de diálogo que aparece introducir la proporción muestral en el campo \campo{p}, el nivel de confianza
-deseado, en este caso $0.95$, en el campo \campo{Nivel de confianza}, el margen de error deseado, en este caso
-$0.01$, en el campo \campo{Error}, y hacer clic en el botón \boton{Enviar}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Cálculo del tamaño muestral para una proporción}.
+\item En el cuadro de diálogo que aparece introducir la proporción muestral en el campo \campo{p}, el nivel de significación deseado, en este caso $0.05$, en el campo \campo{Nivel de significación}, el margen de error deseado, en este caso $0.01$, en el campo \campo{Error}, y
+hacer clic en el botón \boton{Enviar}.
 \end{enumerate}
+}
 \end{indicacion}
 \end{enumerate}
-
 
 
 \item El Ministerio de Sanidad está interesado en la elaboración de un intervalo de confianza para la proporción de
@@ -344,15 +349,15 @@ después de preguntar a 200 pacientes mayores de 65 años con problemas respirat
 154 responden afirmativamente.
 \begin{enumerate}
 \item Calcular el intervalo de confianza al 95\% para la proporción de pacientes vacunados.
-\begin{indicacion}
+\begin{indicacion}{
 \begin{enumerate}
-\item Seleccionar el menú \menu{Teaching > Test paramétricos > Proporciones > Test para una proporción}.
+\item Seleccionar el menú \menu{Teaching>Test paramétricos>Proporciones>Test para una proporción}.
 \item En el cuadro de diálogo que aparece marcar la opción \opcion{Introducción manual de frecuencias}, introducir 154 en el campo \campo{Frecuencia muestral}, introducir 200 en el campo \campo{Tamaño
 muestral} y hacer clic en el botón \boton{Enviar}.
-\end{enumerate}
+\end{enumerate}}
 \end{indicacion}
 
-\item Si entre los objetivos del Ministerio se encontraba alcanzar una proporción del al menos un 70\% de vacunados en
+\item Si entre los objetivos del Ministerio se encontraba alcanzar una proporción de al menos un 70\% de vacunados en
 dicho colectivo, ¿se puede concluir que se han cumplido los objetivos? Justificar la respuesta.
 \end{enumerate}
 \end{enumerate}
@@ -377,12 +382,15 @@ una estimación sobre la proporción de voto que cada uno de ellos obtendrá, se
 300 personas, de las cuales 60 piensan votar a A, 80 a B, 90 a C, 15 en blanco y 55 abstenciones. Calcular un intervalo
 de confianza para la proporción de votos, sobre el total del censo, de cada uno de los partidos que se presentan.
 
-\item El fichero \texttt{nations.txt} contiene información sobre el desarrollo de distintos países (tasa de uso de
-anticonceptivos (contraception), producto interior bruto per cápita (GDP), tasa de mortalidad infantil
-(infant.mortality) y tasa de fertilidad (TFR)). Se pide:
+\item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Se pide:
 \begin{enumerate}
-\item Importar el fichero \texttt{nations.txt} en un conjunto de datos.
-\item Calcular el intervalo de confianza de la tasa de uso de anticonceptivos y de la tasa de fertilidad para los países con un producto
-interior bruto per cápita superior a 10000 US\$ e inferiores a dicha cantidad. Interpretar los intervalos. 
+\item Calcular el intervalo de confianza del 99\% para el peso medio de los recién nacidos. ¿Entre qué valores estará el
+peso medio?
+\item Calcular el intervalo de confianza para la puntuación media del Apgar al minuto de nacer y compararlo con el de la
+puntuación Apgar a ls 5 minutos. ¿Existen diferencias significativas entre las medias de ambas puntuaciones?
+\item Calcular el intervalo de confianza para el porcentaje de niños con peso menor o igual que 2.5 Kg en el grupo de
+las madres que han fumado durante el embarazo y en el de las que no. 
 \end{enumerate}
 \end{enumerate}

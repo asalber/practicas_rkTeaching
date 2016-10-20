@@ -93,32 +93,32 @@
 \definecolor{colbackground}{rgb}{0.9,0.9,1}
 \lstset{%
      language=R,
-     float=hbp,%
-     basicstyle=\ttfamily,%
-     identifierstyle=\color{colIdentifier},%
-     keywordstyle=\color{colKeys},%
-     stringstyle=\color{colString},%ROMERO OTERO, JAVIER
-     commentstyle=\color{colComments},%
-%    columns=flexible,%
-%    columns=fullflexible,%
+     float=hbp,
+     basicstyle=\ttfamily,
+     identifierstyle=\color{colIdentifier},
+     keywordstyle=\color{colKeys},
+     stringstyle=\color{colString},
+     commentstyle=\color{colComments},
+%    columns=flexible,
+%    columns=fullflexible,
      columns=fixed,
      tabsize=1,%
-     extendedchars=true,%
-     showspaces=false,%
-     showstringspaces=false,%
-     breaklines=true,%
-     breakindent=10pt,%
-     backgroundcolor=\color{colbackground},%
-     breakautoindent=true,%
-     captionpos=t,%
-     xleftmargin=1em,%
-%    xrightmargin=.5\fboxsep,%
-     numbersep=1em,%
+     extendedchars=true,
+     showspaces=false,
+     showstringspaces=false,
+     breaklines=true,
+     breakindent=10pt,
+     backgroundcolor=\color{colbackground},
+     breakautoindent=true,
+     captionpos=t,
+     xleftmargin=1em,
+%    xrightmargin=.5\fboxsep,
+     numbersep=1em,
      escapechar=\# 
 }
 
 %Indicar corto o largo según se quiera la versión corta o larga de las prácticas.
-\usepackage[largo]{optional}
+\usepackage[corto]{optional}
 
 % Color
 \usepackage{xcolor} % Required for specifying colors by name
@@ -129,7 +129,7 @@
 \definecolor{grayceu}{RGB}{111,107,83} % Gray color of CEU logo
 \definecolor{coral}{rgb}{1,0.5,0.31} % Orange color for graphics
 \definecolor{royalblue1}{rgb}{0.28,0.46,1} % Blue color for graphics
-\definecolor{mygreen}{rgb}{0,0.8,0} % Grtype filter texteen color for graphics
+\definecolor{mygreen}{rgb}{0,0.8,0} % Green color for graphics
 
 \input{commands_book} % Insert the commands_book.tex file which contains the majority of the structure behind the template
 
@@ -170,8 +170,8 @@
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
-%\input{titlepage} 
-\input{titlepage_book}
+\input{titlepage} 
+%\input{titlepage_book} 
  
 %----------------------------------------------------------------------------------------
 %	COPYRIGHT PAGE
@@ -205,7 +205,7 @@
 \include{intervalos_confianza_2_muestras/intervalos_confianza_2_muestras}
 \include{contrastes/contrastes}
 \include{anova_1_factor/anova_1_factor}
-\include{anova_2_factores/anova_2_factores}
+% \include{anova_2_factores/anova_2_factores}
 \include{contrastes_no_parametricos/contrastes_no_parametricos}
 \include{chi_cuadrado/chi_cuadrado}
 \include{concordancia/concordancia}
