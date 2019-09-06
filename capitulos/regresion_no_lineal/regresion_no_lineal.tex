@@ -1,0 +1,306 @@
+% Author: Alfredo Sánchez Alberca (asalber@ceu.es)
+
+\chapter{Regresión no lineal}\label{cap:regresion-no-lineal}
+
+% \section{Fundamentos teóricos}
+% La regresión simple tiene por objeto la construcción de un modelo funcional $y=f(x)$ que explique lo mejor posible la
+% relación entre dos variables $Y$ (variable dependiente) y $X$ (variable independiente) medidas en una misma muestra.
+
+% Ya vimos que, dependiendo de la forma de esta función, existen muchos tipos de regresión simple. 
+% Entre los más habituales están:
+% \begin{center}
+% \begin{tabular}{|l|c|}
+% \hline
+%  Modelo      &     Ecuación genérica      \\
+% \hline\hline
+%  Lineal                  &          $y=a+bx$          \\
+% \hline
+%  Parabólico              &       $y=a+bx+cx^2$        \\
+% \hline
+%  Polinómico de grado $n$ & $y=a_0+a_1x+\cdots+a_nx^n$ \\
+% \hline
+%  Potencial               &       $y=ax^b$       \\
+% \hline
+%  Exponencial             &     $y=e^{a+bx}$      \\
+% \hline
+%  Logarítmico             &       $y=a+b\log x$        \\
+% \hline
+% Inverso & $y=a+b/x$ \\
+% \hline
+% Curva S & $y= e^{a+b/x}$ \\
+% \hline
+% \end{tabular}
+% \end{center}
+
+% La elección de un tipo de modelo u otro suele hacerse según la forma de la nube de puntos del diagrama de dispersión.
+% A veces estará claro qué tipo de modelo se debe construir, tal y como ocurre en los diagramas de dispersión de la
+% figura~\ref{g:tiposrelaciones2}.
+% Pero otras veces no estará tan claro, y en estas ocasiones, lo normal es ajustar los dos o tres modelos que nos parezcan
+% más convincentes, para luego quedarnos con el que mejor explique la relación entre $Y$ y $X$, mirando el coeficiente de
+% determinación\footnote{Ver la práctica de regresión lineal y correlación.} de cada modelo.
+
+% \begin{figure}[h!]
+% \centering 
+% \subfigure[Sin relación.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_sin_relacion}}}\qquad
+% \subfigure[Relación lineal.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_lineal}}}\qquad
+% \subfigure[Relación polinómica.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_parabolica}}}\\
+% \subfigure[Relación exponencial.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_exponencial}}}\qquad
+% \subfigure[Relación logarítmica.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_logaritmica}}}\qquad
+% \subfigure[Relación inversa.]{\scalebox{0.5}{\input{regresion_lineal_simple/img/diagrama_dispersion_relacion_inversa}}}\\
+% \caption{Diagramas de dispersión correspondientes a distintos tipos de relaciones
+% entre variables.} \label{g:tiposrelaciones2}
+% \end{figure}
+
+% Ya vimos en la práctica sobre regresión lineal simple, cómo construir rectas de regresión.
+% En el caso de que optemos por ajustar un modelo no lineal, la construcción del mismo puede realizarse siguiendo los
+% mismos pasos que en el caso lineal.
+% Básicamente se trata de determinar los parámetros del modelo que minimizan la suma de los cuadrados de los residuos en
+% $Y$.
+% En los modelos multiplicativo y exponencial, el sistema aplica transformaciones logarítmicas a las variables y después
+% ajusta un modelo lineal a los datos transformados.
+% En el modelo recíproco, el sistema sustituye la variable dependiente por su recíproco antes de estimar la ecuación de
+% regresión.
+
+% \clearpage
+% \newpage
+
+\section{Ejercicios resueltos}
+El procedimiento más sencillo para construir un modelo no lineal, siempre que sea posible, es transformar las variables
+para convertirlo en un modelo lineal. En el caso de los modelos de regresión simple más comunes las transformaciones que
+convierten cada modelo en un modelo lineal aparecen en la tabla siguiente:
+\begin{center}
+\begin{tabular}{|l|c|c|p{5cm}|}
+\hline
+ Modelo      &     Modelo no lineal     & Modelo lineal & Transformación  \\
+\hline
+ Potencial               &       $y=ax^b$       & $\log(y) = \log(a)+b\log(x)$ & Se toma el logaritmo de ambas
+ variables\\
+\hline
+ Exponencial             &     $y=e^{a+bx}$     & $\log(y) = a+bx$ & Se toma el logaritmo de la variable dependiente\\
+\hline
+ Logarítmico             &       $y=a+b\log x$  &  $y=a+b\log x$ & Se toma el logaritmo de la variable independiente   
+ \\
+\hline
+Inverso & $y=a+b/x$ & $y=a+b\frac{1}{x}$ & Se toma el inverso de la variable independiente \\
+\hline
+Curva S & $y= e^{a+b/x}$ & $\log(y)=a+b\frac{1}{x}$ & Se toma el logaritmo de la variable dependiente y el inverso de
+la independiente\\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}[leftmargin=*]
+\item En un experimento se ha medido el número de bacterias por unidad de volumen en un cultivo, cada hora transcurrida,
+obteniendo los siguientes resultados:
+\begin{center}
+\begin{tabular}{lrrrrrrrrr}
+\hline
+Horas & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\
+Nº Bacterias & 25 & 28 & 47 & 65 & 86 & 121 & 190 & 290 & 362\\
+\hline
+\end{tabular}
+\end{center}
+
+Se pide:
+\begin{enumerate}
+\item Crear un conjunto de datos con las variables \variable{horas} y \variable{bacterias} e introducir estos datos.
+
+\item Dibujar el diagrama de dispersión correspondiente. En vista del diagrama, ¿qué tipo de modelo crees que explicará
+mejor la relación entre el número de bacterias y el tiempo transcurrido? 
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \field{Variable Y}
+y la variable \variable{horas} en el campo \field{Variable X}, y hacer clic en el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Calcular los modelos exponencial y cuadrático de las bacterias sobre las horas. ¿Qué tipo de modelo es el mejor?
+\begin{indicacion}
+Para el modelo exponencial:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \field{Variable
+dependiente} y la variable \variable{horas} en el campo \field{Variable independiente}.
+\item En la solapa de \option{Modelo de regresión} seleccionar el modelo \option{Exponencial}.
+\item Seleccionar \option{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+Para el modelo cuadrático repetir los pasos pero seleccionando como modelo el \option{Cuadrático}. 
+El modelo mejor será aquel que tenga un coeficiente de determinación mayor.
+\end{indicacion}
+
+\item Dibujar la curva del mejor de los modelos anteriores.
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{bacterias} en el campo \field{Variable Y}
+y la variable \variable{horas} en el campo \field{Variable X}.
+\item En la solapa \menu{Línea de ajuste} seleccionar la opción \option{Exponencial} y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Según el modelo anterior, ¿cuántas bacterias habrá al cabo de 3 horas y media del inicio del cultivo? 
+¿Y al cabo de 10 horas? 
+¿Son fiables estas predicciones?
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión exponencial construido antes.
+\item Introducir los valores $3.5, 10$ en el campo \field{Predicciones para} y hacer clic sobre el botón \button{Enviar}.
+\item Como se trata de un modelo exponencial, las predicciones obtenidas corresponden al logaritmo de bacterias. 
+Para obtener la predicción de bacterias basta con aplicar la función exponencial a los valores obtenidos.
+\end{enumerate}
+\end{indicacion}
+
+\item Dar una predicción lo más fiable posible del tiempo que tendría que transcurrir para que en el cultivo hubiese 100
+bacterias.
+\begin{indicacion}
+Para construir el modelo logarítmico:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{horas} en el campo \field{Variable
+dependiente} y la variable \variable{bacterias} en el campo \field{Variable independiente}.
+\item Seleccionar como modelo el \option{Logarítmico}.
+\item Seleccionar \option{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+Para hacer la predicción:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión logarítmico construido antes.
+\item Introducir el valor $100$ en el campo \field{Predicciones para} y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+\end{enumerate}
+
+\item El conjunto de datos \variable{dieta} del paquete \variable{rk.Teaching} contiene los datos de un estudio llevado
+a cabo por un centro dietético para probar una nueva dieta de adelgazamiento.
+Para cada individuo se ha medido el número de días que lleva con la dieta, el número de kilos perdidos desde entonces y
+si realizó o no un programa de ejercicios.
+Se pide:
+\begin{enumerate}
+\item Cargar el conjunto de datos \variable{dieta} desde el paquete \variable{rk.Teaching}.
+
+\item Dibujar el diagrama de dispersión. 
+Según la nube de puntos, ¿qué tipo de modelo explicaría mejor la relación entre los kilos perdidos y los días de dieta?
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable Y}, la
+variable \variable{dias} en el campo \field{Variable X}, y hacer clic en el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta.
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable
+dependiente} y la variable \variable{dias} en el campo \field{Variable independiente}.
+\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \button{Enviar}.
+\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
+\end{enumerate}
+\end{indicacion}
+
+\item Dibujar el modelo del apartado anterior.
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Gráficos > Diagrama de Dispersión}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable Y}
+y la variable \variable{dias} en el campo \field{Variable X}.
+\item En la solapa \menu{Línea de ajuste} seleccionar la opción correspondiente al mejor modelo y hacer
+clic sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
+los que no hacen ejercicio.
+\begin{indicacion}
+Para ver qué modelo es mejor:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable
+dependiente} y la variable \variable{dias} en el campo \field{Variable independiente}.
+\item Seleccionar la opción \option{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \field{Condición de selección}.
+\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \button{Enviar}.
+\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
+\end{enumerate}
+Para construir el modelo:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable
+dependiente} y la variable \variable{dias} en el campo \field{Variable independiente}.
+\item Seleccionar la opción \option{Filtro} e introducir la condición \lstinline{ejercicio=="no"} en el campo \field{Condición de selección}.
+\item Seleccionar \option{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Construir el modelo de regresión que mejor explique la relación entre los kilos perdidos y los días de dieta para
+los que si hacen ejercicio.
+\begin{indicacion}
+Para ver qué modelo es mejor:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Comparación de modelos}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable
+dependiente} y la variable \variable{dias} en el campo \field{Variable independiente}.
+\item Seleccionar la opción \option{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \field{Condición de selección}.
+\item En la solapa \menu{Modelos de regresión} seleccionar todos los modelos y hacer clic sobre el botón \button{Enviar}.
+\item El mejor modelo aparece en primer lugar y es el que tenga el coeficiente de determinación mayor.
+\end{enumerate}
+Para construir el modelo:
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Regresión no lineal}.
+\item En el cuadro de diálogo que aparece, seleccionar la variable \variable{kilos} en el campo \field{Variable
+dependiente} y la variable \variable{dias} en el campo \field{Variable independiente}.
+\item Seleccionar la opción \option{Filtro} e introducir la condición \lstinline{ejercicio=="si"} en el campo \field{Condición de selección}.
+\item Seleccionar \option{Guardar modelo} e introducir un nombre para el modelo y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Utilizar el modelo construido para predecir el número de kilos perdidos tras 40 y 500 días de dieta, tanto para
+los que hacen ejercicio como para los que no. ¿Son fiables estas predicciones?
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Regresión > Predicciones}.
+\item En el cuadro de diálogo que aparece seleccionar el modelo de regresión construido antes para los que no hacen ejercicio.
+\item Introducir los valores $40, 500$ en el campo \field{Predicciones para} y hacer clic sobre el botón \button{Enviar}.
+\end{enumerate}
+Repetir los pasos anteriores seleccionando el modelo de regresión construido antes para los que si hacen ejercicio.
+\end{indicacion}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item La concentración de un fármaco en sangre, $C$ en mg/dl, es función del tiempo, $t$ en horas, y viene dada por la
+siguiente tabla: 
+\[
+\begin{array}{|l|r|r|r|r|r|r|r|}
+\hline
+\text{t} & 2 & 3 & 4 & 5 & 6 & 7 & 8\\
+\hline
+\text{C} & 25 & 36 & 48 & 64 & 86 & 114 & 168\\
+\hline
+\end{array}
+\]
+Se pide: 
+\begin{enumerate}
+\item Según el modelo exponencial, ¿qué concentración de fármaco habría a las $4.8$ horas? ¿Es fiable la predicción?
+Justificar adecuadamente la respuesta.
+\item Según el modelo logarítmico, ¿qué tiempo debe pasar para que la concentración sea de 100 mg/dl?
+\end{enumerate}
+
+\item El fichero \texttt{naciones.txt} contiene información sobre el desarrollo de distintos países (tasa de fertilidad, tasa de uso de
+anticonceptivos, tasa de mortalidad infantil, producto interior bruto per cápita y continente). 
+Se pide:
+\begin{enumerate}
+\item Importar el fichero \texttt{naciones.txt} en un conjunto de datos.
+\item Construir el mejor modelo de regresión de la tasa de fertilidad sobre el producto interior bruto. ¿Cómo
+explicarías esta relación?
+\item Dibujar el modelo del apartado anterior.
+\item ¿Qué tasa de fertilidad le corresponde a una mujer que viva en un país con un producto interior bruto per cápita
+de 10000 \$? ¿Y si la mujer vive en Europa?
+\end{enumerate}
+
+\end{enumerate}

@@ -1,0 +1,388 @@
+\chapter{Estadísticos Muestrales}\label{cap:estadisticos}
+
+% \section{Fundamentos teóricos}
+% Hemos visto cómo podemos presentar la información que obtenemos de la muestra, a través de tablas o bien a través de
+% gráficas.
+% La tabla de frecuencias contiene toda la información de la muestra pero resulta difícil sacar conclusiones sobre
+% determinados aspectos de la distribución con sólo mirarla.
+% Ahora veremos cómo a partir de esos mismos valores observados de la variable estadística, se calculan ciertos números
+% que resumen la información muestral.
+% Estos números, llamados \emph{Estadísticos}, se utilizan para poner de manifiesto ciertos aspectos de la distribución,
+% tales como la dispersión o concentración de los datos, la forma de su distribución, etc.
+% Según sea la característica que pretenden reflejar se pueden clasificar en medidas de posición, medidas de dispersión y medidas de forma.
+
+% \subsection{Medidas de posición}
+% Son valores que indican cómo se sitúan los datos. Los más importantes son la Media aritmética, la Mediana y la Moda.
+
+% \subsubsection{Media aritmética $ \overline{\mbox{\textit{x}}}$}
+% Se llama \emph{media aritmética} de una variable estadística $X$, y se representa por $\overline{x}$ , a la suma de
+% todos los resultados observados, dividida por el tamaño muestral. 
+% Es decir, la media de la variable estadística $X$, cuya distribución de frecuencias es $(x_i,n_i)$, viene dada por
+% \[
+% \overline{x}=\frac{x_1+\ldots+x_1+\ldots+x_k+\ldots+x_k}{n_1+\ldots+n_k}=\frac{x_1n_1+\ldots+x_kn_k}{n}=\frac{1}{n}\sum_{i=1}^{k}x_in_i
+% \]
+
+% La media aritmética sólo tiene sentido en variables cuantitativas.
+
+% \subsubsection{Mediana \textit{Me}}
+% Se llama \emph{mediana} y lo denotamos por $Me$, a aquel valor de la muestra que, una vez ordenados todos los valores de
+% la misma en orden creciente, tiene tantos términos inferiores a él como superiores.
+% En consecuencia, divide la distribución en dos partes iguales.
+
+% La mediana sólo tiene sentido en atributos ordinales y en variables cuantitativas.
+
+% \subsubsection{Moda \textit{Mo}}
+% La \emph{moda} es el valor de la variable que presenta una mayor frecuencia en la muestra.
+% Cuando haya más de un valor con frecuencia máxima diremos que hay más de una moda. En variables continuas o discretas
+% agrupadas llamaremos clase modal a la que tenga la máxima frecuencia.
+% Se puede calcular la moda tanto en variables cuantitativas como cualitativas.
+
+% \subsubsection{Cuantiles}
+% Si el conjunto total de valores observados se divide en $r$ partes que contengan cada una $\frac{n}{r}$ observaciones,
+% los puntos de separación de las mismas reciben el nombre genérico de \emph{cuantiles}.
+
+% Según esto la mediana también es un cuantil con $r=2$.
+% Algunos cuantiles reciben determinados nombres como:
+% \begin{description}
+% \item [Cuartiles.] Son los puntos que dividen la distribución en 4 partes iguales y se designan por $C_1,C_2,C_3$. Es
+% claro que $C_2=Me$.
+% \item[Deciles.] Son los puntos que dividen la distribución en 10 partes iguales y se designan por $D_1,D_2,\ldots,D_9$.
+% \item [Percentiles.] Son los puntos que dividen la distribución en 100 partes iguales y se designan por
+% $P_1,P_2,\ldots,P_{99}$.
+% \end{description}
+
+% \subsection{Medidas de dispersión}
+% Miden la separación existente entre los valores de la muestra.
+% Las más importantes son el Rango o Recorrido, el Rango Intercuartílico, la Varianza, la Desviación Típica y el
+% Coeficiente de Variación.
+
+% \subsubsection{Rango o Recorrido \textit{Re}}
+% La medida de dispersión más inmediata es el rango. Llamamos \emph{recorrido} o \emph{rango} y lo designaremos por
+% \textit{Re} a la diferencia entre los valores máximo y mínimo que toma la variable en la muestra, es decir
+% \[
+% Re = max\{x_i, i=1,2,\ldots,n\} - min\{x_i, i=1,2,\ldots,n\}.
+% \]
+
+% Este estadístico sirve para medir el campo de variación de la variable, aunque es la medida de dispersión que menos
+% información proporciona sobre la mayor o menor agrupación de los valores de la variable alrededor de las medidas de
+% tendencia central. 
+% Además tiene el inconveniente de que se ve muy afectado por los datos atípicos.
+
+% \subsubsection{Rango Intercuartílico \textit{RI}}
+% El \emph{rango intercuartílico} \textit{RI} es la diferencia entre el tercer y el primer cuartil, y mide, por tanto, el
+% campo de variación del 50\% de los datos centrales de la distribución. 
+% Por consiguiente 
+% \[
+% RI=C_3-C_1.
+% \]
+
+% La ventaja del rango intercuartílico frente al recorrido es que no se ve tan afectado por los datos atípicos.
+
+% \subsubsection{Varianza $\textit{s}_\textit{x}^\textrm{2}$}
+% Llamamos \emph{varianza} de una variable estadística $X$, y la designaremos por $\textit{s}_\textit{x}^\textrm{2}$, a la
+% media de los cuadrados de las desviaciones de los valores observados respecto de la media de la muestra, es decir,
+% \[
+% s_x^{2}=\frac{1}{n}\sum_{i=1}^{k}(x_i-\overline{x})^{2}n_i.
+% \]
+
+% \subsubsection{Desviación Típica $\textit{s}_\textit{x}$}
+% La raíz cuadrada positiva de la varianza se conoce como \emph{desviación típica} de la variable $X$, y se representa por
+% $s$, 
+% \[
+% s=+\sqrt{s_{x}^{2}}.
+% \]
+
+% \subsubsection{Coeficiente de Variación de Pearson $\textit{Cv}_\textit{x}$}
+% Al cociente entre la desviación típica y el valor absoluto de la media se le conoce como \emph{coeficiente de variación
+% de Pearson} o simplemente \emph{coeficiente de variación}:
+% \[
+% Cv_x=\frac{s_x}{|\overline{x}|}.
+% \]
+
+% El coeficiente de variación es adimensional, y por tanto permite hacer comparaciones entre variables expresadas en
+% distintas unidades.
+% Cuanto más próximo esté a 0, menor será la dispersión de la muestra en relación con la media, y más representativa será
+% ésta última del conjunto de observaciones.
+
+% \subsection{Medidas de forma}
+% Indican la forma que tiene la distribución de valores en la muestra.
+% Se pueden clasificar en dos grupos: Medidas de \emph{asimetría} y medidas de \emph{apuntamiento o curtosis}.
+
+% \subsubsection{Coeficiente de asimetría de Fisher $\textit{g}_\textit{1}$}
+% El \emph{coeficiente de asimetría de Fisher}, que se representa por $g_1$, se define
+% \[
+% g_1=\frac{\sum_{i=1}^{k}(x_i-\overline{x})^{3}f_i}{s_x^{3}}.
+% \]
+
+% Dependiendo del valor que tome tendremos:
+% \begin{itemize}
+% \item $g_1=0$. Distribución simétrica.
+% \item $g_1<0$. Distribución asimétrica hacia la izquierda.
+% \item $g_1>0$. Distribución asimétrica hacia la derecha.
+% \end{itemize}
+
+% \subsubsection{Coeficiente de apuntamiento o curtosis $\textit{g}_\textit{2}$}
+% El grado de apuntamiento de las observaciones de la muestra, se caracteriza por el \emph{coeficiente de apuntamiento o
+% curtosis}, que se representa por $g_2$, y se define
+% \[
+% g_2=\frac{\sum_{i=1}^{k}(x_i-\overline{x})^{4}f_i}{s_x^{4}}-3.
+% \]
+
+% Dependiendo del valor que tome tendremos:
+% \begin{itemize}
+% \item $g_2=0$. La distribución tiene un apuntamiento igual que el de la distribución normal de la misma media y
+% desviación típica. Se dice que es una distribución \emph{mesocúrtica}.
+% \item $g_2<0$. La distribución es menos apuntada que la distribución normal de la misma media y desviación típica. Se
+% dice que es una distribución \emph{platicúrtica}.
+% \item $g_2>0$. La distribución es más apuntada que la distribución normal de la misma media y desviación típica. Se dice
+% que es una distribución \emph{leptocúrtica}.
+% \end{itemize}
+
+% Tanto $g_1$ como $g_2$ suelen utilizarse para comprobar si los datos muestrales provienen de una población no normal.
+% Cuando $g_1$  está fuera del intervalo [-2,2] se dice que la distribución es demasiado asimétrica como para que los
+% datos provengan de una población normal.
+% Del mismo modo, cuando $g_2$ está fuera del intervalo [-2,2] se dice que la distribución es, o demasiado apuntada, o
+% demasiado plana, como para que los datos provengan de una población normal.
+
+% \subsection{Estadísticos de variables en las que se definen grupos}
+% Ya sabemos cómo resumir la información contenida en una muestra utilizando una serie de estadísticos.
+% Pero hasta ahora sólo hemos estudiado ejemplos con un único carácter objeto de estudio.
+
+% En la mayoría de las investigaciones no estudiaremos un único carácter, sino un conjunto de caracteres, y muchas veces
+% será conveniente obtener información de un determinado carácter, en función de los grupos creados por otro de los
+% caracteres estudiados en la investigación.
+% A estas variables que se utilizan para formar grupos se les conoce como \emph{variables clasificadoras} o
+% \emph{factores}.
+
+% Por ejemplo, si se realiza un estudio sobre un conjunto de niños recién nacidos, podemos estudiar su peso.
+% Pero si además sabemos si la madre de cada niño es fumadora o no, podremos hacer un estudio del peso de los niños de las
+% madres fumadoras por un lado y los de las no fumadoras por otro, para ver si existen diferencias entre ambos grupos.
+
+% \clearpage
+% \newpage
+
+\section{Ejercicios resueltos}
+\begin{enumerate}[leftmargin=*]
+\item En una encuesta a 25 matrimonios sobre el número de hijos que tenían se obtuvieron los siguientes datos:
+\begin{center}
+1, 2, 4, 2, 2, 2, 3, 2, 1, 1, 0, 2, 2, 0, 2, 2, 1, 2, 2, 3, 1, 2, 2, 1, 2
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Crear un conjunto de datos con la variable \variable{hijos} e introducir los datos. 
+Si ya se tienen los datos, simplemente recuperarlos.
+
+\item Calcular la media aritmética, varianza y desviación típica de dicha variable.
+Interpretar los estadísticos. 
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{hijos} en el campo \field{Variables}.
+\item En la solapa \menu{Estadísticos básicos} seleccionar \option{Media} y \option{Desviación típica}, y hacer
+click sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Calcular los cuartiles, el recorrido, el rango intercuartílico, el tercer decil y el percentil 68. 
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{hijos} en el campo \field{Variables}.
+\item En la solapa \menu{Estadísticos básicos} seleccionar \option{Cuartiles}, \option{Rango}, \option{Rango
+intercuartílico}, introducir los valores $0.3$ y $0.68$ en el campo $\field{Percentiles}$, y hacer click sobre el botón
+\button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+\end{enumerate}
+
+\item En un hospital se realizó un estudio sobre el número de personas que ingresaron en urgencias cada día del mes de
+noviembre. 
+Los datos observados fueron:
+\begin{center}
+15, 23, 12, 10, 28, 50, 12, 17, 20, 21, 18, 13, 11, 12, 26 \\
+30, 6, 16, 19, 22, 14, 17, 21, 28, 9, 16, 13, 11, 16, 20
+\end{center}
+Se pide:
+
+\begin{enumerate}
+\item Crear un conjunto de datos con la variable \variable{urgencias} e introducir los datos.
+
+\item Calcular la media aritmética, varianza, desviación típica y coeficiente de variación de dicha variable.
+Interpretar los estadísticos. 
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{urgencias} en el campo \field{Variables}.
+\item En la solapa \menu{Estadísticos básicos} seleccionar \option{Media}, \option{Varianza}, 
+\option{Desviación típica} y \option{Coeficiente de variación}, y hacer click sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item Calcular el coeficiente de asimetría y el de curtosis e interpretar los resultados
+\begin{indicacion}
+Seguir los mismos pasos del apartado anterior, seleccionando \option{Cofeficiente de asimetría} y \option{Coeficiente de
+Curtosis} en la solapa \menu{Estadísticos básicos}.
+\end{indicacion}
+\end{enumerate}
+
+
+\item En un grupo de 20 alumnos, las calificaciones obtenidas en Matemáticas fueron:
+\begin{center}
+SS, AP, SS, AP, AP, NT, NT, AP, SB, SS \\
+SB, SS, AP, AP, NT, AP, SS, NT, SS, NT
+\end{center}
+Se pide:
+
+\begin{enumerate}
+\item  Crear un conjunto de datos \variable{curso} con la variable \variable{calificaciones} e introducir los datos.
+
+\item  Recodificar esta variable, asignando $2.5$ al SS, $6$ al AP, $8$ al NT y $9.5$ al SB.
+\begin{indicacion}
+\begin{enumerate}
+\item Selecionar el menú \menu{Teaching > Datos > Recodificar variable}.
+\item En el cuadro de diálogo que aparece seleccionar como variable a recodificar la variable \variable{calificaciones}.
+\item Introducir las reglas de recodificación en el campo \field{Reglas de recodificación}:
+\begin{quote}
+\lstinline{"SS" = 2.5}\\
+\lstinline{"AP" = 6}\\
+\lstinline{"NT" = 8}\\
+\lstinline{"SB" = 9.5}
+\end{quote}
+\item En el cuadro \field{Guardar nueva variable} hacer click sobre el botón \button{Cambiar}.
+\item En el cuadro de diálogo que aparece seleccionar como objeto padre la el conjunto de datos \variable{curso} y hacer click sobre el botón \button{Enviar}.
+\item Introducir el nombre de la nueva variable \variable{nota}, desmarcar la casilla \option{Convertir en factor} y hacer click sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+
+\item La mediana y el rango intercuartílico.
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{nota} en el campo \field{Variables}.
+\item En la solapa \menu{Estadísticos básicos} seleccionar \option{Mediana} y \option{Rango intercuartílico}, 
+y hacer click sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+\end{enumerate}
+
+\item Para realizar un estudio sobre la estatura de los estudiantes universitarios se ha seleccionado mediante un
+proceso de muestreo aleatorio, una muestra de 30 estudiantes, obteniendo los siguientes resultados (medidos en centímetros):
+\begin{center}
+\begin{tabular}{ll}
+Mujeres: & 173, 158, 174, 166, 162, 177, 165, 154, 166, 182, 169, 172, 170, 168. \\
+Hombres: & 179, 181, 172, 194, 185, 187, 198, 178, 188, 171, 175, 167, 186, 172, 176, 187. 
+\end{tabular}
+\end{center}
+Se pide:
+
+\begin{enumerate}
+\item Crear un conjunto de datos con las variables \variable{estatura} y \variable{sexo} e introducir los datos.
+
+\item Obtener un resumen de estadísticos en el que se muestren la media aritmética, mediana, varianza,
+desviación típica y cuartiles según el sexo. Interpretar los estadísticos.
+\begin{indicacion}
+\begin{enumerate}
+\item Seleccionar el menú \menu{Teaching > Estadística descriptiva > Estadísticos}.
+\item En el cuadro de diálogo que aparece seleccionar la variable \variable{estatura} en el campo \field{Variables},
+marcar la casilla \option{Estadística por grupos} y seleccionar la variable \variable{sexo} en el campo \field{Variables de agrupación}.
+\item En la solapa \menu{Estadísticos básicos} seleccionar \option{Media}, \option{Mediana}, \option{Varianza},
+\option{Desviación típica} y \option{Cuartiles}, y hacer click sobre el botón \button{Enviar}.
+\end{enumerate}
+\end{indicacion}
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Ejercicios propuestos}
+\begin{enumerate}[leftmargin=*]
+\item  El número de lesiones padecidas durante una temporada por cada jugador de un equipo de fútbol fue el siguiente:
+\begin{center}
+0, 1, 2, 1, 3, 0, 1, 0, 1, 2, 0, 1, 1, 1, 2, 0, 1, 3, 2, 1, 2, 1, 0, 1
+\end{center}
+
+Se pide:
+\begin{enumerate}
+\item Calcular la media aritmética, mediana, varianza y desviación típica de las lesiones e interpretarlas.
+\item Calcular los coeficientes de asimetría y curtosis e interpretarlos.
+\item Calcular el cuarto y el octavo decil e interpretarlos.
+\end{enumerate}
+
+\item  En un estudio de población se tomó una muestra de 27 personas, y se les preguntó por su edad y estado civil,
+obteniendo los siguientes resultados:
+\begin{center}
+\begin{tabular}{|l|rrrrrrrrr|}
+\hline
+Estado civil & \multicolumn{9}{c|}{Edad}\\
+\hline
+Soltero    & 31 & 45 & 35 & 65 & 21 & 38 & 62 & 22 & 31 \\
+Casado     & 62 & 39 & 62 & 59 & 21 & 62 &    &    &    \\
+Viudo      & 80 & 68 & 65 & 40 & 78 & 69 & 75 &    &    \\
+Divorciado & 31 & 65 & 59 & 49 & 65 &    &    &    &    \\
+\hline
+\end{tabular}
+\end{center}
+Se pide:
+\begin{enumerate}
+\item Calcular la media y la desviación típica de la edad según el estado civil e interpretarlas.
+\item ¿En qué grupo es más representativa la media?
+\end{enumerate}
+
+\item En un estudio se ha medido la tensión arterial de 25 individuos. Además se les ha preguntado si fuman y beben:
+\begin{center}
+\begin{tabular}{lccccccccccccc}
+\hline
+Fumador  & si & no & si & si & si & no & no & si & no & si & no & si & no \\
+Bebedor & no & no & si & si & no & no & si & si & no & si & no & si & si \\
+Tensión arterial & 80 & 92 & 75 & 56 & 89 & 93 & 101 & 67 & 89 & 63 & 98 & 58 & 91 \\
+\hline
+\\
+\hline
+Fumador  & si & no & no & si & no & no & no & si & no & si & no & si \\
+Bebedor & si & no & si & si & no & no & si & si & si & no & si & no \\
+Tensión arterial & 71 & 52 & 98 & 104 & 57 & 89 & 70 & 93 & 69 & 82 & 70 & 49 \\
+\hline
+\end{tabular}
+\end{center}
+
+Calcular la media aritmética, desviación típica, coeficiente de asimetría y curtosis de la tensión arterial por
+grupos dependiendo de si beben o fuman e interpretarlos.
+
+\item El conjunto de datos \variable{neonatos} del paquete \variable{rk.Teaching}, contiene información sobre una
+muestra de 320 recién nacidos en un hospital durante un año que cumplieron el tiempo normal de gestación. 
+Se pide:
+\begin{enumerate}
+\item Calcular la media y la mediana muestral del peso de los nacidos e interpretarlos. 
+\item Calcular el peso medio de los recién nacidos de la muestra según si la madre ha fumado o no durante el embarazo.
+Calcular también el peso medio de los recién nacidos de madres que no han fumado durante el embarazo, según si la madre
+fumaba o no antes del embarazo. ¿Qué conclusiones se pueden sacar?
+\item ¿Cuál es la puntuación Apgar al minuto de nacer más frecuente?
+\item Calcular la media de la diferencia entre las puntuaciones Apgar a los 5 minutos y al minuto de nacer. ¿Cómo
+evolucionan los recién nacidos?
+\item Calcular los cuartiles muestrales del peso de los recién nacidos e interpretarlos.
+\item Comparar los cuartiles muestrales del peso de los recién nacidos según el sexo. 
+\item ¿Por encima de qué peso estarán el 10\% de los niños con mayor peso?
+\item Si se considera que un niño es atípico por bajo peso si se encuentra entre el 5\% de los pesos más bajos, ¿por
+debajo de qué peso tiene que estar?
+\item Calcular el recorrido y el rango intercuartílico muestrales del peso de los recién nacidos e interpretarlos.
+\item Calcular la varianza y la desviación típica del peso de los recién nacidos e interpretarlos.
+\item ¿En qué grupo hay más variabilidad del peso de los recién nacidos, en las madres fumadoras o en las madres no
+fumadoras durante el embarazo? ¿En qué grupo será más representativo el peso medio?
+\item ¿Qué variable presenta más variabilidad relativa, el peso de los recién nacidos o el Apgar al minuto de nacer?
+\item Calcular el coeficiente de asimetría y de apuntamiento muestrales del peso de los recién nacidos e interpretarlos.
+\item ¿Qué distribución es más asimétrica, la de los pesos de recién nacidos en madres mayores de 20 años o en madres
+menores de 20 años?
+\item ¿Qué distribución es más apuntada, la del peso de los recién nacidos en hombres o en mujeres?
+\item De acuerdo a la forma de la distribución, ¿puede considerarse la puntuación Apgar al minuto de nacer como una
+variable normal? ¿Y el número de cigarros fumados al día durante el embarazo?
+\end{enumerate}
+
+\item Se quiere comparar la precisión de dos tensiómetros, uno de brazo y otro de muñeca, y para ello se han realizado 8
+medidas repetidas de la tensión arterial de una misma persona con cada uno de ellos, obteniendo los siguientes valores
+en mmHg:
+\begin{itemize}
+\item \variable{tens.brazo}: 111, 109, 112, 111, 113, 113, 114, 111.
+\item \variable{tens.muñeca}: 115, 113, 117, 116, 112, 112, 117, 112.
+\end{itemize}
+¿Qué tensiómetro es más preciso?
+\end{enumerate}
