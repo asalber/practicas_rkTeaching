@@ -18,12 +18,19 @@
 
 % Math support
 \usepackage{amsmath, amssymb}
-% \usepackage{mathspec}
 
 % Font settings
-\usepackage{unicode-math}
-\setmainfont[Ligatures=TeX]{TeX Gyre Pagella}
-%\setmathfont{TG Pagella Math}
+\usepackage[math-style=ISO]{unicode-math}
+\setmainfont[
+  Extension=.otf,
+  UprightFont=*-regular,
+  ItalicFont=*-italic,
+  BoldFont=*-bold,
+  BoldItalicFont=*-bolditalic,
+  Numbers=OldStyle,
+  Scale=MatchLowercase
+  ]{texgyrepagella}
+%\setmathfont{texgyrepagella-math.otf}
 \setmathfont[math-style=ISO, bold-style=ISO]{texgyrepagella-math.otf}
 
 % Color
@@ -212,8 +219,8 @@ urlcolor = magenta,          % color of external links
 \include{capitulos/variables_aleatorias_continuas/variables_aleatorias_continuas}
 \include{capitulos/intervalos_confianza_1_muestra/intervalos_confianza_1_muestra}
 \include{capitulos/intervalos_confianza_2_muestras/intervalos_confianza_2_muestras}
-% \include{capitulos/contrastes/contrastes}
-% \include{capitulos/anova_1_factor/anova_1_factor}
+\include{capitulos/contrastes/contrastes}
+\include{capitulos/anova_1_factor/anova_1_factor}
 % % \include{capitulos/anova_2_factores/anova_2_factores}
 % \include{capitulos/contrastes_no_parametricos/contrastes_no_parametricos}
 % \include{capitulos/chi_cuadrado/chi_cuadrado}
